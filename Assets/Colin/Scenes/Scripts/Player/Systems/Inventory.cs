@@ -32,8 +32,11 @@ public class Inventory : MonoBehaviour
         ingredients[removedIngredient] -= amount;
     }
 
-    public void GetIngredientByType<T>(Ingredients ingredients) where T : Ingredients
+    public void GetIngredientByType<T>(Ingredients searchedIngredient) where T : Ingredients
     {
-        
+        for (int i = 0; i < ingredients.Count; i++) 
+        {
+
+        }
     }
 }
