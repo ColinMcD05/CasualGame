@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.EventSystems;
 
 public class Ingredients : MonoBehaviour
 {
@@ -11,15 +12,6 @@ public class Ingredients : MonoBehaviour
     //References
     [Header("References")]
     [SerializeField]Image image;
-
-    Ingredients()
-    {
-        if(sprite && image)
-        {
-            image.sprite = sprite;
-        }
-    }
-
     #region Getters
     //Getters
     public string GetIngredientName()

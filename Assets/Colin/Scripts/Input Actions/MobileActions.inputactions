@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "name": "MobileActions",
+    "maps": [
+        {
+            "name": "MobileAction",
+            "id": "62b0972e-3d39-41dc-b6b2-5aa1cc4af69e",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "Value",
+                    "id": "6ab8358b-1e25-4fb4-8d36-efb05bd8ce7e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "182fc9ab-8570-4a9b-a008-be689bc9b425",
+                    "path": "<Touchscreen>/Press",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Touch",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}
