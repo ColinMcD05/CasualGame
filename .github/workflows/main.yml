@@ -1,0 +1,21 @@
+name: Discord Merge Notification
+
+on:
+  push:
+    branches:
+      - main
+      - DevBuild
+      - Programming
+      - Art
+      - Design
+
+jobs:
+  post-to-discord:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send custom JSON message to Discord
+        run: |
+          curl -H "Content-Type: application/json" \
+               -X POST \
+               -d '{"content":"A merge has occurred in the ${{ github.ref_name }} branch"}' \
+               "${{ secrets.DISCORD_WEBHOOK_URL }}"
