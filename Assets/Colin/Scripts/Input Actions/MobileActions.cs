@@ -107,7 +107,7 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""182fc9ab-8570-4a9b-a008-be689bc9b425"",
-                    ""path"": ""<Touchscreen>/Press"",
+                    ""path"": ""<Touchscreen>/position"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
