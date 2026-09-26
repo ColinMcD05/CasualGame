@@ -1,9 +1,7 @@
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.EventSystems;
-using UnityEngine.InputSystem;
 
-public class UIDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class IgredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
     [Header("Drag Settings")]
     [SerializeField] private float dragAlpha;
@@ -13,6 +11,7 @@ public class UIDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEn
     [Header("References")]
     private Ingredients ingredient;
     private DraggedIngredients draggedIngredient;
+    [SerializeField] private PlayerController playerController;
 
     //Back end variables
     private RectTransform rectTransform;
