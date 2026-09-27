@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
 
-public class Ingredients : MonoBehaviour
+public class Ingredients : MonoBehaviour, IDropHandler
 {
     [Header("Ingrediant Info")]
     //Ingrediant Info
@@ -35,4 +35,9 @@ public class Ingredients : MonoBehaviour
         }
     }
     #endregion
+
+    public void OnDrop(PointerEventData pointerEvent)
+    {
+        Debug.Log("Hello");
+    }
 }
