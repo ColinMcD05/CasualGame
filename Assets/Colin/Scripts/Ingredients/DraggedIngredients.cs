@@ -62,5 +62,6 @@ public class DraggedIngredients : MonoBehaviour
         {
             rectTransform.anchoredPosition = localPosition;
         }
+
     }
 }
