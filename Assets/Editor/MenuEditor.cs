@@ -3,8 +3,8 @@ using System.Security.Policy;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(RecipeList))]
-public class RecipeListEditor : Editor
+[CustomEditor(typeof(Menu))]
+public class MenuEditor : Editor
 {
     private string recipeName;
     private Ingredients[] ingredients;
@@ -24,6 +24,8 @@ public class RecipeListEditor : Editor
 
         recipeName = EditorGUILayout.TextField("Recipe Name", recipeName);
         //ingredients = EditorGUILayout.
+
+
 
         if (GUILayout.Button("Make Recipe"))
         {

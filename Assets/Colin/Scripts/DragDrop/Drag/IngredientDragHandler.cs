@@ -40,9 +40,9 @@ public class IgredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandl
         draggedIngredient.Deactivate();
 
         GameObject objectUnder = eventData.pointerCurrentRaycast.gameObject;
-        if (objectUnder)
+        if(objectUnder.TryGetComponent(out IDroppedOn droppedOn))
         {
-            print(objectUnder);
+            droppedOn.DroppedOn(this.ingredient);
         }
     }
 }

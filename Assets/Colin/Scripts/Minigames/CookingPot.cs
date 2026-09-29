@@ -5,6 +5,8 @@ public class CookingPot : MonoBehaviour, IDroppedOn
 {
     List<Ingredients> ingredientsInPot = new List<Ingredients>();
 
+    Menu currentMenu;
+
     public void DroppedOn(Ingredients ingredient)
     {
         ingredientsInPot.Add(ingredient);
@@ -12,7 +14,7 @@ public class CookingPot : MonoBehaviour, IDroppedOn
 
     public void MakeMeal()
     {
-
+        
     }
 
     public void EmptyPot()
