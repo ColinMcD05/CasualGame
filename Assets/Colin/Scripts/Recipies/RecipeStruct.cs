@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Recipe
+public class Recipe : MonoBehaviour
 {
     public string name;
     public List<Ingredients> ingredients = new();
