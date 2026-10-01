@@ -3,17 +3,9 @@ using System.Collections.Generic;
 using UnityEngine;
 
 [Serializable]
-public class Recipe : MonoBehaviour
+public class Recipe
 {
-    public string name;
-    public List<Ingredients> ingredients = new();
+    public string recipeName;
+    public Ingredients[] ingredients;
     public GameObject mealPrefab;
-
-    public Recipe()
-    {
-        if (ingredients.Count != 0)
-        {
-            ingredients.Sort();
-        }
-    }
 }

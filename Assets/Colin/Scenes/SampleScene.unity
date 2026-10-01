@@ -1249,7 +1249,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::RecipeList
   menu:
-  - name: 
+  - recipeName: 
     ingredients: []
     mealPrefab: {fileID: 0}
 --- !u!1660057539 &9223372036854775807

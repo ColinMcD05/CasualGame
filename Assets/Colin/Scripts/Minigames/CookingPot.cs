@@ -7,6 +7,11 @@ public class CookingPot : MonoBehaviour, IDroppedOn
 
     Menu currentMenu;
 
+    void Awake()
+    {
+        currentMenu = GameObject.Find("GameManager").GetComponent<Menu>();
+    }
+
     public void DroppedOn(Ingredients ingredient)
     {
         ingredientsInPot.Add(ingredient);
@@ -14,7 +19,19 @@ public class CookingPot : MonoBehaviour, IDroppedOn
 
     public void MakeMeal()
     {
-        
+        if(currentMenu)
+        {
+            Recipe recipe = currentMenu.CompareMenu(ingredientsInPot);
+            if (recipe == null)
+            {
+
+            }
+            else
+            {
+                Instantiate(recipe.mealPrefab);
+            }
+        }
+        EmptyPot();
     }
 
     public void EmptyPot()
