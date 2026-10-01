@@ -39,4 +39,10 @@ public class Menu : MonoBehaviour
         }
         return null;
     }
+
+    public Recipe GetRandomRecipe()
+    {
+        int randomInt = UnityEngine.Random.Range(0, menu.Length);
+        return menu[randomInt];
+    }
 }

@@ -6,10 +6,11 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     List<Ingredients> ingredientsInPot = new List<Ingredients>();
     [SerializeField] GameObject badMeal;
     Menu currentMenu;
+    Shelves shelf;
 
     void Awake()
     {
-        currentMenu = GameObject.Find("GameManager").GetComponent<Menu>();
+        currentMenu = GameObject.FindFirstObjectByType<Menu>();
     }
 
     public void DroppedOn(Ingredients ingredient)
@@ -24,11 +25,11 @@ public class CookingPot : MonoBehaviour, IDroppedOn
             Recipe recipe = currentMenu.CompareMenu(ingredientsInPot);
             if (recipe == null)
             {
-                Instantiate(badMeal);
+                shelf.AddFinishedMeal(null);
             }
             else
             {
-                Instantiate(recipe.mealPrefab);
+                shelf.AddFinishedMeal(recipe);
             }
         }
         EmptyPot();

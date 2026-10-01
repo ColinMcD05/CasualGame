@@ -2,15 +2,10 @@ using UnityEngine;
 
 public class FinishedMeal : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+	Recipe recipe;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public void InitializeMeal(Recipe newRecipe)
+	{
+		recipe = newRecipe;
+	}
 }
