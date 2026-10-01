@@ -4,7 +4,7 @@ using System.Collections.Generic;
 public class CookingPot : MonoBehaviour, IDroppedOn
 {
     List<Ingredients> ingredientsInPot = new List<Ingredients>();
-
+    [SerializeField] GameObject badMeal;
     Menu currentMenu;
 
     void Awake()
@@ -24,7 +24,7 @@ public class CookingPot : MonoBehaviour, IDroppedOn
             Recipe recipe = currentMenu.CompareMenu(ingredientsInPot);
             if (recipe == null)
             {
-
+                Instantiate(badMeal);
             }
             else
             {
