@@ -9,9 +9,12 @@ public class IngredientsEditor : Editor
     {
         serializedObject.Update();
 
+        var name = serializedObject.FindProperty("ingredientName");
+
         var sprite = serializedObject.FindProperty("sprite");
         var image = serializedObject.FindProperty("image");
 
+        EditorGUILayout.PropertyField(name);
         EditorGUILayout.PropertyField(sprite);
         EditorGUILayout.PropertyField(image);
 
