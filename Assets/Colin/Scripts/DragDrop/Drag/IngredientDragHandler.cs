@@ -1,23 +1,12 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class IgredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
+public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
-    [Header("Drag Settings")]
-    [SerializeField] private float dragAlpha;
-    [SerializeField] private bool retrnToStartPosition = false;
-
     //References
     [Header("References")]
     private Ingredients ingredient;
     private DraggedIngredients draggedIngredient;
-    [SerializeField] private PlayerController playerController;
-
-    //Back end variables
-    private RectTransform rectTransform;
-    private CanvasGroup canvasGroup;
-    private Vector2 originalPosition;
-    private GameObject dragVisualInstance;
 
     void Awake()
     {
