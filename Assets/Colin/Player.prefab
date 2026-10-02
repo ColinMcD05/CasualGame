@@ -151,6 +151,8 @@ GameObject:
   - component: {fileID: 17198065211196402}
   - component: {fileID: 7478017585376758327}
   - component: {fileID: 4618467611561885552}
+  - component: {fileID: 9156297245933657924}
+  - component: {fileID: 6186721260424000035}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -294,3 +296,30 @@ MonoBehaviour:
   speed: 5
   lookSensitivity: 0.2
   lookAngleLimit: 90
+--- !u!114 &9156297245933657924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430243506684994509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3034571eb2fd37044b9ebc4c68ee2854, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Ingredients
+  ingredientName: player
+  sprite: {fileID: 0}
+  image: {fileID: 0}
+--- !u!114 &6186721260424000035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7430243506684994509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef0313c746563b642a587745ff972cc7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FinishedMeal
