@@ -5,7 +5,6 @@ using UnityEngine.EventSystems;
 public class DraggedIngredients : MonoBehaviour
 {
     [SerializeField] private Canvas canvas;
-    [SerializeField] private bool returnToStartPosition = false;
 
     //References
     Image image;

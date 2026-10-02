@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.EventSystems;
 
+[RequireComponent(typeof(IngredientDragHandler))]
 public class Ingredients : MonoBehaviour
 {
     [Header("Ingrediant Info")]
