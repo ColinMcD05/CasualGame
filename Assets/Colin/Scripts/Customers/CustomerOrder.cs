@@ -1,15 +1,18 @@
 using UnityEngine;
 
-public class Customer : MonoBehaviour
+public class CustomerOrder : MonoBehaviour
 {
 	private Menu menu;
 	private Recipe order;
-
 	private Shelves shelf;
 
 	void Awake()
 	{
 		menu = GameObject.FindFirstObjectByType<Menu>();
+		if(menu)
+		{
+			order = menu.GetRandomRecipe();
+		}
 	}
 
 	void Start()
@@ -19,7 +22,7 @@ public class Customer : MonoBehaviour
 
 	public void TakeMeal(Recipe meal)
 	{
-		if(meal = null)
+		if(meal == null)
 		{
 			//Bad stuff happens
 		}
@@ -28,5 +31,10 @@ public class Customer : MonoBehaviour
 			//Good stuff happens
 		}
 		shelf.RemoveFinishedMeal(meal);
+	}
+
+	public Recipe GetOrder()
+	{
+		return order;
 	}
 }

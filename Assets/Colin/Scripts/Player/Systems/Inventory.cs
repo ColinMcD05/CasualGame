@@ -4,7 +4,7 @@ using UnityEngine;
 public class Inventory : MonoBehaviour
 {
     //Variables
-    Dictionary<Ingredients, int> ingredients;
+    [SerializeField] Dictionary<Ingredients, int> ingredients;
 
     public void AddToInventorty<T>(T newIngredient, int amount) where T : Ingredients
     {
