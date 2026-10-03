@@ -13,7 +13,7 @@ public class DraggedIngredients : MonoBehaviour
     CanvasGroup canvasGroup;
     Vector3 startPosition;
 
-    void Awake()
+    void Start()
     {
         gameObject.SetActive(false);
 

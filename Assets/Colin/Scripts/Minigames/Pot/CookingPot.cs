@@ -11,11 +11,13 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     void Awake()
     {
         currentMenu = GameObject.FindFirstObjectByType<Menu>();
+        shelf = GameObject.FindFirstObjectByType<Shelves>();
     }
 
     public void DroppedOn(Ingredients ingredient)
     {
         ingredientsInPot.Add(ingredient);
+        Debug.Log(ingredient.GetIngredientName());
     }
 
     public void MakeMeal()
@@ -25,11 +27,13 @@ public class CookingPot : MonoBehaviour, IDroppedOn
             Recipe recipe = currentMenu.CompareMenu(ingredientsInPot);
             if (recipe == null)
             {
-                shelf.AddFinishedMeal(null);
+                shelf.AddFinishedMeal(null, badMeal);
+                Debug.Log("Bad Meal");
             }
             else
             {
                 shelf.AddFinishedMeal(recipe);
+                Debug.Log(recipe.recipeName);
             }
         }
         EmptyPot();

@@ -15,7 +15,7 @@ public class Menu : MonoBehaviour
             return null;
         }
 
-        ingredients.Sort();
+        ingredients.Sort((a, b) => string.Compare(a.GetIngredientName(), b.GetIngredientName(), StringComparison.OrdinalIgnoreCase));
         int ingredientsCount = ingredients.Count();
         foreach (Recipe recipe in menu)
         {
@@ -24,7 +24,7 @@ public class Menu : MonoBehaviour
                 continue;
             }
             List<Ingredients> ingredientList = recipe.ingredients.ToList();
-            ingredientList.Sort();
+            ingredientList.Sort((a, b) => string.Compare(a.GetIngredientName(), b.GetIngredientName(), StringComparison.OrdinalIgnoreCase));
             for(int i = 0; i < ingredientsCount; i++)
             {
                 if (ingredients[i].GetIngredientName() != ingredientList[i].GetIngredientName())

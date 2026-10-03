@@ -7,14 +7,19 @@ public class CustomersManager : MonoBehaviour
     [SerializeField] private Transform[] orderPositions;
     [SerializeField] private Transform[] waitingPositions;
 
-    List<CustomerOrder> needToTake;
-    List<CustomerOrder> alreadyTaken;
+    List<CustomerOrder> needToTake = new();
+    List<CustomerOrder> alreadyTaken = new();
 
     [SerializeField] private GameObject[] customerPrefabs;
 
     public void Start()
     {
         InvokeRepeating("AddNewCustomer", 2, Random.Range(8, 15));
+    }
+
+    public void TakeOrder()
+    {
+        Invoke("OrderTaken", 2f);
     }
 
     public void OrderTaken()
@@ -65,8 +70,14 @@ public class CustomersManager : MonoBehaviour
         {
             int randomIndex = Random.Range(0, customerPrefabs.Length);
             GameObject newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
+            newCustomer.transform.position = orderPositions[needToTake.Count].position;
 
             needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
         }
+    }
+
+    public int GetNeedToTakeCount()
+    {
+        return needToTake.Count;
     }
 }

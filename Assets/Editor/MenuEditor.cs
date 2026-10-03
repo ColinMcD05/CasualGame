@@ -1,7 +1,6 @@
 using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
-using UnityEngine.UIElements;
 
 [CustomEditor(typeof(Menu))]
 public class MenuEditor : Editor
@@ -152,7 +151,6 @@ public class MenuEditor : Editor
 
                 if (ingredientObject != null)
                 {
-                    Debug.Log(ingredientObject.GetIngredientName());
                     EditorGUILayout.LabelField($"  - {ingredientObject.GetIngredientName()}");
                 }
             }

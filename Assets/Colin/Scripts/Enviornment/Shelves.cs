@@ -7,10 +7,11 @@ public class Shelves : MonoBehaviour
 	[SerializeField] private Transform[] positions;
 
 	private GameObject[] mealObjects;
-	private List<Recipe> finishedMeals;
+	private List<Recipe> finishedMeals = new();
 
 	void Awake()
 	{
+		mealObjects = new GameObject[positions.Length];
 	}
 
 	public void AddFinishedMeal(Recipe newMeal)
@@ -19,7 +20,20 @@ public class Shelves : MonoBehaviour
 		UpdatePositions(newMeal);
 	}
 
-	public void RemoveFinishedMeal(Recipe mealToRemove)
+    public void AddFinishedMeal(Recipe newMeal, GameObject badMeal)
+    {
+		if(newMeal == null)
+		{
+			newMeal = new Recipe();
+			newMeal.recipeName = "Bad Meal";
+			newMeal.mealPrefab = badMeal;
+		}
+
+        finishedMeals.Add(newMeal);
+        UpdatePositions(newMeal);
+    }
+
+    public void RemoveFinishedMeal(Recipe mealToRemove)
 	{
 		finishedMeals.Remove(mealToRemove);
 		UpdatePositions(mealToRemove);
