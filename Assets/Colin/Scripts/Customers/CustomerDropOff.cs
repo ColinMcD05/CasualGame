@@ -4,8 +4,13 @@ public class CustomerDropOff : MonoBehaviour
 {
     [SerializeField] CustomersManager customerManager;
 
-    public void DropOff(Recipe recipe)
+    public bool DropOff(Recipe recipe)
     {
-        customerManager.OrderGiven(recipe);
+        if (customerManager.CheckCustomersToGive())
+        {
+            customerManager.OrderGiven(recipe);
+            return true;
+        }
+        return false;
     }
 }

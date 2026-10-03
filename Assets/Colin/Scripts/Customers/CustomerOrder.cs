@@ -29,13 +29,12 @@ public class CustomerOrder : MonoBehaviour
 	{
 		if(meal == null || meal.recipeName != order.recipeName)
 		{
-			//Bad stuff happens
-		}
+			BadOrder();
+        }
 		if(meal.recipeName == order.recipeName)
 		{
-			//Good stuff happens
-		}
-		shelf.RemoveFinishedMeal(meal);
+			GoodOrder();
+        }
 	}
 
 	public Recipe GetOrder()

@@ -17,7 +17,7 @@ public class Shelves : MonoBehaviour
 	public void AddFinishedMeal(Recipe newMeal)
 	{
 		finishedMeals.Add(newMeal);
-		UpdatePositions(newMeal);
+		UpdatePositions();
 	}
 
     public void AddFinishedMeal(Recipe newMeal, GameObject badMeal)
@@ -30,16 +30,22 @@ public class Shelves : MonoBehaviour
 		}
 
         finishedMeals.Add(newMeal);
-        UpdatePositions(newMeal);
+        UpdatePositions();
     }
 
     public void RemoveFinishedMeal(Recipe mealToRemove)
 	{
 		finishedMeals.Remove(mealToRemove);
-		UpdatePositions(mealToRemove);
+		UpdatePositions();
 	}
 
-	private void UpdatePositions(Recipe newMeal)
+    public void RemoveFinishedMeal(int index)
+    {
+        finishedMeals.RemoveAt(index);
+        UpdatePositions();
+    }
+
+    public void UpdatePositions()
 	{
 		foreach(GameObject meal in mealObjects)
 		{
@@ -51,9 +57,34 @@ public class Shelves : MonoBehaviour
 		for(int i = 0; i < count; i++)
 		{
 			GameObject meal = Instantiate(finishedMeals[i].mealPrefab, positions[i]);
-			meal.GetComponent<FinishedMeal>().InitializeMeal(newMeal);
+			meal.GetComponent<FinishedMeal>().InitializeMeal(finishedMeals[i]);
+			meal.transform.position = positions[i].position;
 
 			mealObjects[i] = meal;
 		}
 	}
+
+	public GameObject GetObjectAtIndex(int index)
+	{
+		if(index >= mealObjects.Length)
+		{
+			return null;
+		}
+		else
+		{
+			return mealObjects[index];
+		}
+	}
+
+	public Recipe GetRecipeAtIndex(int index)
+	{
+        if (index >= finishedMeals.Count)
+        {
+            return null;
+        }
+        else
+        {
+            return finishedMeals[index];
+        }
+    }	
 }
