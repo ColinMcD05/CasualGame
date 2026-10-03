@@ -12448,7 +12448,7 @@ MonoBehaviour:
   - {fileID: 1811632436}
   - {fileID: 244586683}
   - {fileID: 1626250181}
-  orderText: {fileID: 0}
+  orderText: {fileID: 1051060751}
   customerPrefabs:
   - {fileID: 3149795306523558028, guid: 9d3a066dacc9a58429c20342ab1466ae, type: 3}
 --- !u!4 &564474519
@@ -23025,7 +23025,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Order
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
