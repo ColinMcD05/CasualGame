@@ -424,6 +424,7 @@ GameObject:
   - component: {fileID: 530649325}
   - component: {fileID: 530649324}
   - component: {fileID: 530649327}
+  - component: {fileID: 530649328}
   m_Layer: 5
   m_Name: Ingredient
   m_TagString: Untagged
@@ -515,9 +516,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31754c4fe6b6f904ea934bb2e936ee0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UIDragHandler
-  dragAlpha: 0
-  retrnToStartPosition: 0
-  playerController: {fileID: 954657447}
+--- !u!114 &530649328
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 530649322}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daaabdd12bd0ce48ab27c0db8a57627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StirThePot
 --- !u!1 &686775648
 GameObject:
   m_ObjectHideFlags: 0
@@ -1088,7 +1098,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DraggedIngredients
   canvas: {fileID: 849500834}
-  returnToStartPosition: 0
 --- !u!114 &1328504489
 MonoBehaviour:
   m_ObjectHideFlags: 0

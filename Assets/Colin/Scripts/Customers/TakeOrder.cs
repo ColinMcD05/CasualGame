@@ -8,7 +8,7 @@ public class TakeOrder : MonoBehaviour
     {
         if (customersManager.CheckCustomersToOrder())
         {
-            customersManager.OrderTaken();
+            customersManager.Invoke("OrderTaken", 2);
         }
     }
 }

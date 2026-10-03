@@ -19,10 +19,15 @@ public class CustomersManager : MonoBehaviour
 
     public void OrderTaken()
     {
-        alreadyTaken[0].transform.position = waitingPositions[needToTake.Count].position;
+        needToTake[0].transform.position = waitingPositions[alreadyTaken.Count].position;
 
         alreadyTaken.Add(needToTake[0]);
         needToTake.RemoveAt(0);
+
+        for(int i = 0; i < needToTake.Count; i++)
+        {
+            needToTake[i].transform.position = orderPositions[i].position;
+        }
     }
 
     public void OrderGiven(Recipe recipe)
@@ -41,6 +46,11 @@ public class CustomersManager : MonoBehaviour
         if(alreadyTaken.Count == 0 && needToTake.Count == 0)
         {
             AddNewCustomer();   
+        }
+
+        for (int i = 0; i < alreadyTaken.Count; i++)
+        {
+            alreadyTaken[i].transform.position = waitingPositions[i].position;
         }
     }
 
