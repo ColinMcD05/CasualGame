@@ -51,6 +51,7 @@ public class CustomersManager : MonoBehaviour
     void RemoveCustomer()
     {
         GameObject remove = alreadyTaken[0].gameObject;
+        alreadyTaken.RemoveAt(0);
         Destroy(remove);
 
         if(alreadyTaken.Count == 0 && needToTake.Count == 0)
