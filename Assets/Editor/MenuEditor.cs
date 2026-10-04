@@ -10,6 +10,7 @@ public class MenuEditor : Editor
     private GameObject finishedDish;
     SerializedProperty recipeList;
     Vector2 scrollPosition;
+    bool recipeInAlready;
 
     private void OnEnable()
     {
@@ -24,6 +25,10 @@ public class MenuEditor : Editor
         EditorGUILayout.LabelField("New recipe creator");
 
         recipeName = EditorGUILayout.TextField("Recipe Name", recipeName);
+        if (recipeInAlready)
+        {
+            EditorGUILayout.HelpBox("Recipe is already in.", MessageType.Error);
+        }
 
         EditorGUILayout.Space();
         EditorGUILayout.BeginHorizontal();
@@ -82,6 +87,7 @@ public class MenuEditor : Editor
 
     public void MakeRecipe()
     {
+        recipeInAlready = false;
         int menuLength = recipeList.arraySize;
 
         for (int i = 0; i < menuLength; i++)
@@ -91,7 +97,8 @@ public class MenuEditor : Editor
 
             if (foundNameProperty.stringValue == recipeName)
             {
-                EditorGUILayout.HelpBox("Recipe is already in.", MessageType.Error);
+                recipeInAlready = true;
+                return;
             }
         }
 

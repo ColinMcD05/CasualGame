@@ -1,5 +1,6 @@
 using UnityEngine;
 using System.Collections.Generic;
+using TMPro;
 
 public class CookingPot : MonoBehaviour, IDroppedOn
 {
@@ -7,6 +8,8 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     [SerializeField] GameObject badMeal;
     Menu currentMenu;
     Shelves shelf;
+
+    public TextMeshProUGUI text;
 
     void Awake()
     {
@@ -24,17 +27,21 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     {
         if(currentMenu)
         {
+            CancelInvoke();
             Recipe recipe = currentMenu.CompareMenu(ingredientsInPot);
             if (recipe == null)
             {
                 shelf.AddFinishedMeal(null, badMeal);
+                ShowText("Bad Meal");
                 Debug.Log("Bad Meal");
             }
             else
             {
                 shelf.AddFinishedMeal(recipe);
+                ShowText(recipe.recipeName);
                 Debug.Log(recipe.recipeName);
             }
+            Invoke("TextDisappear", 2);
         }
         EmptyPot();
     }
@@ -42,5 +49,15 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     public void EmptyPot()
     {
         ingredientsInPot.Clear();
+    }
+
+    void ShowText(string newText)
+    {
+        text.text = "You Made " + newText;
+    }
+
+    void TextDisappear()
+    {
+        text.text = "";
     }
 }

@@ -66,6 +66,10 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
                     shelves.UpdatePositions();
                 }
             }
+            if(objectUnder.TryGetComponent(out TrashCan trashCan))
+            {
+                shelves.RemoveFinishedMeal(num);
+            }
             else
             {
                 shelves.UpdatePositions();
