@@ -1,3 +1,8 @@
+Install Instructions:
+1. Download and extract the Hexalicious project/build folder.
+2. Open the extracted folder.
+3. Launch the provided Hexalicious executable/build file.
+
 Controls:
 Take order - touch customer on left
 Give order - drag finished dish to customer on right
@@ -11,9 +16,11 @@ Take a customers order
 Make a meal:
 	- making recipe wrong = bad meal
 	- making recipe right = good meal
-
 Give customer meal:
 	-Checks if meal is correct based on order
+
+Outside Assets Used:
+None
 
 Credits:
 Producer - Trey Brown
@@ -23,3 +30,6 @@ Level Designer - Ian Gines
 Level Designer - Lily Miska
 Artist - Reagan Jewett
 UI Artist - Cora Updyke
+
+AI Disclosure:
+AI was not used in the making of this game and any AI generated material would be reviewed, revised, and documented by the development team. 
