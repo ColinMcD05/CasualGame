@@ -7,9 +7,12 @@ public class Shelves : MonoBehaviour
 	[SerializeField] private Transform[] positions;
 
 	private GameObject[] mealObjects;
+	public FinishedMealDragHandler[] dragHandlers;
 	private List<Recipe> finishedMeals = new();
 
-	void Awake()
+	public FinishedMealDragHandler meal;
+
+    void Awake()
 	{
 		mealObjects = new GameObject[positions.Length];
 	}
@@ -52,6 +55,11 @@ public class Shelves : MonoBehaviour
 			Destroy(meal);
 		}
 
+		foreach(FinishedMealDragHandler drag in dragHandlers)
+		{
+			drag.MealDespawned();
+		}
+
 		int count = Mathf.Min(positions.Length, finishedMeals.Count);
 
 		for(int i = 0; i < count; i++)
@@ -59,6 +67,8 @@ public class Shelves : MonoBehaviour
 			GameObject meal = Instantiate(finishedMeals[i].mealPrefab, positions[i]);
 			meal.GetComponent<FinishedMeal>().InitializeMeal(finishedMeals[i]);
 			meal.transform.position = positions[i].position;
+
+			dragHandlers[i].MealSpawned(meal);
 
 			mealObjects[i] = meal;
 		}

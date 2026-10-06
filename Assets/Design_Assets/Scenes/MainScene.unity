@@ -172,6 +172,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 4
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 2654217}
 --- !u!114 &2654217
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8071,6 +8072,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 6
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 352131655}
 --- !u!114 &352131655
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -9401,6 +9403,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 2
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 408330757}
 --- !u!1 &410662270
 GameObject:
   m_ObjectHideFlags: 0
@@ -10660,6 +10663,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 0
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 489553717}
 --- !u!1 &489770434
 GameObject:
   m_ObjectHideFlags: 0
@@ -17553,6 +17557,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 7
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 771826892}
 --- !u!114 &771826892
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24591,6 +24596,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 3
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 1102301416}
 --- !u!114 &1102301416
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32396,6 +32402,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 5
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 1442870120}
 --- !u!114 &1442870120
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32999,6 +33006,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 1
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 1506242033}
 --- !u!1 &1506963661
 GameObject:
   m_ObjectHideFlags: 0
@@ -33283,6 +33291,17 @@ MonoBehaviour:
   - {fileID: 465066633}
   - {fileID: 217288172}
   - {fileID: 1180142178}
+  dragHandlers:
+  - {fileID: 489553719}
+  - {fileID: 1102301415}
+  - {fileID: 352131654}
+  - {fileID: 1506242035}
+  - {fileID: 2654216}
+  - {fileID: 771826891}
+  - {fileID: 408330759}
+  - {fileID: 1442870119}
+  - {fileID: 1570319118}
+  meal: {fileID: 489553719}
 --- !u!1 &1518103386
 GameObject:
   m_ObjectHideFlags: 0
@@ -34592,6 +34611,7 @@ MonoBehaviour:
   shelves: {fileID: 1515890276}
   num: 8
   thisCamera: {fileID: 1157589295}
+  image: {fileID: 1570319119}
 --- !u!114 &1570319119
 MonoBehaviour:
   m_ObjectHideFlags: 0

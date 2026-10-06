@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.UI;
 
 public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHandler, IEndDragHandler
 {
@@ -13,11 +14,25 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
     private GameObject connectedMeal;
     private float objectDepth;
 
+    public Image image;
+
+    public void MealSpawned(GameObject connectedMeal)
+    {
+        image.rectTransform.position = thisCamera.WorldToScreenPoint(connectedMeal.transform.position);
+        image.enabled = true;
+        this.connectedMeal = connectedMeal;
+    }
+
+    public void MealDespawned()
+    {
+        connectedMeal = null;
+        image.enabled = false;
+    }
+
     public void OnBeginDrag(PointerEventData eventData)
     {
         beforePosition = eventData.position;
 
-        connectedMeal = shelves.GetObjectAtIndex(num);
         if(connectedMeal == null)
         {
             return;
@@ -60,6 +75,7 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
                 if (dropOff.DropOff(shelves.GetRecipeAtIndex(num)))
                 {
                     shelves.RemoveFinishedMeal(num);
+                    connectedMeal = null;
                 }
                 else
                 {
@@ -69,12 +85,12 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
             if(objectUnder.TryGetComponent(out TrashCan trashCan))
             {
                 shelves.RemoveFinishedMeal(num);
+                connectedMeal = null;
             }
             else
             {
                 shelves.UpdatePositions();
             }
         }
-        connectedMeal = null;
     }
 }
