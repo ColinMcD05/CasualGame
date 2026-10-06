@@ -8,6 +8,7 @@ public class CustomersManager : MonoBehaviour
     [SerializeField] private Transform[] orderPositions;
     [SerializeField] private Transform[] waitingPositions;
     [SerializeField] private TextMeshProUGUI orderText;
+    [SerializeField] private TextMeshProUGUI dropoffText;
 
     List<CustomerOrder> needToTake = new();
     List<CustomerOrder> alreadyTaken = new();
@@ -18,10 +19,10 @@ public class CustomersManager : MonoBehaviour
 
     public void Start()
     {
-        InvokeRepeating("AddNewCustomer", 1, Random.Range(8, 15));
+        InvokeRepeating("AddNewCustomer", 0.5f, Random.Range(8, 15));
     }
 
-    public void TakeOrder()
+    public void TakeOrder(bool first)
     {
         if (canTakeOrder)
         {
@@ -31,6 +32,12 @@ public class CustomersManager : MonoBehaviour
 
             Invoke("OrderTaken", 2f);
         }
+        if(first)
+        {
+            dropoffText.enabled = true;
+        }
+
+        Invoke("OrderTaken", 2f);
     }
 
     public void OrderTaken()
@@ -51,6 +58,11 @@ public class CustomersManager : MonoBehaviour
     public void OrderGiven(Recipe recipe)
     {
         alreadyTaken[0].TakeMeal(recipe);
+
+        if(dropoffText.enabled)
+        {
+            dropoffText.enabled = false;
+        }
 
         Invoke("RemoveCustomer", 2);
     }

@@ -1,11 +1,18 @@
+using TMPro;
 using UnityEngine;
-using UnityEngine.InputSystem.Composites;
 using UnityEngine.UI;
 
 public class TakeOrder : MonoBehaviour
 {
     public CustomersManager customersManager;
     public Button button;
+    public TextMeshProUGUI text;
+
+    void Start()
+    {
+        Invoke("ShowText", 0.5f);
+    }
+
     void Update()
     {
         if (!button.enabled && customersManager.GetNeedToTakeCount() > 0)
@@ -22,7 +29,21 @@ public class TakeOrder : MonoBehaviour
     {
         if (customersManager.CheckCustomersToOrder())
         {
-            customersManager.TakeOrder();
+            
+            if(text.enabled)
+            {
+                text.enabled = false;
+                customersManager.TakeOrder(true);
+            }
+            else
+            {
+                customersManager.TakeOrder(true);
+            }
         }
+    }
+
+    public void ShowText()
+    {
+        text.enabled = true;
     }
 }
