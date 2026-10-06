@@ -14,6 +14,8 @@ public class CustomersManager : MonoBehaviour
 
     [SerializeField] private GameObject[] customerPrefabs;
 
+    bool canTakeOrder = true;
+
     public void Start()
     {
         InvokeRepeating("AddNewCustomer", 1, Random.Range(8, 15));
@@ -21,10 +23,14 @@ public class CustomersManager : MonoBehaviour
 
     public void TakeOrder()
     {
-        alreadyTaken.Add(needToTake[0]);
-        orderText.text = needToTake[0].GetOrder().recipeName;
+        if (canTakeOrder)
+        {
+            alreadyTaken.Add(needToTake[0]);
+            orderText.text = needToTake[0].GetOrder().recipeName;
+            canTakeOrder = false;
 
-        Invoke("OrderTaken", 2f);
+            Invoke("OrderTaken", 2f);
+        }
     }
 
     public void OrderTaken()
@@ -38,6 +44,8 @@ public class CustomersManager : MonoBehaviour
         {
             needToTake[i].transform.position = orderPositions[i].position;
         }
+
+        canTakeOrder = true;
     }
 
     public void OrderGiven(Recipe recipe)
