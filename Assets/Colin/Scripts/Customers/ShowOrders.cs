@@ -21,7 +21,7 @@ public class ShowOrders : MonoBehaviour
                 groups[i].alpha = 1;
                 Recipe recipe = customersManager.GetRecipeByIndex(i);
                 TextMeshProUGUI[] text = groups[i].GetComponentsInChildren<TextMeshProUGUI>();
-                text[i].text = recipe.recipeName;
+                text[0].text = recipe.recipeName;
                 for(int j = 1; j < text.Length; j++)
                 {
                     if (j - 1 < recipe.ingredients.Length)

@@ -30,14 +30,13 @@ public class CustomersManager : MonoBehaviour
             orderText.text = needToTake[0].GetOrder().recipeName;
             canTakeOrder = false;
 
+            if (first)
+            {
+                dropoffText.enabled = true;
+            }
+
             Invoke("OrderTaken", 2f);
         }
-        if(first)
-        {
-            dropoffText.enabled = true;
-        }
-
-        Invoke("OrderTaken", 2f);
     }
 
     public void OrderTaken()
