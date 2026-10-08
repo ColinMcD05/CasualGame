@@ -4160,6 +4160,24 @@ MonoBehaviour:
     - {fileID: 7931600601095130950, guid: 985d7cdf9e27dcd40b06b58ab94ce4ce, type: 3}
     - {fileID: 7931600601095130950, guid: c80b00c1440da0249a23d6ecf0783a6a, type: 3}
     mealPrefab: {fileID: 8667204518530093240, guid: 73379ca0cf6402e408d9174b88a91ce7, type: 3}
+  - recipeName: Blooming Onion
+    ingredients:
+    - {fileID: 7931600601095130950, guid: c80b00c1440da0249a23d6ecf0783a6a, type: 3}
+    - {fileID: 7931600601095130950, guid: 3acf9339069feee489862025218dfe8f, type: 3}
+    - {fileID: 7931600601095130950, guid: 2f32f11ee13eca741bf786f81e89fae9, type: 3}
+    - {fileID: 7931600601095130950, guid: 98b1ab39b1acb31448901da88d32a316, type: 3}
+    - {fileID: 7931600601095130950, guid: 5664773cf0063404f837d8c9efdce9b7, type: 3}
+    mealPrefab: {fileID: 8667204518530093240, guid: 186ff632987a8a74cb3aac31f176b22a, type: 3}
+  - recipeName: Winter Salad
+    ingredients:
+    - {fileID: 7931600601095130950, guid: c61315d9167dd734b93c63474f7e84cf, type: 3}
+    - {fileID: 7931600601095130950, guid: 9a30df872d1654b42baad216bdc1346f, type: 3}
+    - {fileID: 7931600601095130950, guid: 63a0619c9f564da4a93bec5d0579eb46, type: 3}
+    - {fileID: 7931600601095130950, guid: 3958d929d0bc5204dbe48355a0054167, type: 3}
+    - {fileID: 7931600601095130950, guid: a103dcb2337cd68488e88100e2ed4cf3, type: 3}
+    - {fileID: 7931600601095130950, guid: 1f055089d3277ec49945480eabdd5e96, type: 3}
+    - {fileID: 7931600601095130950, guid: 7bebda7102849ca40ae708b9d67b3a1d, type: 3}
+    mealPrefab: {fileID: 8667204518530093240, guid: 7650c887a8e1ba9429107da80fbc3f0f, type: 3}
 --- !u!4 &793994009
 Transform:
   m_ObjectHideFlags: 0
