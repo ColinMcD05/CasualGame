@@ -30,7 +30,8 @@ public class Shelves : MonoBehaviour
 			newMeal = new Recipe();
 			newMeal.recipeName = "Bad Meal";
 			newMeal.mealPrefab = badMeal;
-		}
+
+        }
 
         finishedMeals.Add(newMeal);
         UpdatePositions();

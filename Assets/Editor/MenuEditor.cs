@@ -7,6 +7,7 @@ public class MenuEditor : Editor
 {
     private string recipeName;
     private List<GameObject> ingredients = new();
+    private int stirAmount;
     private GameObject finishedDish;
     SerializedProperty recipeList;
     Vector2 scrollPosition;
@@ -66,6 +67,8 @@ public class MenuEditor : Editor
             }
         }
 
+        stirAmount = EditorGUILayout.IntField("Amount to stir", stirAmount);
+
         finishedDish = (GameObject)EditorGUILayout.ObjectField($"Finished Dish", finishedDish, typeof(GameObject), false);
         if(finishedDish && !finishedDish.GetComponent<FinishedMeal>())
         {
@@ -75,6 +78,10 @@ public class MenuEditor : Editor
         if (GUILayout.Button("Make Recipe"))
         {
             MakeRecipe();
+        }
+        if(GUILayout.Button("Add Stir Amount to Recipe"))
+        {
+            AddStirAmount();
         }
 
         serializedObject.ApplyModifiedProperties();
@@ -121,8 +128,13 @@ public class MenuEditor : Editor
 
         nameProperty.stringValue = recipeName;
 
+        SerializedProperty stirAmount = newRecipe.FindPropertyRelative("stirAmount");
+        stirAmount.intValue = this.stirAmount;
+
         recipeName = string.Empty;
         ingredients.Clear();
+        this.stirAmount = 0;
+        finishedDish = null;
     }
 
     public void ShowRecipe()
@@ -136,9 +148,12 @@ public class MenuEditor : Editor
 
             SerializedProperty ingredients = recipe.FindPropertyRelative("ingredients");
 
+            SerializedProperty stirAmount = recipe.FindPropertyRelative("stirAmount");
+
             EditorGUILayout.BeginHorizontal();
 
-            EditorGUILayout.LabelField(recipeName.stringValue);
+            EditorGUILayout.LabelField(recipeName.stringValue, GUILayout.Width(200));
+            EditorGUILayout.LabelField($"Stir amount: {stirAmount.intValue}", GUILayout.Width(300));
 
             if (GUILayout.Button("-"))
             {
@@ -164,5 +179,22 @@ public class MenuEditor : Editor
         }
 
         EditorGUILayout.EndScrollView();
+    }
+
+    public void AddStirAmount()
+    {
+        int menuLength = recipeList.arraySize;
+        for (int i = 0; i < menuLength; i++)
+        {
+            SerializedProperty foundRecipe = recipeList.GetArrayElementAtIndex(i);
+            SerializedProperty foundNameProperty = foundRecipe.FindPropertyRelative("recipeName");
+
+            if (foundNameProperty.stringValue == recipeName)
+            {
+                SerializedProperty stirAmount = foundRecipe.FindPropertyRelative("stirAmount");
+                stirAmount.intValue = this.stirAmount;
+                return;
+            }
+        }
     }
 }
