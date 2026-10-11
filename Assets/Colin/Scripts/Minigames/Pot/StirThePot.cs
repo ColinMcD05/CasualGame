@@ -1,3 +1,4 @@
+using UnityEditor.Animations;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -5,7 +6,8 @@ using UnityEngine.UIElements;
 public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     [SerializeField] Camera thisCamera;
-    [SerializeField] float rotationAmount = 2;
+    [SerializeField] Animation stirringAnimation;
+    [SerializeField] GameObject potObject;
     CookingPot pot;
 
     Vector2 center;
@@ -13,45 +15,73 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     float previousSlope;
     float angle = 0;
 
-    bool rotationDone = false;
-
     void Start()
     {
         pot = GetComponent<CookingPot>();
         center = transform.position;
-        print(center);
     }
 
     public void OnPointerDown(PointerEventData eventData) 
     {
         previousVector = eventData.position - center;
         previousVector = previousVector.normalized;
-        angle = 0;
+
+        if (stirringAnimation)
+        {
+            stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(previousVector));
+        }
     }
 
     public void OnDrag(PointerEventData eventData)
     {
-        if (rotationDone) return;
         Vector2 newVector = eventData.position - center;
         newVector = newVector.normalized;
 
         float addedAngle = Vector2.SignedAngle(newVector, previousVector);
 
-        angle += addedAngle;
-        previousVector = newVector;
-
-        if(angle/360 > rotationAmount)
+        if(addedAngle <= 0)
         {
-            pot.MakeMeal();
-            rotationDone = true;
+            addedAngle = Mathf.Abs(addedAngle);
+            angle += addedAngle;
+
+
+            if (angle >= 360)
+            {
+                angle = angle - 360;
+                pot.RotationComplete();
+            }
         }
 
-        print(angle);
+        if (stirringAnimation)
+        {
+            stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(newVector));
+        }
+
+        previousVector = newVector;
     }
 
     public void OnPointerUp(PointerEventData eventData)
     {
+        pot.StoppedStirring();
+    }
+
+    public void ResetPot()
+    {
         angle = 0;
-        rotationDone = false;
+    }
+
+    public float NextAnimationPosition(Vector2 position)
+    {
+        float angle = Vector2.SignedAngle(Vector2.right, position);
+        if(angle < 0)
+        {
+            angle = 360 - Mathf.Abs(angle);
+        }
+
+        float nextPosition = angle * stirringAnimation.clip.length;
+
+        nextPosition = nextPosition / 360;
+
+        return nextPosition;
     }
 }
