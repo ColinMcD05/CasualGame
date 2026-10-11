@@ -7,6 +7,7 @@ public class CustomerOrder : MonoBehaviour
 	private Recipe order;
 	private Shelves shelf;
 	private Image indicator;
+	[SerializeField] Sprite goodSprite, badSprite;
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
     private AudioSource giveOrderSource;
 
@@ -48,9 +49,10 @@ public class CustomerOrder : MonoBehaviour
 
 	public void GoodOrder()
 	{
-        Color newColor = Color.green;
+        Color newColor = Color.white;
         newColor.a = 1;
-        indicator.color = newColor;
+        indicator.sprite = goodSprite;
+		indicator.color = newColor;
 		giveOrderSource.PlayOneShot(correctOrderGiven);
 
 
@@ -59,9 +61,10 @@ public class CustomerOrder : MonoBehaviour
 
 	public void BadOrder()
 	{
-        Color newColor = Color.red;
+        Color newColor = Color.white;
         newColor.a = 1;
-        indicator.color = newColor;
+        indicator.sprite = badSprite;
+		indicator.color = newColor;
 		giveOrderSource.PlayOneShot(incorrectOrderGiven);
 
         Invoke("DisappearIndicator", 2);
