@@ -20,7 +20,9 @@ public class CustomerOrder : MonoBehaviour
 		}
 
 		indicator = GameObject.Find("Indicator").GetComponent<Image>();
-	}
+		giveOrderSource = gameObject.AddComponent<AudioSource>();
+
+    }
 
 	void Start()
 	{

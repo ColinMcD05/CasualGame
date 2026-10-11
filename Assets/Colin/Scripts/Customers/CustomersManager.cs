@@ -29,6 +29,7 @@ public class CustomersManager : MonoBehaviour
 
     public void TakeOrder(bool first)
     {
+        orderTakenSource.PlayOneShot(takeOrder);
         if (canTakeOrder)
         {
             alreadyTaken.Add(needToTake[0]);
@@ -46,8 +47,6 @@ public class CustomersManager : MonoBehaviour
 
     public void OrderTaken()
     {
-        orderTakenSource.PlayOneShot(takeOrder);
-
         needToTake[0].transform.position = waitingPositions[alreadyTaken.Count - 1].position;
         orderText.text = "";
 
