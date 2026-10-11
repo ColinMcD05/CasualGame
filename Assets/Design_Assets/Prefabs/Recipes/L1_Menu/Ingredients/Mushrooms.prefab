@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1324563970792568713}
   - component: {fileID: 7931600601095130950}
   m_Layer: 5
-  m_Name: Musrooms
+  m_Name: Mushrooms
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 4a94f99636eabc24a8f523898ac5e2e9, type: 3}
+  m_Sprite: {fileID: 21300000, guid: c606d1707441e494098e15094e16c92b, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -102,5 +102,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Mushrooms
-  sprite: {fileID: 21300000, guid: 4a94f99636eabc24a8f523898ac5e2e9, type: 3}
+  sprite: {fileID: 21300000, guid: c606d1707441e494098e15094e16c92b, type: 3}
   image: {fileID: 7506636115850831363}

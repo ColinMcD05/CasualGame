@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 02869434e368d554b8615c3048b82f51, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 126d01527d32c234c987a42e3cd64c49, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -102,5 +102,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Rice Paper
-  sprite: {fileID: 21300000, guid: 02869434e368d554b8615c3048b82f51, type: 3}
+  sprite: {fileID: 21300000, guid: 126d01527d32c234c987a42e3cd64c49, type: 3}
   image: {fileID: 7506636115850831363}
