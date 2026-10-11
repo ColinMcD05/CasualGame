@@ -10,6 +10,7 @@ public class IngredientContainers : MonoBehaviour
     InputAction touch;
     Camera cauldronCamera;
     GameObject hitObject;
+    [SerializeField] Transform movingObject;
     float dragDepth;
 
     Vector3 previousPosition;
@@ -76,10 +77,10 @@ public class IngredientContainers : MonoBehaviour
             float distance = previousPosition.z - toWorld.z;
             previousPosition = toWorld;
 
-            Vector3 newVector3 = hitObject.transform.localPosition - Vector3.forward * distance;
-            newVector3.z = Mathf.Clamp(newVector3.z, maxZValues.x, maxZValues.y);
+            Vector3 newVector3 = movingObject.localPosition + Vector3.right * distance/10;
+            newVector3.x = Mathf.Clamp(newVector3.x, maxZValues.x, maxZValues.y);
 
-            hitObject.transform.localPosition = newVector3;
+            movingObject.localPosition = newVector3;
             print(distance);
         }
     }
