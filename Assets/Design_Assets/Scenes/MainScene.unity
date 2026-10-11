@@ -14613,7 +14613,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8958088558779813876, guid: 985d7cdf9e27dcd40b06b58ab94ce4ce, type: 3}
       propertyPath: m_Name
-      value: Musrooms
+      value: Mushrooms
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
