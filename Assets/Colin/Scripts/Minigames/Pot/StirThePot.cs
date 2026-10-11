@@ -8,7 +8,9 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     [SerializeField] Camera thisCamera;
     [SerializeField] Animation stirringAnimation;
     [SerializeField] GameObject potObject;
+    [SerializeField] AudioClip stirringClip;
     CookingPot pot;
+    AudioSource source;
 
     Vector2 center;
     Vector2 previousVector;
@@ -19,6 +21,10 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     {
         pot = GetComponent<CookingPot>();
         center = transform.position;
+
+        source = gameObject.AddComponent<AudioSource>();
+        source.loop = true;
+        source.clip = stirringClip;
     }
 
     public void OnPointerDown(PointerEventData eventData) 
@@ -30,6 +36,7 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         {
             stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(previousVector));
         }
+        source.Play();
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -47,9 +54,19 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
 
             if (angle >= 360)
             {
+
                 angle = angle - 360;
                 pot.RotationComplete();
             }
+            
+            if (!source.isPlaying)
+            {
+                source.UnPause();
+            }
+        }
+        else
+        {
+            source.Pause();
         }
 
         if (stirringAnimation)
@@ -63,6 +80,7 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     public void OnPointerUp(PointerEventData eventData)
     {
         pot.StoppedStirring();
+        source.Stop();
     }
 
     public void ResetPot()

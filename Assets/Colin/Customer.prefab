@@ -127,3 +127,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6478c96fc136d3d40acd4b78db798632, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerOrder
+  correctOrderGiven: {fileID: 8300000, guid: d5dadbaa02f7c68469aac74e82d84fa5, type: 3}
+  incorrectOrderGiven: {fileID: 8300000, guid: 7f79cd773284edb4eafdedcb827d8f15, type: 3}

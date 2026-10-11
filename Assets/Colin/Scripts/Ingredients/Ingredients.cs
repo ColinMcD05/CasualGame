@@ -12,6 +12,7 @@ public class Ingredients : MonoBehaviour
     //References
     [Header("References")]
     [SerializeField]Image image;
+
     #region Getters
     //Getters
     public string GetIngredientName()

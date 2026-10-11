@@ -6,10 +6,12 @@ public class CustomerOrder : MonoBehaviour
 	private Menu menu;
 	private Recipe order;
 	private Shelves shelf;
-
 	private Image indicator;
+	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
+    private AudioSource giveOrderSource;
 
-	void Awake()
+
+    void Awake()
 	{
 		menu = GameObject.FindFirstObjectByType<Menu>();
 		if(menu)
@@ -47,8 +49,10 @@ public class CustomerOrder : MonoBehaviour
         Color newColor = Color.green;
         newColor.a = 1;
         indicator.color = newColor;
+		giveOrderSource.PlayOneShot(correctOrderGiven);
 
-		Invoke("DisappearIndicator", 2);
+
+        Invoke("DisappearIndicator", 2);
     }
 
 	public void BadOrder()
@@ -56,6 +60,7 @@ public class CustomerOrder : MonoBehaviour
         Color newColor = Color.red;
         newColor.a = 1;
         indicator.color = newColor;
+		giveOrderSource.PlayOneShot(incorrectOrderGiven);
 
         Invoke("DisappearIndicator", 2);
     }

@@ -14,12 +14,17 @@ public class CustomersManager : MonoBehaviour
     List<CustomerOrder> alreadyTaken = new();
 
     [SerializeField] private GameObject[] customerPrefabs;
+    [SerializeField] AudioClip newCustomerClip, takeOrder;
+    AudioSource newCustomerSource, orderTakenSource;
 
     bool canTakeOrder = true;
 
     public void Start()
     {
         InvokeRepeating("AddNewCustomer", 0.5f, Random.Range(8, 15));
+
+        newCustomerSource = gameObject.AddComponent<AudioSource>();
+        orderTakenSource = gameObject.AddComponent<AudioSource>();
     }
 
     public void TakeOrder(bool first)
@@ -41,6 +46,8 @@ public class CustomersManager : MonoBehaviour
 
     public void OrderTaken()
     {
+        orderTakenSource.PlayOneShot(takeOrder);
+
         needToTake[0].transform.position = waitingPositions[alreadyTaken.Count - 1].position;
         orderText.text = "";
 
@@ -101,6 +108,8 @@ public class CustomersManager : MonoBehaviour
             int randomIndex = Random.Range(0, customerPrefabs.Length);
             GameObject newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
             newCustomer.transform.position = orderPositions[needToTake.Count].position;
+
+            newCustomerSource.PlayOneShot(newCustomerClip);
 
             needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
         }

@@ -12,12 +12,19 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     Menu currentMenu;
     Shelves shelf;
     int rotations;
-
-
+    AudioSource creationSource, ambienceSource;
+    [SerializeField] AudioClip goodClip, badClip, ambienceClip;
+    
     public TextMeshProUGUI text;
 
     void Awake()
     {
+        ambienceSource = gameObject.AddComponent<AudioSource>();
+        creationSource = gameObject.AddComponent<AudioSource>();
+
+        ambienceSource.clip = ambienceClip;
+        ambienceSource.loop = true;
+
         currentMenu = GameObject.FindFirstObjectByType<Menu>();
         shelf = GameObject.FindFirstObjectByType<Shelves>();
         SetRotation(0);
@@ -41,12 +48,14 @@ public class CookingPot : MonoBehaviour, IDroppedOn
                 shelf.AddFinishedMeal(null, badMeal);
                 ShowText("Bad Meal");
                 Debug.Log("Bad Meal");
+                creationSource.PlayOneShot(badClip);
             }
             else
             {
                 shelf.AddFinishedMeal(recipe);
                 ShowText(recipe.recipeName);
                 Debug.Log(recipe.recipeName);
+                creationSource.PlayOneShot(goodClip);
             }
             Invoke("TextDisappear", 2);
         }

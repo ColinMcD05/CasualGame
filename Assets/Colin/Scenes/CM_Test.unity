@@ -5362,6 +5362,9 @@ MonoBehaviour:
   badMeal: {fileID: 4418723042623423121, guid: 558a5ba91ccdc9d4e8e577c5aa3a1157, type: 3}
   stir: {fileID: 148694788}
   rotationNumber: {fileID: 1169729972}
+  goodClip: {fileID: 8300000, guid: f8f2f2b88ded5a14298597d5a64b8225, type: 3}
+  badClip: {fileID: 8300000, guid: 4e374ea880aafcd41b3771df10e48d93, type: 3}
+  ambienceClip: {fileID: 8300000, guid: ed9799d6a68886248aa969646bf7ecdc, type: 3}
   text: {fileID: 186414108}
 --- !u!114 &148694788
 MonoBehaviour:
@@ -5378,6 +5381,7 @@ MonoBehaviour:
   thisCamera: {fileID: 878403165}
   stirringAnimation: {fileID: 1527099044}
   potObject: {fileID: 1527099041}
+  stirringClip: {fileID: 8300000, guid: b2e975867d8b83f46a252f265605a541, type: 3}
 --- !u!114 &148694789
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16454,6 +16458,8 @@ MonoBehaviour:
   dropoffText: {fileID: 1257213524}
   customerPrefabs:
   - {fileID: 3149795306523558028, guid: 9d3a066dacc9a58429c20342ab1466ae, type: 3}
+  newCustomerClip: {fileID: 8300000, guid: aff000be4558c47428949d337405e1be, type: 3}
+  takeOrder: {fileID: 8300000, guid: dd25c58d72212934898ed89857ff1a8f, type: 3}
 --- !u!4 &564474519
 Transform:
   m_ObjectHideFlags: 0
@@ -16830,9 +16836,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 569187036}
   m_Enabled: 1
-  m_Alpha: 0
-  m_Interactable: 0
-  m_BlocksRaycasts: 0
+  m_Alpha: 1
+  m_Interactable: 1
+  m_BlocksRaycasts: 1
   m_IgnoreParentGroups: 0
 --- !u!224 &569187038
 RectTransform:
@@ -26165,7 +26171,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 878403161}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -34000,7 +34006,7 @@ Camera:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157589291}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 1
   m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
@@ -51799,9 +51805,9 @@ CanvasGroup:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1756351122}
   m_Enabled: 1
-  m_Alpha: 1
-  m_Interactable: 1
-  m_BlocksRaycasts: 1
+  m_Alpha: 0
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
   m_IgnoreParentGroups: 0
 --- !u!1 &1756758189
 GameObject:
@@ -63114,7 +63120,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 97c89048cdefa7d498d20cb2ccf70ebc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientContainers
-  maxZValues: {x: -8.18, y: -0.58}
+  maxZValues: {x: -9.68, y: -0.58}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

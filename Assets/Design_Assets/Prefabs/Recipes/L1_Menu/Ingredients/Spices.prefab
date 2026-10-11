@@ -89,6 +89,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31754c4fe6b6f904ea934bb2e936ee0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::IngredientDragHandler
+  pickUpSound: {fileID: 8300000, guid: d7ca986f385b1064a8386e7ba2b479c5, type: 3}
+  dropSound: {fileID: 8300000, guid: d7ca986f385b1064a8386e7ba2b479c5, type: 3}
+  dropPotSound: {fileID: 8300000, guid: 705957e8db62f8e44aa3d884fd70e31a, type: 3}
 --- !u!114 &7931600601095130950
 MonoBehaviour:
   m_ObjectHideFlags: 0
