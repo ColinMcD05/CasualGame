@@ -31,6 +31,10 @@ public class ShowOrders : MonoBehaviour
                     {
                         text[j].text = "";
                     }
+                    if(j == text.Length - 1)
+                    {
+                        text[j].text = $"{recipe.stirAmount}";
+                    }
                 }
             }
             else
