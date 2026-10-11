@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
+using System.Collections.Generic;
 
 public class TitleScreen : MonoBehaviour
 {
@@ -14,34 +14,23 @@ public class TitleScreen : MonoBehaviour
     //called when start is pressed
     public void StartClicked()
     {
-        //title screen disappears
-        titleGroup.alpha = 0;
-        titleGroup.interactable = false;
-
         //go to main scene
-        //StartCoroutine(GoToScene(Scenes.Main));
-
-        showOrdersGroup.alpha = 1;
-        showOrdersGroup.interactable = true;
-
-        orderWindowGroup.alpha = 1;
-        orderWindowGroup.interactable = true;
+        GoToScene(Scenes.Main);
     }
 
-    /*
-        public IEnumerator GoToScene(Scenes scene)
+    public void GoToScene(Scenes scene)
     {
 
-
+        switch(scene)
+        { 
             case Scenes.Main:
-            SceneManager.LoadScene("MainScene");
-            break;
-        default:
-            Debug.Log("How did this happen?");
-            break;
+                SceneManager.LoadScene("MainScene");
+                break;
+            default:
+                Debug.Log("How did this happen?");
+                break;
 
         }
     }
-    */
 
 }
