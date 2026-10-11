@@ -7,9 +7,19 @@
             "id": "62b0972e-3d39-41dc-b6b2-5aa1cc4af69e",
             "actions": [
                 {
-                    "name": "Touch",
+                    "name": "Tracking",
                     "type": "Value",
                     "id": "6ab8358b-1e25-4fb4-8d36-efb05bd8ce7e",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true,
+                    "priority": 0
+                },
+                {
+                    "name": "Touch",
+                    "type": "Value",
+                    "id": "ff4335e1-b451-4f55-ae3e-6b71e9f32a67",
                     "expectedControlType": "Vector2",
                     "processors": "",
                     "interactions": "",
@@ -21,7 +31,18 @@
                 {
                     "name": "",
                     "id": "182fc9ab-8570-4a9b-a008-be689bc9b425",
-                    "path": "<Touchscreen>/position",
+                    "path": "<Touchscreen>/primaryTouch/position",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Tracking",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "a7ddb71d-4a88-4db9-8608-d7f41e29e248",
+                    "path": "<Touchscreen>/primaryTouch/startPosition",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

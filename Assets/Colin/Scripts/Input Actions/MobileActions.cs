@@ -93,9 +93,19 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
             ""id"": ""62b0972e-3d39-41dc-b6b2-5aa1cc4af69e"",
             ""actions"": [
                 {
-                    ""name"": ""Touch"",
+                    ""name"": ""Tracking"",
                     ""type"": ""Value"",
                     ""id"": ""6ab8358b-1e25-4fb4-8d36-efb05bd8ce7e"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true,
+                    ""priority"": 0
+                },
+                {
+                    ""name"": ""Touch"",
+                    ""type"": ""Value"",
+                    ""id"": ""ff4335e1-b451-4f55-ae3e-6b71e9f32a67"",
                     ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -107,7 +117,18 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""182fc9ab-8570-4a9b-a008-be689bc9b425"",
-                    ""path"": ""<Touchscreen>/position"",
+                    ""path"": ""<Touchscreen>/primaryTouch/position"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Tracking"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""a7ddb71d-4a88-4db9-8608-d7f41e29e248"",
+                    ""path"": ""<Touchscreen>/primaryTouch/startPosition"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -122,6 +143,7 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
 }");
         // MobileAction
         m_MobileAction = asset.FindActionMap("MobileAction", throwIfNotFound: true);
+        m_MobileAction_Tracking = m_MobileAction.FindAction("Tracking", throwIfNotFound: true);
         m_MobileAction_Touch = m_MobileAction.FindAction("Touch", throwIfNotFound: true);
     }
 
@@ -203,6 +225,7 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
     // MobileAction
     private readonly InputActionMap m_MobileAction;
     private List<IMobileActionActions> m_MobileActionActionsCallbackInterfaces = new List<IMobileActionActions>();
+    private readonly InputAction m_MobileAction_Tracking;
     private readonly InputAction m_MobileAction_Touch;
     /// <summary>
     /// Provides access to input actions defined in input action map "MobileAction".
@@ -215,6 +238,10 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
         /// Construct a new instance of the input action map wrapper class.
         /// </summary>
         public MobileActionActions(@MobileActions wrapper) { m_Wrapper = wrapper; }
+        /// <summary>
+        /// Provides access to the underlying input action "MobileAction/Tracking".
+        /// </summary>
+        public InputAction @Tracking => m_Wrapper.m_MobileAction_Tracking;
         /// <summary>
         /// Provides access to the underlying input action "MobileAction/Touch".
         /// </summary>
@@ -245,6 +272,9 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
         {
             if (instance == null || m_Wrapper.m_MobileActionActionsCallbackInterfaces.Contains(instance)) return;
             m_Wrapper.m_MobileActionActionsCallbackInterfaces.Add(instance);
+            @Tracking.started += instance.OnTracking;
+            @Tracking.performed += instance.OnTracking;
+            @Tracking.canceled += instance.OnTracking;
             @Touch.started += instance.OnTouch;
             @Touch.performed += instance.OnTouch;
             @Touch.canceled += instance.OnTouch;
@@ -259,6 +289,9 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
         /// <seealso cref="MobileActionActions" />
         private void UnregisterCallbacks(IMobileActionActions instance)
         {
+            @Tracking.started -= instance.OnTracking;
+            @Tracking.performed -= instance.OnTracking;
+            @Tracking.canceled -= instance.OnTracking;
             @Touch.started -= instance.OnTouch;
             @Touch.performed -= instance.OnTouch;
             @Touch.canceled -= instance.OnTouch;
@@ -302,6 +335,13 @@ public partial class @MobileActions: IInputActionCollection2, IDisposable
     /// <seealso cref="MobileActionActions.RemoveCallbacks(IMobileActionActions)" />
     public interface IMobileActionActions
     {
+        /// <summary>
+        /// Method invoked when associated input action "Tracking" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
+        /// </summary>
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.started" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.performed" />
+        /// <seealso cref="UnityEngine.InputSystem.InputAction.canceled" />
+        void OnTracking(InputAction.CallbackContext context);
         /// <summary>
         /// Method invoked when associated input action "Touch" is either <see cref="UnityEngine.InputSystem.InputAction.started" />, <see cref="UnityEngine.InputSystem.InputAction.performed" /> or <see cref="UnityEngine.InputSystem.InputAction.canceled" />.
         /// </summary>
