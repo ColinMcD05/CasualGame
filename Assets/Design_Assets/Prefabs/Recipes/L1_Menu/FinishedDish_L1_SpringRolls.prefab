@@ -301,6 +301,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: dish_L1_springrolls
       objectReference: {fileID: 0}
+    - target: {fileID: 1653051850873811219, guid: af2c13213e51b5a4c89236c639ce9e0a, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1653051850873811219, guid: af2c13213e51b5a4c89236c639ce9e0a, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dabc6bd1a9a8fb4889e4fb3f5a94c8d, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
