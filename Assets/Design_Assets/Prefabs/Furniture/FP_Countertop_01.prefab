@@ -65,6 +65,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 33e127a7facfab14b8d996ed189dc2bb, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 33e127a7facfab14b8d996ed189dc2bb, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 590190378abb9134ca3016419062dbc8, type: 2}
@@ -72,6 +76,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 37c424b763bed8249b75679dd3496fb0, type: 2}
+    - target: {fileID: -7511558181221131132, guid: 33e127a7facfab14b8d996ed189dc2bb, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 15924ad86dd5e2e4f83fcbedae98dfe6, type: 2}
     - target: {fileID: 919132149155446097, guid: 33e127a7facfab14b8d996ed189dc2bb, type: 3}
       propertyPath: m_Name
       value: FP_Countertop_01
