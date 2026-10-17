@@ -7,6 +7,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Recipe[] menu;
+    //[SerializeField] private Recipe bossRecipe;
 
     public Recipe CompareMenu(List<Ingredients> ingredients)
     {

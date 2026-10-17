@@ -8,4 +8,5 @@ public class Recipe
     public Ingredients[] ingredients;
     public int stirAmount;
     public GameObject mealPrefab;
+    public bool isBossRecipe = false;
 }

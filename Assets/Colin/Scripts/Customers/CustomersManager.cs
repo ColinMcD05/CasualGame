@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class CustomersManager : MonoBehaviour
 {
-    [SerializeField] private int customerLimit;
+    [SerializeField] private int customerLimit = 1;
+    [SerializeField] private int maxCustomersToday = 1;
     [SerializeField] private Transform[] orderPositions;
     [SerializeField] private Transform[] waitingPositions;
     [SerializeField] private TextMeshProUGUI orderText;
@@ -17,21 +18,37 @@ public class CustomersManager : MonoBehaviour
     [SerializeField] AudioClip newCustomerClip, takeOrder;
     AudioSource newCustomerSource, orderTakenSource;
 
+    int satisfiedCustomers;
+    int unsatisfiedCustomers;
+    int mehCustomers;
+
     bool canTakeOrder = true;
+
+    [SerializeField] DayManager dayManager;
 
     public void Start()
     {
-        InvokeRepeating("AddNewCustomer", 0.5f, Random.Range(8, 15));
-
         newCustomerSource = gameObject.AddComponent<AudioSource>();
         orderTakenSource = gameObject.AddComponent<AudioSource>();
+
+        StartDay();
     }
 
-    public void TakeOrder(bool first)
+    public void StartDay()
+    {
+        InvokeRepeating("AddNewCustomer", 1.2f, Random.Range(8, 15));
+
+        satisfiedCustomers = 0;
+        unsatisfiedCustomers = 0;
+        mehCustomers = 0;
+    }
+
+    public void TakeOrder(bool first = false)
     {
         orderTakenSource.PlayOneShot(takeOrder);
         if (canTakeOrder)
         {
+            needToTake[0].StartCoroutine("IncreaseWaitTimer");
             alreadyTaken.Add(needToTake[0]);
             orderText.text = needToTake[0].GetOrder().recipeName;
             canTakeOrder = false;
@@ -62,13 +79,27 @@ public class CustomersManager : MonoBehaviour
 
     public void OrderGiven(Recipe recipe)
     {
-        alreadyTaken[0].TakeMeal(recipe);
+        CustomerSatisfaction wasGood = alreadyTaken[0].TakeMeal(recipe);
 
-        if(dropoffText.enabled)
+        switch (wasGood)
+        {
+            case CustomerSatisfaction.Satisfied:
+                satisfiedCustomers++;
+                break;
+            case CustomerSatisfaction.Meh:
+                mehCustomers++;
+                break;
+            case CustomerSatisfaction.Unsatisfied:
+                unsatisfiedCustomers++;
+                break;
+        }
+
+        if (dropoffText.enabled)
         {
             dropoffText.enabled = false;
         }
 
+        CheckDayEnd();
         Invoke("RemoveCustomer", 2);
     }
 
@@ -102,7 +133,7 @@ public class CustomersManager : MonoBehaviour
 
     public void AddNewCustomer()
     {
-        if (needToTake.Count + alreadyTaken.Count < customerLimit)
+        if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers < maxCustomersToday && alreadyTaken.Count + needToTake.Count < customerLimit)
         {
             int randomIndex = Random.Range(0, customerPrefabs.Length);
             GameObject newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
@@ -131,5 +162,15 @@ public class CustomersManager : MonoBehaviour
             return null;
         }
         return alreadyTaken[index].GetOrder();
+    }
+
+    public void CheckDayEnd()
+    {
+        if(satisfiedCustomers + unsatisfiedCustomers + mehCustomers >= maxCustomersToday)
+        {
+            dayManager.FinishDay(satisfiedCustomers, unsatisfiedCustomers, mehCustomers);
+
+            CancelInvoke("AddNewCustomer");
+        }
     }
 }

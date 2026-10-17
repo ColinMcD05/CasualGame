@@ -2,7 +2,11 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    [SerializeField] GameObject enemyPrefabs;
+    [SerializeField] GameObject[] enemyPrefabs;
+    
 
+    void SpawnEnemy()
+    {
 
+    }
 }
