@@ -65,9 +65,17 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: af6d08af0bbbe2b48b7282d7c55593a8, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: af6d08af0bbbe2b48b7282d7c55593a8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 767ba7291c833f14f9ae38e89c6b75e5, type: 2}
+    - target: {fileID: -7511558181221131132, guid: af6d08af0bbbe2b48b7282d7c55593a8, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 9dabc6bd1a9a8fb4889e4fb3f5a94c8d, type: 2}
     - target: {fileID: 919132149155446097, guid: af6d08af0bbbe2b48b7282d7c55593a8, type: 3}
       propertyPath: m_Name
       value: L2_Bowl

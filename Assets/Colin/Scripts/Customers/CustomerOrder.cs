@@ -1,8 +1,10 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
 public class CustomerOrder : MonoBehaviour
 {
+	public bool boss;
 	private Menu menu;
 	private Recipe order;
 	private Shelves shelf;
@@ -11,18 +13,17 @@ public class CustomerOrder : MonoBehaviour
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
     private AudioSource giveOrderSource;
 
+	[SerializeField] float ehTime = 30, madTime = 60;
+
+	private float waitTimer = 0;
+
 
     void Awake()
 	{
 		menu = GameObject.FindFirstObjectByType<Menu>();
-		if(menu)
-		{
-			order = menu.GetRandomRecipe();
-		}
 
 		indicator = GameObject.Find("Indicator").GetComponent<Image>();
 		giveOrderSource = gameObject.AddComponent<AudioSource>();
-
     }
 
 	void Start()
@@ -30,16 +31,28 @@ public class CustomerOrder : MonoBehaviour
 		order = menu.GetRandomRecipe();
 	}
 
-	public void TakeMeal(Recipe meal)
+    public CustomerSatisfaction TakeMeal(Recipe meal)
 	{
-		if(meal == null || meal.recipeName != order.recipeName)
+		if(meal == null || meal.recipeName != order.recipeName || waitTimer > madTime)
 		{
 			BadOrder();
+			return CustomerSatisfaction.Unsatisfied;
         }
-		if(meal.recipeName == order.recipeName)
+		else if(waitTimer > ehTime)
+		{
+            GoodOrder();
+            return CustomerSatisfaction.Meh;
+		}
+		else
 		{
 			GoodOrder();
-        }
+			return CustomerSatisfaction.Satisfied;
+		}
+	}
+
+	public void SetOrder()
+	{
+		menu.GetRandomRecipe();
 	}
 
 	public Recipe GetOrder()
@@ -75,5 +88,14 @@ public class CustomerOrder : MonoBehaviour
 		Color newColor = Color.white;
 		newColor.a = 0;
 		indicator.color = newColor;
+	}
+
+	public IEnumerator IncreaseWaitTimer()
+	{
+		while(waitTimer <= madTime)
+		{
+			waitTimer += Time.deltaTime;
+			yield return null;
+		}
 	}
 }

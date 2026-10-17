@@ -37,7 +37,7 @@ public class TakeOrder : MonoBehaviour
             }
             else
             {
-                customersManager.TakeOrder(true);
+                customersManager.TakeOrder();
             }
         }
     }
