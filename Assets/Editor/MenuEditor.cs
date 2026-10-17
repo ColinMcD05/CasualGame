@@ -8,14 +8,17 @@ public class MenuEditor : Editor
     private string recipeName;
     private List<GameObject> ingredients = new();
     private int stirAmount;
+    private bool isBossDish;
     private GameObject finishedDish;
     SerializedProperty recipeList;
+    SerializedProperty bossRecipe;
     Vector2 scrollPosition;
     bool recipeInAlready;
 
     private void OnEnable()
     {
         recipeList = serializedObject.FindProperty("menu");
+        bossRecipe = serializedObject.FindProperty("bossRecipe");
     }
 
     public override void OnInspectorGUI()
@@ -79,7 +82,7 @@ public class MenuEditor : Editor
         {
             MakeRecipe();
         }
-        if(GUILayout.Button("Add Stir Amount to Recipe"))
+        if (GUILayout.Button("Add Stir Amount to Recipe"))
         {
             AddStirAmount();
         }
@@ -152,10 +155,29 @@ public class MenuEditor : Editor
 
             EditorGUILayout.BeginHorizontal();
 
-            EditorGUILayout.LabelField(recipeName.stringValue, GUILayout.Width(200));
-            EditorGUILayout.LabelField($"Stir amount: {stirAmount.intValue}", GUILayout.Width(300));
+            EditorGUILayout.LabelField(recipeName.stringValue, GUILayout.Width(100));
+            EditorGUILayout.LabelField($"Stir amount: {stirAmount.intValue}", GUILayout.Width(100));
 
-            if (GUILayout.Button("-"))
+            /*
+            if(bossRecipe.objectReferenceValue == null)
+            {
+                if (GUILayout.Button("Make Boss Recipe", GUILayout.Width(125)))
+                {
+                    SwapRecipe(ref bossRecipe, ref recipe);
+                }
+            }
+            else
+            {
+                if (GUILayout.Button("Replace Boss Recipe", GUILayout.Width(125)))
+                {
+                    SwapRecipe(ref bossRecipe, ref recipe, true);
+
+                    bossRecipe.objectReferenceValue = recipe.objectReferenceValue;
+                    recipeList.DeleteArrayElementAtIndex(i);
+                }
+            }*/
+
+            if (GUILayout.Button("-", GUILayout.Width(25)))
             {
                 recipeList.DeleteArrayElementAtIndex(i);
                 recipeList.serializedObject.ApplyModifiedProperties();
@@ -181,6 +203,14 @@ public class MenuEditor : Editor
         EditorGUILayout.EndScrollView();
     }
 
+    public void ShowBossRecipe()
+    {
+        if(bossRecipe.objectReferenceValue == null)
+        {
+            EditorGUILayout.LabelField("Boss Recipe:");
+        }
+    }
+
     public void AddStirAmount()
     {
         int menuLength = recipeList.arraySize;
@@ -196,5 +226,10 @@ public class MenuEditor : Editor
                 return;
             }
         }
+    }
+
+    public void SwapRecipe(ref SerializedProperty to, ref SerializedProperty from, bool fullSwap = false)
+    {
+
     }
 }
