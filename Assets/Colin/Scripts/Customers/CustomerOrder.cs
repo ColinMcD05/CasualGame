@@ -9,7 +9,7 @@ public class CustomerOrder : MonoBehaviour
 	private Recipe order;
 	private Shelves shelf;
 	private Image indicator;
-	[SerializeField] Sprite goodSprite, badSprite;
+	[SerializeField] Sprite goodSprite, badSprite, mehSprite;
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
     private AudioSource giveOrderSource;
 
@@ -81,7 +81,7 @@ public class CustomerOrder : MonoBehaviour
 	{
         Color newColor = Color.white;
         newColor.a = 1;
-        indicator.sprite = goodSprite;
+        indicator.sprite = mehSprite;
         indicator.color = newColor;
         giveOrderSource.PlayOneShot(correctOrderGiven);
 

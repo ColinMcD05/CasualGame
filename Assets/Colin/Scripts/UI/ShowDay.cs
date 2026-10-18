@@ -18,8 +18,8 @@ public class ShowDay : MonoBehaviour
 
         day.text = $"Day: {currentDay}";
         unsatisfied.text = $"Unhappy: {unsatisifedAmount}";
-        satisfied.text = $"Ok: {satisfiedAmount}";
-        meh.text = $"Unhappy: {mehAmount}";
+        satisfied.text = $"Happy: {satisfiedAmount}";
+        meh.text = $"Ok: {mehAmount}";
     }
 
     public void HideDay()
