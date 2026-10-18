@@ -31,9 +31,13 @@ public class ShowOrders : MonoBehaviour
                     {
                         text[j].text = "";
                     }
-                    if(j == text.Length - 1)
+                    if(j == text.Length - 2)
                     {
                         text[j].text = $"{recipe.stirAmount}";
+                    }
+                    if(j == text.Length - 1)
+                    {
+                        text[j].text = $"Mix";
                     }
                 }
             }

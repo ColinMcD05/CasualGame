@@ -28,7 +28,7 @@ public class CustomersManager : MonoBehaviour
 
     bool canTakeOrder = true;
 
-    int baseThreeStars, baseTwoStars, baseOneStar;
+    [SerializeField] float baseThreeStars=0.75f, baseTwoStars=0.5f, baseOneStar=0.30f;
 
     [SerializeField] DayManager dayManager;
 
@@ -42,7 +42,12 @@ public class CustomersManager : MonoBehaviour
 
     public void StartDay()
     {
-        Invoke("AddNewCustomer", Random.Range(10, 15));
+        if(dayManager.GetCurrentDay() % 5 == 0)
+        {
+            maxCustomersToday++;
+        }
+
+        Invoke("AddNewCustomer", 1.2f);
 
         satisfiedCustomers = 0;
         unsatisfiedCustomers = 0;
@@ -147,7 +152,7 @@ public class CustomersManager : MonoBehaviour
 
     public void AddNewCustomer()
     {
-        if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers < maxCustomersToday && alreadyTaken.Count + needToTake.Count < customerLimit)
+        if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday && alreadyTaken.Count + needToTake.Count < customerLimit)
         {
             int randomIndex = Random.Range(0, customerPrefabs.Length);
             GameObject newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
@@ -192,7 +197,8 @@ public class CustomersManager : MonoBehaviour
 
     int CalculateStars()
     {
-        float percentage = maxPoints / points;
+        float percentage = (float)points / maxPoints;
+        print(percentage);
 
         if(percentage >= Mathf.Clamp(baseThreeStars + (dayManager.GetCurrentDay() * 0.075f), baseThreeStars, 0.875f))
         {
@@ -202,7 +208,7 @@ public class CustomersManager : MonoBehaviour
         {
             return 2;
         }
-        else if(percentage >= Mathf.Clamp(baseThreeStars + (dayManager.GetCurrentDay() * 0.052f), baseThreeStars, 0.5f))
+        else if(percentage >= Mathf.Clamp(baseOneStar + (dayManager.GetCurrentDay() * 0.052f), baseOneStar, 0.5f))
         {
             return 1;
         }
