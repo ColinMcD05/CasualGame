@@ -33,15 +33,20 @@ public class CustomerOrder : MonoBehaviour
 
     public CustomerSatisfaction TakeMeal(Recipe meal)
 	{
-		if(meal == null || meal.recipeName != order.recipeName || waitTimer > madTime)
+		if(meal == null || meal.recipeName != order.recipeName)
 		{
 			BadOrder();
 			return CustomerSatisfaction.Unsatisfied;
         }
-		else if(waitTimer > ehTime)
+		else if (waitTimer > madTime)
 		{
-            GoodOrder();
-            return CustomerSatisfaction.Meh;
+			BadOrder();
+			return CustomerSatisfaction.Mad;
+		}
+		else if (waitTimer > ehTime)
+		{
+			MehOrder();
+			return CustomerSatisfaction.Meh;
 		}
 		else
 		{
@@ -67,6 +72,18 @@ public class CustomerOrder : MonoBehaviour
         indicator.sprite = goodSprite;
 		indicator.color = newColor;
 		giveOrderSource.PlayOneShot(correctOrderGiven);
+
+
+        Invoke("DisappearIndicator", 2);
+    }
+
+	public void MehOrder()
+	{
+        Color newColor = Color.white;
+        newColor.a = 1;
+        indicator.sprite = goodSprite;
+        indicator.color = newColor;
+        giveOrderSource.PlayOneShot(correctOrderGiven);
 
 
         Invoke("DisappearIndicator", 2);
