@@ -15,6 +15,7 @@ public class CustomersManager : MonoBehaviour
     List<CustomerOrder> alreadyTaken = new();
 
     [SerializeField] private GameObject[] customerPrefabs;
+    [SerializeField] private GameObject bossPrefab;
     [SerializeField] AudioClip newCustomerClip, takeOrder;
     AudioSource newCustomerSource, orderTakenSource;
 
@@ -154,24 +155,28 @@ public class CustomersManager : MonoBehaviour
     {
         if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday && alreadyTaken.Count + needToTake.Count < customerLimit)
         {
-            int randomIndex = Random.Range(0, customerPrefabs.Length);
-            GameObject newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
-            newCustomer.transform.position = orderPositions[needToTake.Count].position;
+            GameObject newCustomer = null;
 
-            newCustomerSource.PlayOneShot(newCustomerClip);
-
-            needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
-
-            print((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count) % maxCustomersToday);
-
-            if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count) % maxCustomersToday == 0)
+            if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count + 1) % maxCustomersToday == 0)
             {
+                int randomIndex = Random.Range(0, customerPrefabs.Length);
+                newCustomer = Instantiate(bossPrefab, orderPositions[needToTake.Count]);
+                newCustomer.transform.position = orderPositions[needToTake.Count].position;
+
                 newCustomer.GetComponent<CustomerOrder>().SetOrder(true);
             }
             else
             {
+                int randomIndex = Random.Range(0, customerPrefabs.Length);
+                newCustomer = Instantiate(customerPrefabs[randomIndex], orderPositions[needToTake.Count]);
+                newCustomer.transform.position = orderPositions[needToTake.Count].position;
+
                 newCustomer.GetComponent<CustomerOrder>().SetOrder();
             }
+
+            newCustomerSource.PlayOneShot(newCustomerClip);
+
+            needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
 
             Invoke("AddNewCustomer", Random.Range(10, 15));
         }

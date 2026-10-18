@@ -1,0 +1,103 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5042055466269613063
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 122.41619
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.84
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -151.1869
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 180
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -8679921383154817045, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      propertyPath: m_Name
+      value: L1_Boss
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 6633045778859305958}
+  m_SourcePrefab: {fileID: 100100000, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+--- !u!1 &5276410523676320086 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 73406a3c0f19f6343a94534d870f709f, type: 3}
+  m_PrefabInstance: {fileID: 5042055466269613063}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &6633045778859305958
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5276410523676320086}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6478c96fc136d3d40acd4b78db798632, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerOrder
+  boss: 1
+  goodSprite: {fileID: 21300000, guid: 493ea09463569c043bb636e9360e4fbd, type: 3}
+  badSprite: {fileID: 21300000, guid: b6d95c7b5e476a84cbc1b284c189d2e6, type: 3}
+  mehSprite: {fileID: 21300000, guid: caf9febf205ea1d4a8726f0b644bf66c, type: 3}
+  correctOrderGiven: {fileID: 8300000, guid: d5dadbaa02f7c68469aac74e82d84fa5, type: 3}
+  incorrectOrderGiven: {fileID: 8300000, guid: 7f79cd773284edb4eafdedcb827d8f15, type: 3}
+  ehTime: 30
+  madTime: 60

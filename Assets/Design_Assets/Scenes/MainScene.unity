@@ -17187,8 +17187,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7a891d4a5ecf54ebe8909feea367a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomersManager
-  customerLimit: 5
-  maxCustomersToday: 5
+  customerLimit: 1
+  maxCustomersToday: 1
   orderPositions:
   - {fileID: 1191936190}
   - {fileID: 198404715}
@@ -17205,6 +17205,7 @@ MonoBehaviour:
   dropoffText: {fileID: 1666703778}
   customerPrefabs:
   - {fileID: 3149795306523558028, guid: 9d3a066dacc9a58429c20342ab1466ae, type: 3}
+  bossPrefab: {fileID: 5276410523676320086, guid: 330b64c021bb500419debe9c296214d0, type: 3}
   newCustomerClip: {fileID: 8300000, guid: aff000be4558c47428949d337405e1be, type: 3}
   takeOrder: {fileID: 8300000, guid: dd25c58d72212934898ed89857ff1a8f, type: 3}
   baseThreeStars: 0.75
@@ -55833,7 +55834,8 @@ MonoBehaviour:
     stirAmount: 4
     mealPrefab: {fileID: 8667204518530093240, guid: 186ff632987a8a74cb3aac31f176b22a, type: 3}
     isBossRecipe: 0
-  - recipeName: Winter Salad
+  bossRecipe:
+    recipeName: Winter Salad
     ingredients:
     - {fileID: 7931600601095130950, guid: c61315d9167dd734b93c63474f7e84cf, type: 3}
     - {fileID: 7931600601095130950, guid: 9a30df872d1654b42baad216bdc1346f, type: 3}
