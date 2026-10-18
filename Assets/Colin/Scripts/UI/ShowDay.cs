@@ -17,9 +17,9 @@ public class ShowDay : MonoBehaviour
         showDayEndGroup.interactable = true;
 
         day.text = $"Day: {currentDay}";
-        unsatisfied.text = $"Unsatisfied: {unsatisifedAmount}";
-        satisfied.text = $"Satisfied: {satisfiedAmount}";
-        meh.text = $"Meh: {mehAmount}";
+        unsatisfied.text = $"Unhappy: {unsatisifedAmount}";
+        satisfied.text = $"Ok: {satisfiedAmount}";
+        meh.text = $"Unhappy: {mehAmount}";
     }
 
     public void HideDay()

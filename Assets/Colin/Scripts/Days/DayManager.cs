@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
 public class DayManager : MonoBehaviour
@@ -8,6 +9,10 @@ public class DayManager : MonoBehaviour
     [SerializeField] CustomersManager customersManager;
 
     [SerializeField] TextMeshProUGUI dayText;
+
+    [SerializeField] Sprite fullStarSprite, noStarSprite;
+
+    [SerializeField] Image[] images;
     public void Start()
     {
         DayStarted();
@@ -38,9 +43,21 @@ public class DayManager : MonoBehaviour
         return currentDay;
     }
 
-    public void FinishDay(int satisfiedAmount, int unsatisifedAmount, int mehAmount)
+    public void FinishDay(int satisfiedAmount, int unsatisifedAmount, int mehAmount, int starAmount)
     {
         showDay.DisplayDayEnd(satisfiedAmount, unsatisifedAmount, mehAmount, currentDay);
         currentDay++;
+
+        for(int i = 0; i < images.Length; i++)
+        {
+            if(i <= starAmount-1)
+            {
+                images[i].sprite = fullStarSprite;
+            }
+            else
+            {
+                images[i].sprite = noStarSprite;
+            }
+        }
     }
 }

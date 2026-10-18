@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class CustomersManager : MonoBehaviour
 {
-    [SerializeField] private int customerLimit = 1;
-    [SerializeField] private int maxCustomersToday = 1;
+    [SerializeField] private int customerLimit = 5;
+    [SerializeField] private int maxCustomersToday = 5;
     [SerializeField] private Transform[] orderPositions;
     [SerializeField] private Transform[] waitingPositions;
     [SerializeField] private TextMeshProUGUI orderText;
@@ -21,8 +21,14 @@ public class CustomersManager : MonoBehaviour
     int satisfiedCustomers;
     int unsatisfiedCustomers;
     int mehCustomers;
+    int madCustomers;
+
+    int points;
+    int maxPoints;
 
     bool canTakeOrder = true;
+
+    int baseThreeStars, baseTwoStars, baseOneStar;
 
     [SerializeField] DayManager dayManager;
 
@@ -36,11 +42,13 @@ public class CustomersManager : MonoBehaviour
 
     public void StartDay()
     {
-        InvokeRepeating("AddNewCustomer", 1.2f, Random.Range(8, 15));
+        Invoke("AddNewCustomer", Random.Range(10, 15));
 
         satisfiedCustomers = 0;
         unsatisfiedCustomers = 0;
         mehCustomers = 0;
+
+        maxPoints = maxCustomersToday * 3;
     }
 
     public void TakeOrder(bool first = false)
@@ -92,7 +100,13 @@ public class CustomersManager : MonoBehaviour
             case CustomerSatisfaction.Unsatisfied:
                 unsatisfiedCustomers++;
                 break;
+            case CustomerSatisfaction.Mad:
+                madCustomers++;
+                unsatisfiedCustomers++;
+                break;
         }
+
+        points += ((int)wasGood);
 
         if (dropoffText.enabled)
         {
@@ -142,6 +156,8 @@ public class CustomersManager : MonoBehaviour
             newCustomerSource.PlayOneShot(newCustomerClip);
 
             needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
+
+            Invoke("AddNewCustomer", Random.Range(10, 15));
         }
     }
 
@@ -168,9 +184,28 @@ public class CustomersManager : MonoBehaviour
     {
         if(satisfiedCustomers + unsatisfiedCustomers + mehCustomers >= maxCustomersToday)
         {
-            dayManager.FinishDay(satisfiedCustomers, unsatisfiedCustomers, mehCustomers);
+            dayManager.FinishDay(satisfiedCustomers, unsatisfiedCustomers, mehCustomers, CalculateStars());
 
             CancelInvoke("AddNewCustomer");
         }
+    }
+
+    int CalculateStars()
+    {
+        float percentage = maxPoints / points;
+
+        if(percentage >= Mathf.Clamp(baseThreeStars + (dayManager.GetCurrentDay() * 0.075f), baseThreeStars, 0.875f))
+        {
+            return 3;
+        }
+        else if(percentage >= Mathf.Clamp(baseTwoStars + (dayManager.GetCurrentDay() * 0.05f), baseThreeStars, 0.65f))
+        {
+            return 2;
+        }
+        else if(percentage >= Mathf.Clamp(baseThreeStars + (dayManager.GetCurrentDay() * 0.052f), baseThreeStars, 0.5f))
+        {
+            return 1;
+        }
+        return 0;
     }
 }
