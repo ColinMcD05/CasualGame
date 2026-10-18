@@ -162,6 +162,17 @@ public class CustomersManager : MonoBehaviour
 
             needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
 
+            print((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count) % maxCustomersToday);
+
+            if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count) % maxCustomersToday == 0)
+            {
+                newCustomer.GetComponent<CustomerOrder>().SetOrder(true);
+            }
+            else
+            {
+                newCustomer.GetComponent<CustomerOrder>().SetOrder();
+            }
+
             Invoke("AddNewCustomer", Random.Range(10, 15));
         }
     }

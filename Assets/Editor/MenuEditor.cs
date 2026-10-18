@@ -92,7 +92,12 @@ public class MenuEditor : Editor
         EditorGUILayout.Space();
 
         EditorGUILayout.LabelField("Menu:");
+        scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Height(200));
+
         ShowRecipe();
+        ShowBossRecipe();
+
+        EditorGUILayout.EndScrollView();
     }
 
     public void MakeRecipe()
@@ -142,7 +147,6 @@ public class MenuEditor : Editor
 
     public void ShowRecipe()
     {
-        scrollPosition = EditorGUILayout.BeginScrollView(scrollPosition, GUILayout.Height(100));
         for(int i = 0; i < recipeList.arraySize; i++)
         {
             SerializedProperty recipe = recipeList.GetArrayElementAtIndex(i);
@@ -158,12 +162,15 @@ public class MenuEditor : Editor
             EditorGUILayout.LabelField(recipeName.stringValue, GUILayout.Width(100));
             EditorGUILayout.LabelField($"Stir amount: {stirAmount.intValue}", GUILayout.Width(100));
 
-            /*
-            if(bossRecipe.objectReferenceValue == null)
+            if(bossRecipe.FindPropertyRelative("recipeName").stringValue == "")
             {
                 if (GUILayout.Button("Make Boss Recipe", GUILayout.Width(125)))
                 {
                     SwapRecipe(ref bossRecipe, ref recipe);
+                    recipeList.DeleteArrayElementAtIndex(i);
+                    serializedObject.ApplyModifiedProperties();
+                    i--;
+                    continue;
                 }
             }
             else
@@ -171,11 +178,9 @@ public class MenuEditor : Editor
                 if (GUILayout.Button("Replace Boss Recipe", GUILayout.Width(125)))
                 {
                     SwapRecipe(ref bossRecipe, ref recipe, true);
-
-                    bossRecipe.objectReferenceValue = recipe.objectReferenceValue;
-                    recipeList.DeleteArrayElementAtIndex(i);
+                    serializedObject.ApplyModifiedProperties();
                 }
-            }*/
+            }
 
             if (GUILayout.Button("-", GUILayout.Width(25)))
             {
@@ -199,15 +204,40 @@ public class MenuEditor : Editor
                 }
             }
         }
-
-        EditorGUILayout.EndScrollView();
     }
 
     public void ShowBossRecipe()
     {
-        if(bossRecipe.objectReferenceValue == null)
+        if(bossRecipe.FindPropertyRelative("recipeName").stringValue != "")
         {
+            EditorGUILayout.Space();
             EditorGUILayout.LabelField("Boss Recipe:");
+
+            SerializedProperty recipe = bossRecipe;
+
+            SerializedProperty recipeName = recipe.FindPropertyRelative("recipeName");
+
+            SerializedProperty ingredients = recipe.FindPropertyRelative("ingredients");
+
+            SerializedProperty stirAmount = recipe.FindPropertyRelative("stirAmount");
+
+            EditorGUILayout.BeginHorizontal();
+
+            EditorGUILayout.LabelField(recipeName.stringValue, GUILayout.Width(100));
+            EditorGUILayout.LabelField($"Stir amount: {stirAmount.intValue}", GUILayout.Width(100));
+            EditorGUILayout.EndHorizontal();
+
+            for (int j = 0; j < ingredients.arraySize; j++)
+            {
+                SerializedProperty ingredient = ingredients.GetArrayElementAtIndex(j);
+
+                Ingredients ingredientObject = ingredient.objectReferenceValue as Ingredients;
+
+                if (ingredientObject != null)
+                {
+                    EditorGUILayout.LabelField($"  - {ingredientObject.GetIngredientName()}");
+                }
+            }
         }
     }
 
@@ -230,6 +260,43 @@ public class MenuEditor : Editor
 
     public void SwapRecipe(ref SerializedProperty to, ref SerializedProperty from, bool fullSwap = false)
     {
+        string tempName = to.FindPropertyRelative("recipeName").stringValue;
+        int tempStir = to.FindPropertyRelative("stirAmount").intValue;
+        Object tempObject = to.FindPropertyRelative("mealPrefab").objectReferenceValue;
 
+        var toIngredients = to.FindPropertyRelative("ingredients");
+        var fromIngredients = from.FindPropertyRelative("ingredients");
+        Object[] tempIngredients = new Ingredients[toIngredients.arraySize];
+
+        for(int i = 0; i < toIngredients.arraySize; i++)
+        {
+            tempIngredients[i] = toIngredients.GetArrayElementAtIndex(i).objectReferenceValue;
+        }
+
+        to.FindPropertyRelative("recipeName").stringValue = from.FindPropertyRelative("recipeName").stringValue;
+        to.FindPropertyRelative("stirAmount").intValue = from.FindPropertyRelative("stirAmount").intValue;
+        to.FindPropertyRelative("mealPrefab").objectReferenceValue = from.FindPropertyRelative("mealPrefab").objectReferenceValue;
+        toIngredients.ClearArray();
+
+        for(int i = 0; i < fromIngredients.arraySize; i++)
+        {
+            toIngredients.InsertArrayElementAtIndex(i);
+            toIngredients.GetArrayElementAtIndex(i).objectReferenceValue = fromIngredients.GetArrayElementAtIndex(i).objectReferenceValue;
+        }
+
+        if (fullSwap)
+        {
+            from.FindPropertyRelative("recipeName").stringValue = tempName;
+            from.FindPropertyRelative("stirAmount").intValue = tempStir;
+            from.FindPropertyRelative("mealPrefab").objectReferenceValue = tempObject;
+
+            fromIngredients.ClearArray();
+
+            for(int i = 0; i< tempIngredients.Length; i++)
+            {
+                fromIngredients.InsertArrayElementAtIndex(i);
+                fromIngredients.GetArrayElementAtIndex(i).objectReferenceValue = tempIngredients[i];
+            }
+        }
     }
 }

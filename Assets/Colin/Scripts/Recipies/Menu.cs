@@ -7,7 +7,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
     [SerializeField] private Recipe[] menu;
-    //[SerializeField] private Recipe bossRecipe;
+    [SerializeField] private Recipe bossRecipe;
 
     public Recipe CompareMenu(List<Ingredients> ingredients)
     {
@@ -45,5 +45,10 @@ public class Menu : MonoBehaviour
     {
         int randomInt = UnityEngine.Random.Range(0, menu.Length);
         return menu[randomInt];
+    }
+
+    public Recipe GetBossRecipe()
+    {
+        return bossRecipe;
     }
 }

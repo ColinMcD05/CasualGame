@@ -1,3 +1,4 @@
+using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -26,11 +27,6 @@ public class CustomerOrder : MonoBehaviour
 		giveOrderSource = gameObject.AddComponent<AudioSource>();
     }
 
-	void Start()
-	{
-		order = menu.GetRandomRecipe();
-	}
-
     public CustomerSatisfaction TakeMeal(Recipe meal)
 	{
 		if(meal == null || meal.recipeName != order.recipeName)
@@ -57,7 +53,19 @@ public class CustomerOrder : MonoBehaviour
 
 	public void SetOrder()
 	{
-		menu.GetRandomRecipe();
+        order = menu.GetRandomRecipe();
+	}
+
+	public void SetOrder(bool isBoss)
+	{
+		if(isBoss)
+		{
+            order = menu.GetBossRecipe();
+		}
+		else
+		{
+			SetOrder();
+		}
 	}
 
 	public Recipe GetOrder()
