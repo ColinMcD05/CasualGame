@@ -14,6 +14,7 @@ public class CustomerOrder : MonoBehaviour
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
     private AudioSource giveOrderSource;
 
+	[SerializeField] CustomerVisuals visuals;
 	[SerializeField] float ehTime = 30, madTime = 60;
 
 	private float waitTimer = 0;
@@ -32,22 +33,26 @@ public class CustomerOrder : MonoBehaviour
 		if(meal == null || meal.recipeName != order.recipeName)
 		{
 			BadOrder();
+			visuals.PlayVisual(CustomerSatisfaction.Unsatisfied);
 			return CustomerSatisfaction.Unsatisfied;
         }
 		else if (waitTimer > madTime)
 		{
 			BadOrder();
-			return CustomerSatisfaction.Mad;
+            visuals.PlayVisual(CustomerSatisfaction.Mad);
+            return CustomerSatisfaction.Mad;
 		}
 		else if (waitTimer > ehTime)
 		{
 			MehOrder();
-			return CustomerSatisfaction.Meh;
+            visuals.PlayVisual(CustomerSatisfaction.Meh);
+            return CustomerSatisfaction.Meh;
 		}
 		else
 		{
 			GoodOrder();
-			return CustomerSatisfaction.Satisfied;
+            visuals.PlayVisual(CustomerSatisfaction.Satisfied);
+            return CustomerSatisfaction.Satisfied;
 		}
 	}
 
