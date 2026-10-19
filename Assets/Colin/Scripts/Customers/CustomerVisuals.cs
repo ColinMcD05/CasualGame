@@ -17,10 +17,13 @@ public class CustomerVisuals : MonoBehaviour
         {
             case CustomerSatisfaction.Unsatisfied:
             case CustomerSatisfaction.Mad:
+
                 break;
             case CustomerSatisfaction.Meh:
+
                 break;
             case CustomerSatisfaction.Satisfied:
+
                 break;
         }
     }
