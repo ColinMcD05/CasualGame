@@ -1,4 +1,3 @@
-using JetBrains.Rider.Unity.Editor;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
