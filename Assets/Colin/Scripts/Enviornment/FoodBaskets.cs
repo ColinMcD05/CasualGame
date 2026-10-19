@@ -15,6 +15,7 @@ public class FoodBaskets : MonoBehaviour
         if (ingredient)
         {
             ingredients = ingredient;
+            print("Good");
         }
         else
         {
