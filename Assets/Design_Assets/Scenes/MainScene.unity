@@ -11068,7 +11068,7 @@ MonoBehaviour:
   orderText: {fileID: 2087201352}
   dropoffText: {fileID: 1666703778}
   customerPrefabs:
-  - {fileID: 3149795306523558028, guid: 9d3a066dacc9a58429c20342ab1466ae, type: 3}
+  - {fileID: 6627989370010781066, guid: ffa583d226719f8469433fbc084b9871, type: 3}
   bossPrefab: {fileID: 3149795306523558028, guid: fca2a41227377ae40b6f5f82e4e61db1, type: 3}
   newCustomerClip: {fileID: 8300000, guid: aff000be4558c47428949d337405e1be, type: 3}
   takeOrder: {fileID: 8300000, guid: dd25c58d72212934898ed89857ff1a8f, type: 3}
