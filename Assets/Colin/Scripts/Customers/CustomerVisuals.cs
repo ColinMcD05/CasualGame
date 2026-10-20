@@ -7,8 +7,7 @@ public class CustomerVisuals : MonoBehaviour
 
     public void Start()
     {
-        if (!animator) return;
-        animator.SetBool("CorrectOrder", true);
+
     }
 
     public void PlayVisual(CustomerSatisfaction satisfaction)
