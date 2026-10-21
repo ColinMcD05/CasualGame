@@ -28424,6 +28424,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3821124732516550588, guid: d4c5c8a5f5986344bb1a979efa2d3334, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1334905299}
+    - targetCorrespondingSourceObject: {fileID: 3821124732516550588, guid: d4c5c8a5f5986344bb1a979efa2d3334, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1334905302}
+    - targetCorrespondingSourceObject: {fileID: 3821124732516550588, guid: d4c5c8a5f5986344bb1a979efa2d3334, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1334905301}
   m_SourcePrefab: {fileID: 100100000, guid: d4c5c8a5f5986344bb1a979efa2d3334, type: 3}
 --- !u!1 &1334905298 stripped
 GameObject:
@@ -28452,6 +28458,40 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4489116990915190022, guid: d4c5c8a5f5986344bb1a979efa2d3334, type: 3}
   m_PrefabInstance: {fileID: 1334905297}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1334905301
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334905298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bb4f9443a485b4db60c1e45634af49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CookingPot
+  badMeal: {fileID: 4418723042623423121, guid: 558a5ba91ccdc9d4e8e577c5aa3a1157, type: 3}
+  stir: {fileID: 1334905302}
+  rotationNumber: {fileID: 17807784}
+  goodClip: {fileID: 8300000, guid: f8f2f2b88ded5a14298597d5a64b8225, type: 3}
+  badClip: {fileID: 8300000, guid: 4e374ea880aafcd41b3771df10e48d93, type: 3}
+  ambienceClip: {fileID: 8300000, guid: ed9799d6a68886248aa969646bf7ecdc, type: 3}
+  text: {fileID: 914836283}
+--- !u!114 &1334905302
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1334905298}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daaabdd12bd0ce48ab27c0db8a57627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StirThePot
+  thisCamera: {fileID: 878403165}
+  stirringAnimation: {fileID: 1334905299}
+  stirringClip: {fileID: 8300000, guid: b2e975867d8b83f46a252f265605a541, type: 3}
 --- !u!1 &1336442746
 GameObject:
   m_ObjectHideFlags: 0
@@ -29799,7 +29839,6 @@ RectTransform:
   - {fileID: 17807786}
   - {fileID: 914836285}
   - {fileID: 1630441094}
-  - {fileID: 2064075990}
   - {fileID: 1880642543}
   - {fileID: 1854744824}
   - {fileID: 1043519487}
@@ -39302,7 +39341,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 2064075986}
+      - m_Target: {fileID: 0}
         m_TargetAssemblyTypeName: CookingPot, Assembly-CSharp
         m_MethodName: MakeMeal
         m_Mode: 1
@@ -43493,118 +43532,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
   m_PrefabInstance: {fileID: 1575261940}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &2064075985
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 2064075990}
-  - component: {fileID: 2064075989}
-  - component: {fileID: 2064075988}
-  - component: {fileID: 2064075986}
-  - component: {fileID: 2064075987}
-  m_Layer: 0
-  m_Name: Pot
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &2064075986
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064075985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c0bb4f9443a485b4db60c1e45634af49, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::CookingPot
-  badMeal: {fileID: 4418723042623423121, guid: 558a5ba91ccdc9d4e8e577c5aa3a1157, type: 3}
-  stir: {fileID: 2064075987}
-  rotationNumber: {fileID: 17807784}
-  goodClip: {fileID: 8300000, guid: f8f2f2b88ded5a14298597d5a64b8225, type: 3}
-  badClip: {fileID: 8300000, guid: 4e374ea880aafcd41b3771df10e48d93, type: 3}
-  ambienceClip: {fileID: 8300000, guid: ed9799d6a68886248aa969646bf7ecdc, type: 3}
-  text: {fileID: 914836283}
---- !u!114 &2064075987
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064075985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9daaabdd12bd0ce48ab27c0db8a57627, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StirThePot
-  thisCamera: {fileID: 878403165}
-  stirringAnimation: {fileID: 1334905299}
-  potObject: {fileID: 1334905298}
-  stirringClip: {fileID: 8300000, guid: b2e975867d8b83f46a252f265605a541, type: 3}
---- !u!114 &2064075988
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064075985}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: UnityEngine.UI::UnityEngine.UI.Image
-  m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
-  m_RaycastTarget: 1
-  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
-  m_Maskable: 1
-  m_OnCullStateChanged:
-    m_PersistentCalls:
-      m_Calls: []
-  m_Sprite: {fileID: 0}
-  m_Type: 0
-  m_PreserveAspect: 0
-  m_FillCenter: 1
-  m_FillMethod: 4
-  m_FillAmount: 1
-  m_FillClockwise: 1
-  m_FillOrigin: 0
-  m_UseSpriteMesh: 0
-  m_PixelsPerUnitMultiplier: 1
---- !u!222 &2064075989
-CanvasRenderer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064075985}
-  m_CullTransparentMesh: 1
---- !u!224 &2064075990
-RectTransform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2064075985}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 1402680942}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 27.9, y: -16.5}
-  m_SizeDelta: {x: 299.8, y: 230.1}
-  m_Pivot: {x: 0.5, y: 0.5}
 --- !u!1 &2087201350
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,25 +10,41 @@ public class PlayerController : MonoBehaviour
     //Inputs
     private MobileActions mobileActions;
     private InputAction touch;
+    private InputAction drag;
 
     void Awake()
     {
         mobileActions = new MobileActions();
 
         touch = mobileActions.MobileAction.Touch;
+        drag = mobileActions.MobileAction.Tracking;
     }
 
     void OnEnable()
     {
         touch.Enable();
+        touch.performed += Touch;
+
+        drag.Enable();
+        drag.performed += Drag;
     }
 
     void OnDisable()
     {
+        touch.performed -= Touch;
         touch.Disable();
+
+        drag.performed -= Drag;
+        drag.Disable();
     }
-    public InputAction GetTouch()
+
+    void Touch(InputAction.CallbackContext context)
     {
-        return touch;
+
+    }
+
+    private void Drag(InputAction.CallbackContext context)
+    {
+        
     }
 }

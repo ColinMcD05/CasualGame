@@ -22,6 +22,13 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     float previousSlope;
     float angle = 0;
 
+    void Awake()
+    {
+        mobileActions = new MobileActions();
+        touch = mobileActions.MobileAction.Touch;
+        drag = mobileActions.MobileAction.Tracking;
+    }
+
     void Start()
     {
         pot = GetComponent<CookingPot>();
@@ -30,10 +37,6 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         source = gameObject.AddComponent<AudioSource>();
         source.loop = true;
         source.clip = stirringClip;
-
-        mobileActions = new();
-        touch = mobileActions.MobileAction.Touch;
-        touch = mobileActions.MobileAction.Tracking;
     }
 
     void OnEnable()
@@ -56,6 +59,7 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
 
     public void CheckIfOverObject(InputAction.CallbackContext context)
     {
+        Debug.Log("Activate");
         Vector2 screenPostion = context.ReadValue<Vector2>();
         Ray position = thisCamera.ScreenPointToRay(screenPostion);
 
@@ -64,6 +68,8 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
             if (hit.collider.GetComponent<StirThePot>())
             {
                 potObject = hit.collider.gameObject;
+
+                Debug.Log("Hit pot");
 
                 previousVector = screenPostion - center;
                 previousVector = previousVector.normalized;
