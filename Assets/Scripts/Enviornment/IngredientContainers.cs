@@ -36,11 +36,11 @@ public class IngredientContainers : MonoBehaviour
 
     private void OnDisable()
     {
-        touch.Disable();
         touch.performed -= CheckIfOverObject;
+        touch.Disable();
 
-        tracking.Disable();
         tracking.performed -= DragIngredientContainer;
+        tracking.Disable();
     }
 
     public void CheckIfOverObject(InputAction.CallbackContext context)

@@ -1,14 +1,21 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
+using UnityEngine.InputSystem;
 
 public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
 {
     [SerializeField] Camera thisCamera;
     [SerializeField] Animation stirringAnimation;
-    [SerializeField] GameObject potObject;
+    GameObject potObject;
     [SerializeField] AudioClip stirringClip;
     CookingPot pot;
     AudioSource source;
+    float dragDepth;
+
+    //Inputs
+    MobileActions mobileActions;
+    InputAction touch;
+    InputAction drag;
 
     Vector2 center;
     Vector2 previousVector;
@@ -23,6 +30,93 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
         source = gameObject.AddComponent<AudioSource>();
         source.loop = true;
         source.clip = stirringClip;
+
+        mobileActions = new();
+        touch = mobileActions.MobileAction.Touch;
+        touch = mobileActions.MobileAction.Tracking;
+    }
+
+    void OnEnable()
+    {
+        touch.Enable();
+        touch.performed += CheckIfOverObject;
+
+        drag.Enable();
+        drag.performed += Stirring;
+    }
+
+    void OnDisable()
+    {
+        touch.performed -= CheckIfOverObject;
+        touch.Disable();
+
+        drag.performed -= Stirring;
+        drag.Disable();
+    }
+
+    public void CheckIfOverObject(InputAction.CallbackContext context)
+    {
+        Vector2 screenPostion = context.ReadValue<Vector2>();
+        Ray position = thisCamera.ScreenPointToRay(screenPostion);
+
+        if (Physics.Raycast(position, out RaycastHit hit))
+        {
+            if (hit.collider.GetComponent<StirThePot>())
+            {
+                potObject = hit.collider.gameObject;
+
+                previousVector = screenPostion - center;
+                previousVector = previousVector.normalized;
+            }
+            else
+            {
+                potObject = null;
+            }
+        }
+        else
+        {
+            potObject = null;
+        }
+    }
+
+    public void Stirring(InputAction.CallbackContext context)
+    {
+        if(potObject)
+        {
+            Vector2 newVector = context.ReadValue<Vector2>() - center;
+            newVector = newVector.normalized;
+
+            float addedAngle = Vector2.SignedAngle(newVector, previousVector);
+
+            if (addedAngle <= 0)
+            {
+                addedAngle = Mathf.Abs(addedAngle);
+                angle += addedAngle;
+
+
+                if (angle >= 360)
+                {
+                    angle = angle - 360;
+                    pot.RotationComplete();
+                }
+
+                if (!source.isPlaying)
+                {
+                    source.UnPause();
+                }
+            }
+            else
+            {
+                source.Pause();
+            }
+
+            if (stirringAnimation)
+            {
+                stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(newVector));
+            }
+
+            previousVector = newVector;
+        }
     }
 
     public void OnPointerDown(PointerEventData eventData) 
