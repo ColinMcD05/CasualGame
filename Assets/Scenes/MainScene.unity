@@ -8268,6 +8268,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -17456,6 +17464,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -22675,6 +22691,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 138.26749
@@ -24440,13 +24464,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157589291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.14669019, y: -0, z: -0, w: 0.98918253}
-  m_LocalPosition: {x: 3.3182793, y: 3.6299999, z: -4.9400005}
+  m_LocalRotation: {x: 0.10450206, y: -0, z: -0, w: 0.9945247}
+  m_LocalPosition: {x: 3.3600006, y: 4.94, z: -8.393}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1405120956}
-  m_LocalEulerAnglesHint: {x: 16.87, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 11.997, y: 0, z: 0}
 --- !u!114 &1157589293
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28851,7 +28875,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5292415525438176426, guid: 5eddf670fa4c62d48b146b464f3ec029, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -4.218281
+      value: -2.8
       objectReference: {fileID: 0}
     - target: {fileID: 5292415525438176426, guid: 5eddf670fa4c62d48b146b464f3ec029, type: 3}
       propertyPath: m_LocalPosition.y
@@ -33442,6 +33466,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 1
@@ -35741,6 +35773,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 138.26749
@@ -40628,6 +40668,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Walls_L1 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4150294425928128801, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 5689966994700494201, guid: e479d90adf864a043bd136f649b1e144, type: 3}
     - target: {fileID: 4383389688585228049, guid: 51a9f6935ddce284cb2aa8e01e5f1314, type: 3}
       propertyPath: m_LocalScale.x
       value: 138.26749
@@ -43546,7 +43594,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::StirThePot
   thisCamera: {fileID: 878403165}
   stirringAnimation: {fileID: 1334905299}
-  potObject: {fileID: 1334905298}
   stirringClip: {fileID: 8300000, guid: b2e975867d8b83f46a252f265605a541, type: 3}
 --- !u!114 &2064075988
 MonoBehaviour:
