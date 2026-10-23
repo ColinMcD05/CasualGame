@@ -3,40 +3,45 @@ using UnityEngine;
 
 public class Inventory : MonoBehaviour
 {
+    public delegate void InventoryChange();
+    public static event InventoryChange OnInventoryChange;
+
     //Variables
-    [SerializeField] Dictionary<Ingredients, int> ingredients;
+    [SerializeField] Dictionary<Ingredients, int> ingredients = new();
 
-    public void AddToInventorty<T>(T newIngredient, int amount) where T : Ingredients
+    public void AddIngredient(Ingredients ingredient)
     {
-        if(ingredients.ContainsKey(newIngredient))
+        if (!ingredients.ContainsKey(ingredient))
         {
-            ingredients[newIngredient] += amount;
+            ingredients.Add(ingredient, 0);
         }
-        else 
-        {
-            ingredients.Add(newIngredient, amount);
-        }
+
+        ingredients[ingredient]++;
+        OnInventoryChange?.Invoke();
     }
 
-    public void RemoveFromInventory<T>(T removedIngredient, int amount) where T : Ingredients
+    public void RemoveIngredient(Ingredients ingredient)
     {
-        if(!ingredients.ContainsKey(removedIngredient))
-        {
+        if (!ingredients.ContainsKey(ingredient))
             return;
-        }
-        if(ingredients[removedIngredient] < amount)
-        {
-            return;
-        }
 
-        ingredients[removedIngredient] -= amount;
+        if (ingredients[ingredient] <= 0)
+            return;
+
+        ingredients[ingredient] = Mathf.Max(ingredients[ingredient]--, 0);
+        OnInventoryChange?.Invoke();
     }
 
-    public void GetIngredientByType<T>(Ingredients searchedIngredient) where T : Ingredients
+    public bool InInventory(Ingredients ingredient)
     {
-        for (int i = 0; i < ingredients.Count; i++) 
-        {
+        if (!ingredients.ContainsKey(ingredient) || ingredients[ingredient] <= 0)
+            return false;
 
-        }
+        return true;
+    }
+
+    public Dictionary<Ingredients, int> GetInventory()
+    {
+        return ingredients;
     }
 }
