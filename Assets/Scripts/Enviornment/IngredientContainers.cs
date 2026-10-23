@@ -25,6 +25,23 @@ public class IngredientContainers : MonoBehaviour
         cauldronCamera = GameObject.FindGameObjectWithTag("CauldronCamera").GetComponent<Camera>();
     }
 
+    void OnEnable()
+    {
+        touch.Enable();
+        touch.performed += CheckIfOverObject;
+
+        tracking.Enable();
+        tracking.performed += DragIngredientContainer;
+    }
+
+    private void OnDisable()
+    {
+        touch.performed -= CheckIfOverObject;
+        touch.Disable();
+
+        tracking.performed -= DragIngredientContainer;
+        tracking.Disable();
+    }
 
     public void CheckIfOverObject(InputAction.CallbackContext context)
     {

@@ -162,8 +162,96 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: -8679921383154817045, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
       insertIndex: -1
       addedObject: {fileID: 329625888043958599}
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1920900954241127265}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 607895774244495369}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 7436864210613827039}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3876342456400223854}
   m_SourcePrefab: {fileID: 100100000, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+--- !u!1 &3821124732516550588 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
+  m_PrefabInstance: {fileID: 4163073605138578157}
+  m_PrefabAsset: {fileID: 0}
+--- !u!111 &1920900954241127265
+Animation:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821124732516550588}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Animation: {fileID: 1827226128182048838, guid: 1921a7dacc3f35c4f97494d2c08d6560, type: 3}
+  m_Animations:
+  - {fileID: 1827226128182048838, guid: 1921a7dacc3f35c4f97494d2c08d6560, type: 3}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_UpdateMode: 0
+  m_CullingType: 0
+--- !u!114 &607895774244495369
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821124732516550588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9daaabdd12bd0ce48ab27c0db8a57627, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::StirThePot
+  stirringAnimation: {fileID: 0}
+  stirringClip: {fileID: 8300000, guid: b2e975867d8b83f46a252f265605a541, type: 3}
+--- !u!114 &7436864210613827039
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821124732516550588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c0bb4f9443a485b4db60c1e45634af49, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CookingPot
+  badMeal: {fileID: 4418723042623423121, guid: 558a5ba91ccdc9d4e8e577c5aa3a1157, type: 3}
+  stir: {fileID: 607895774244495369}
+  rotationNumber: {fileID: 0}
+  goodClip: {fileID: 8300000, guid: f8f2f2b88ded5a14298597d5a64b8225, type: 3}
+  badClip: {fileID: 8300000, guid: 4e374ea880aafcd41b3771df10e48d93, type: 3}
+  ambienceClip: {fileID: 8300000, guid: ed9799d6a68886248aa969646bf7ecdc, type: 3}
+  text: {fileID: 0}
+--- !u!65 &3876342456400223854
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3821124732516550588}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.05, y: 0.1, z: 0.05}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!4 &4489116990915190022 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 14f914c2a544dc44c91f27fe0b73436f, type: 3}
