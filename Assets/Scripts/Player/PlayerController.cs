@@ -11,6 +11,8 @@ public class PlayerController : MonoBehaviour
     private InputAction touch;
     private InputAction drag;
 
+    IDraggable3D draggedObject;
+
     void Awake()
     {
         mobileActions = new MobileActions();
@@ -57,13 +59,26 @@ public class PlayerController : MonoBehaviour
 
         if (Physics.Raycast(position, out RaycastHit hit))
         {
+            IDraggable3D touchedDraggable = hit.collider.gameObject.GetComponent<IDraggable3D>();
+            if (touchedDraggable == null)
+            {
+                draggedObject = null;
+                return;
+            }
+
+            draggedObject = touchedDraggable;
+            draggedObject.StartDrag(screenPostion);
+
             Debug.Log(hit.collider.gameObject);
         }
     }
 
     private void Drag(InputAction.CallbackContext context)
     {
-        
+        if (draggedObject == null)
+            return;
+
+        draggedObject.Drag(context.ReadValue<Vector2>());
     }
 
     private void ChangeCurrentCamera(Camera newCamera)

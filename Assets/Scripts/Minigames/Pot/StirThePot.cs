@@ -1,184 +1,78 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 
-public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPointerUpHandler
+public class StirThePot : MonoBehaviour, IDraggable3D
 {
-    [SerializeField] Camera thisCamera;
+    Camera potCamera;
     [SerializeField] Animation stirringAnimation;
-    GameObject potObject;
     [SerializeField] AudioClip stirringClip;
     CookingPot pot;
     AudioSource source;
-    float dragDepth;
-
-    //Inputs
-    MobileActions mobileActions;
-    InputAction touch;
-    InputAction drag;
 
     Vector2 center;
     Vector2 previousVector;
-    float previousSlope;
     float angle = 0;
-
-    void Awake()
-    {
-        mobileActions = new MobileActions();
-        touch = mobileActions.MobileAction.Touch;
-        drag = mobileActions.MobileAction.Tracking;
-    }
 
     void Start()
     {
         pot = GetComponent<CookingPot>();
-        center = transform.position;
+        potCamera = CameraManager.GetCameraOfType(CameraType.Pot);
+        center = potCamera.WorldToScreenPoint(transform.position);
 
         source = gameObject.AddComponent<AudioSource>();
         source.loop = true;
         source.clip = stirringClip;
     }
 
-    void OnEnable()
+    public void StartDrag(Vector2 screenPosition)
     {
-        touch.Enable();
-        touch.performed += CheckIfOverObject;
-
-        drag.Enable();
-        drag.performed += Stirring;
-    }
-
-    void OnDisable()
-    {
-        touch.performed -= CheckIfOverObject;
-        touch.Disable();
-
-        drag.performed -= Stirring;
-        drag.Disable();
-    }
-
-    public void CheckIfOverObject(InputAction.CallbackContext context)
-    {
-        Debug.Log("Activate");
-        Vector2 screenPostion = context.ReadValue<Vector2>();
-        Ray position = thisCamera.ScreenPointToRay(screenPostion);
-
-        if (Physics.Raycast(position, out RaycastHit hit))
-        {
-            if (hit.collider.GetComponent<StirThePot>())
-            {
-                potObject = hit.collider.gameObject;
-
-                Debug.Log("Hit pot");
-
-                previousVector = screenPostion - center;
-                previousVector = previousVector.normalized;
-            }
-            else
-            {
-                potObject = null;
-            }
-        }
-        else
-        {
-            potObject = null;
-        }
-    }
-
-    public void Stirring(InputAction.CallbackContext context)
-    {
-        if(potObject)
-        {
-            Vector2 newVector = context.ReadValue<Vector2>() - center;
-            newVector = newVector.normalized;
-
-            float addedAngle = Vector2.SignedAngle(newVector, previousVector);
-
-            if (addedAngle <= 0)
-            {
-                addedAngle = Mathf.Abs(addedAngle);
-                angle += addedAngle;
-
-
-                if (angle >= 360)
-                {
-                    angle = angle - 360;
-                    pot.RotationComplete();
-                }
-
-                if (!source.isPlaying)
-                {
-                    source.UnPause();
-                }
-            }
-            else
-            {
-                source.Pause();
-            }
-
-            if (stirringAnimation)
-            {
-                stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(newVector));
-            }
-
-            previousVector = newVector;
-        }
-    }
-
-    public void OnPointerDown(PointerEventData eventData) 
-    {
-        previousVector = eventData.position - center;
+        previousVector = screenPosition - center;
         previousVector = previousVector.normalized;
 
         if (stirringAnimation)
         {
-            stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(previousVector));
+            stirringAnimation.clip.SampleAnimation(gameObject, NextAnimationPosition(previousVector));
         }
         source.Play();
     }
 
-    public void OnDrag(PointerEventData eventData)
+    public void Drag(Vector2 screenPosition)
     {
-        Vector2 newVector = eventData.position - center;
+        Vector2 newVector = screenPosition - center;
         newVector = newVector.normalized;
 
         float addedAngle = Vector2.SignedAngle(newVector, previousVector);
 
-        if(addedAngle <= 0)
+        addedAngle = Mathf.Abs(addedAngle);
+        angle += addedAngle;
+
+        if (angle >= 360)
         {
-            addedAngle = Mathf.Abs(addedAngle);
-            angle += addedAngle;
-
-
-            if (angle >= 360)
-            {
-
-                angle = angle - 360;
-                pot.RotationComplete();
-            }
-            
-            if (!source.isPlaying)
-            {
-                source.UnPause();
-            }
+            angle = angle - 360;
+            pot.RotationComplete();
         }
-        else
+
+        if (!source.isPlaying)
         {
-            source.Pause();
+            source.UnPause();
         }
+
+        CancelInvoke();
+        Invoke("StopSound", 0.1f);
 
         if (stirringAnimation)
         {
-            stirringAnimation.clip.SampleAnimation(potObject, NextAnimationPosition(newVector));
+            stirringAnimation.clip.SampleAnimation(gameObject, NextAnimationPosition(newVector));
         }
 
         previousVector = newVector;
     }
 
-    public void OnPointerUp(PointerEventData eventData)
+    void StopSound()
     {
-        pot.StoppedStirring();
-        source.Stop();
+        source.Pause();
     }
 
     public void ResetPot()
@@ -189,7 +83,7 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
     public float NextAnimationPosition(Vector2 position)
     {
         float angle = Vector2.SignedAngle(Vector2.right, position);
-        if(angle < 0)
+        if (angle < 0)
         {
             angle = 360 - Mathf.Abs(angle);
         }
@@ -200,4 +94,5 @@ public class StirThePot : MonoBehaviour, IPointerDownHandler, IDragHandler, IPoi
 
         return nextPosition;
     }
+
 }

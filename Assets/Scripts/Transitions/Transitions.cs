@@ -2,15 +2,14 @@ using UnityEngine;
 
 public class Transitions : MonoBehaviour
 {
-    [SerializeField] Camera nextCamera;
-    [SerializeField] Camera oldCamera;
+    [SerializeField] CameraType nextCamera;
+
     [SerializeField] CanvasGroup nextCanvasGroup;
     [SerializeField] CanvasGroup oldCanvasGroup;
 
     public void Transition()
     {
-        oldCamera.enabled = false;
-        nextCamera.enabled = true;
+        CameraManager.SwapCurrentCamera(nextCamera);
 
         oldCanvasGroup.alpha = 0;
         oldCanvasGroup.interactable = false;

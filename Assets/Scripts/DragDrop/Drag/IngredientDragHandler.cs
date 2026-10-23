@@ -32,17 +32,23 @@ public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHand
     {
         draggedIngredient.Deactivate();
 
-        GameObject objectUnder = eventData.pointerCurrentRaycast.gameObject;
-        if(!objectUnder)
-        {
-            source.PlayOneShot(dropSound);
-            return;
-        }
-        if(objectUnder.TryGetComponent(out IDroppedOn droppedOn))
-        {
-            droppedOn.DroppedOn(this.ingredient);
-            source.PlayOneShot(dropPotSound);
-        }
+        Ray position = CameraManager.GetCurrentCamera().ScreenPointToRay(eventData.position);
 
+        if (Physics.Raycast(position, out RaycastHit hit))
+        {
+            GameObject objectUnder = hit.collider.gameObject;
+
+            if (!objectUnder)
+            {
+                source.PlayOneShot(dropSound);
+                return;
+            }
+            if (objectUnder.TryGetComponent(out IDroppedOn droppedOn))
+            {
+                droppedOn.DroppedOn(this.ingredient);
+                source.PlayOneShot(dropPotSound);
+            }
+
+        }
     }
 }

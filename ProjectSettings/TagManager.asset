@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Customer
   - CauldronCamera
+  - RestaurantCamera
+  - EnemyCamera
   layers:
   - Default
   - TransparentFX

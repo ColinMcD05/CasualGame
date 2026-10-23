@@ -3,17 +3,18 @@ using UnityEngine.Rendering;
 
 public class CameraManager : MonoBehaviour
 {
-    public delegate void ChangeCamera(CameraType cameraType);
-    public static event ChangeCamera OnChangeCamera;
-
     public delegate void CameraChanged(Camera camera);
     public static event CameraChanged OnCameraChanged;
 
-    [SerializeField] Camera restaurantCamera, potCamera, enemyCamera;
+    [SerializeField] static Camera restaurantCamera, potCamera, enemyCamera;
     static Camera currentCamera;
 
     private void Awake()
     {
+        restaurantCamera = GameObject.FindGameObjectWithTag("RestaurantCamera").GetComponent<Camera>();
+        potCamera = GameObject.FindGameObjectWithTag("CauldronCamera").GetComponent<Camera>();
+        enemyCamera = GameObject.FindGameObjectWithTag("EnemyCamera").GetComponent<Camera>();
+
         //Setup cameras
         currentCamera = restaurantCamera;
         currentCamera.enabled = true;
@@ -22,18 +23,8 @@ public class CameraManager : MonoBehaviour
         enemyCamera.enabled = false;
     }
 
-    private void OnEnable()
-    {
-        OnChangeCamera += SwapCurrentCamera;
-    }
-
-    private void OnDisable()
-    {
-        OnChangeCamera -= SwapCurrentCamera;
-    }
-
     //Swaps the current camera with the new camera.
-    public void SwapCurrentCamera(CameraType cameraType)
+    public static void SwapCurrentCamera(CameraType cameraType)
     {
         //Swaps camera
         switch(cameraType)
@@ -58,7 +49,7 @@ public class CameraManager : MonoBehaviour
         OnCameraChanged?.Invoke(currentCamera);
     }
 
-    public Camera GetCameraOfType(CameraType cameraType)
+    public static Camera GetCameraOfType(CameraType cameraType)
     {
         switch(cameraType)
         {
