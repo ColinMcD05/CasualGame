@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public abstract class IDragging
+public abstract class IDragable
 {
     abstract public void StartDrag(InputAction.CallbackContext context);
 
