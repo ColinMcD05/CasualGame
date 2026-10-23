@@ -262,6 +262,18 @@ PrefabInstance:
       value: L1_Bowl (1)
       objectReference: {fileID: 0}
     - target: {fileID: 5289152330637360687, guid: 4af2faf84224174458f032ca96b10973, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289152330637360687, guid: 4af2faf84224174458f032ca96b10973, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289152330637360687, guid: 4af2faf84224174458f032ca96b10973, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5289152330637360687, guid: 4af2faf84224174458f032ca96b10973, type: 3}
       propertyPath: m_LocalPosition.x
       value: 5.713
       objectReference: {fileID: 0}
