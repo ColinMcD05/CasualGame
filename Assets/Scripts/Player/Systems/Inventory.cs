@@ -9,14 +9,28 @@ public class Inventory : MonoBehaviour
     //Variables
     [SerializeField] Dictionary<Ingredients, int> ingredients = new();
 
-    public void AddIngredient(Ingredients ingredient)
+    [SerializeField] Ingredients[] initialIngredients;
+    [SerializeField] int startingIngredientAmount;
+
+    public void Awake()
+    {
+        if(ingredients.Count <= 0)
+        {
+            foreach(Ingredients ingredient in initialIngredients)
+            {
+                ingredients.Add(ingredient, startingIngredientAmount);
+            }
+        }
+    }
+
+    public void AddIngredient(Ingredients ingredient, int amount)
     {
         if (!ingredients.ContainsKey(ingredient))
         {
             ingredients.Add(ingredient, 0);
         }
 
-        ingredients[ingredient]++;
+        ingredients[ingredient] += amount;
         OnInventoryChange?.Invoke();
     }
 
@@ -28,12 +42,17 @@ public class Inventory : MonoBehaviour
         if (ingredients[ingredient] <= 0)
             return;
 
-        ingredients[ingredient] = Mathf.Max(ingredients[ingredient]--, 0);
+        ingredients[ingredient] = Mathf.Max(--ingredients[ingredient], 0);
+        Debug.Log($"{ingredient.name}: {ingredients[ingredient]}");
+
         OnInventoryChange?.Invoke();
     }
 
     public bool InInventory(Ingredients ingredient)
     {
+
+        //Debug.Log($"{ingredient.name}: {!ingredients.ContainsKey(ingredient)}");
+
         if (!ingredients.ContainsKey(ingredient) || ingredients[ingredient] <= 0)
             return false;
 

@@ -40,7 +40,7 @@ public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHand
     void CheckCanPickup()
     {
         canPickUp = inventory.InInventory(ingredient);
-        
+
         if(canPickUp)
         {
             ingredient.SetImageColor(Color.white);
@@ -88,7 +88,8 @@ public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHand
             }
             if (objectUnder.TryGetComponent(out IDroppedOn droppedOn))
             {
-                droppedOn.DroppedOn(this.ingredient);
+                droppedOn.DroppedOn(ingredient);
+                inventory.RemoveIngredient(ingredient);
                 source.PlayOneShot(dropPotSound);
             }
 
