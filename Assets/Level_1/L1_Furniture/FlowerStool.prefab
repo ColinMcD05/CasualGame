@@ -61,9 +61,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8062436231783572724, guid: 4e4d8357ab7c3844188397a27da50f97, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8062436231783572724, guid: 4e4d8357ab7c3844188397a27da50f97, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: d7b410f8a57391c4790cc9851bdc60bf, type: 2}
+    - target: {fileID: -8062436231783572724, guid: 4e4d8357ab7c3844188397a27da50f97, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
     - target: {fileID: 919132149155446097, guid: 4e4d8357ab7c3844188397a27da50f97, type: 3}
       propertyPath: m_Name
       value: FlowerStool
