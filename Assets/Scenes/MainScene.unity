@@ -266,6 +266,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Onion
   sprite: {fileID: 21300000, guid: 4fb5d1f8f0deda341897db2ddc0b9c99, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 890877948}
 --- !u!1 &21230054
 GameObject:
@@ -526,6 +527,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Cucumber
   sprite: {fileID: 21300000, guid: 42c531d10d8c9764ba3fb3bfc6aeeb12, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1754797649}
 --- !u!1 &23702176
 GameObject:
@@ -692,6 +694,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Cabbage
   sprite: {fileID: 21300000, guid: 0390d2220d23f554e8869eef4d5d0b9f, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1132738653}
 --- !u!114 &27319793
 MonoBehaviour:
@@ -1512,6 +1515,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Rice Paper
   sprite: {fileID: 21300000, guid: 126d01527d32c234c987a42e3cd64c49, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 578545460}
 --- !u!114 &78595608
 MonoBehaviour:
@@ -9703,6 +9707,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Egg
   sprite: {fileID: 21300000, guid: bbc8f4638c71b3049a3d57a11386c710, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 483815895}
 --- !u!1001 &344595791
 PrefabInstance:
@@ -10794,6 +10799,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Apples
   sprite: {fileID: 21300000, guid: 75865c1e899f23c40bd799ee2e2e1b4e, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 453063271}
 --- !u!114 &415550425
 MonoBehaviour:
@@ -14550,6 +14556,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Kale
   sprite: {fileID: 21300000, guid: 28c49e865fa9f4d4ea8f174904ed33bc, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 2063112849}
 --- !u!1 &602746952
 GameObject:
@@ -16740,6 +16747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Carrot
   sprite: {fileID: 21300000, guid: 5d20c95a1ad0a184ea40b98eaa3d186b, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1827898625}
 --- !u!114 &764389811
 MonoBehaviour:
@@ -21090,6 +21098,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Pecans
   sprite: {fileID: 21300000, guid: 83e96f11bb5bb2342b38e1909af44631, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 336716649}
 --- !u!1 &1048637605
 GameObject:
@@ -39359,6 +39368,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Mushrooms
   sprite: {fileID: 21300000, guid: c606d1707441e494098e15094e16c92b, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1389539668}
 --- !u!1 &1573739729
 GameObject:
@@ -44710,6 +44720,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Cheese
   sprite: {fileID: 21300000, guid: ac49f6a0164ef594d81a3e8489d63448, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1451939109}
 --- !u!1001 &1642757133
 PrefabInstance:
@@ -45526,6 +45537,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Butternut Squash
   sprite: {fileID: 21300000, guid: aa209ef136313f843a7fd24c259d5d9a, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1803969566}
 --- !u!114 &1701906352
 MonoBehaviour:
@@ -46902,6 +46914,63 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4959013482656122832, guid: 940d573558856074fb31248a64bac035, type: 3}
   m_PrefabInstance: {fileID: 725653285}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1803381680
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -42.98866
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 1.52753
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6793216165727516705, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+      propertyPath: m_Name
+      value: poofVFX
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
 --- !u!1 &1803880570
 GameObject:
   m_ObjectHideFlags: 0
@@ -47381,6 +47450,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Tomato
   sprite: {fileID: 21300000, guid: f1d5216f8dd1b3440bf53376a6ad2cce, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1644711486}
 --- !u!114 &1823111811
 MonoBehaviour:
@@ -48690,6 +48760,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Flour
   sprite: {fileID: 21300000, guid: 71b1699faf75edd49a6b0131c2285fcf, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 130523273}
 --- !u!1001 &1901852051
 PrefabInstance:
@@ -50564,6 +50635,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Spices
   sprite: {fileID: 21300000, guid: 4facea0f824d9fa489489a657e27fb2c, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1211303559}
 --- !u!114 &2018807720
 MonoBehaviour:
@@ -51491,6 +51563,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Breadcrumb
   sprite: {fileID: 21300000, guid: 00587264dc316d141a9e9505392650ac, type: 3}
+  potIngredient: {fileID: 0}
   image: {fileID: 1797625753}
 --- !u!114 &2088093470
 MonoBehaviour:
@@ -62656,3 +62729,4 @@ SceneRoots:
   - {fileID: 1282608263}
   - {fileID: 1495671046}
   - {fileID: 577374608}
+  - {fileID: 1803381680}

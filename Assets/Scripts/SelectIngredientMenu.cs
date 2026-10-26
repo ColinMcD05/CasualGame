@@ -27,9 +27,9 @@ public class SelectIngredientMenu : MonoBehaviour
 
     public void SelectIngredient()
     {
-        if(EventSystem.current.currentSelectedGameObject.TryGetComponent<Ingredients>(out Ingredients ingredient))
+        if(EventSystem.current.currentSelectedGameObject.TryGetComponent<IngredientsReference>(out IngredientsReference ingredient))
         {
-            enemyManager.selectedIngredient = ingredient;
+            enemyManager.selectedIngredient = ingredient.GetIngredientReference();
         }
         enemyManager.SpawnEnemy();
         ToggleMenu();
