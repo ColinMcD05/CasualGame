@@ -14460,6 +14460,7 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   ingredientGetText: {fileID: 1439751279}
+  poofParticles: {fileID: 859555668}
   selectedIngredient: {fileID: 0}
 --- !u!4 &577374608
 Transform:
@@ -18273,6 +18274,11 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855021536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!198 &859555668 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 3357473679679971492, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+  m_PrefabInstance: {fileID: 1609329129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866319512
 GameObject:
   m_ObjectHideFlags: 0
