@@ -10,6 +10,9 @@ public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHand
     [SerializeField] AudioClip pickUpSound, dropSound, dropPotSound;
     Inventory inventory;
 
+
+    [SerializeField] Color darkColor;
+
     bool canPickUp;
 
     AudioSource source;
@@ -47,7 +50,7 @@ public class IngredientDragHandler : MonoBehaviour, IBeginDragHandler, IDragHand
         }
         else
         {
-            ingredient.SetImageColor(Color.gray);
+            ingredient.SetImageColor(darkColor);
         }
     }
 
