@@ -9,6 +9,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
     [SerializeField] private TextMeshProUGUI ingredientGetText;
+    [SerializeField] private ParticleSystem poofParticles;
 
     private int currentSlime;
     private bool enemyActive = false;
@@ -62,6 +63,7 @@ public class EnemyManager : MonoBehaviour
                 }
                 ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
                 textCoroutine = StartCoroutine(displayText());
+                poofParticles.Play();
 
                 inventory.AddIngredient(selectedIngredient, 1);
                 enemyInstances[currentSlime].SetActive(false);
