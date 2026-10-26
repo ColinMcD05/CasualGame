@@ -10,7 +10,7 @@ public class TakeOrder : MonoBehaviour
 
     void Start()
     {
-        Invoke("ShowText", 0.5f);
+        Invoke("ShowText", 1.1f);
     }
 
     void Update()
