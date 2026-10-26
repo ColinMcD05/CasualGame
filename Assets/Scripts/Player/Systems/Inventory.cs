@@ -28,6 +28,7 @@ public class Inventory : MonoBehaviour
         if (!ingredients.ContainsKey(ingredient))
         {
             ingredients.Add(ingredient, 0);
+            Debug.Log("Not There");
         }
 
         ingredients[ingredient] += amount;
