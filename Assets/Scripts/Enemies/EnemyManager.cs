@@ -5,7 +5,7 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject[] enemyPrefabs;
     
     private Inventory inventory;
-    public Ingredients selectedIngredient;
+    [HideInInspector] public Ingredients selectedIngredient;
 
     public void SpawnEnemy() //change to enable enemy and toggle the different slimes on and off instead?
     {
