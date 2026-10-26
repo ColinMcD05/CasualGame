@@ -13826,18 +13826,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
-    - target: {fileID: 1324563970792568713, guid: a103dcb2337cd68488e88100e2ed4cf3, type: 3}
-      propertyPath: darkColor.b
-      value: 0.25882354
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324563970792568713, guid: a103dcb2337cd68488e88100e2ed4cf3, type: 3}
-      propertyPath: darkColor.g
-      value: 0.25882354
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324563970792568713, guid: a103dcb2337cd68488e88100e2ed4cf3, type: 3}
-      propertyPath: darkColor.r
-      value: 0.25882354
-      objectReference: {fileID: 0}
     - target: {fileID: 2450787000878761389, guid: a103dcb2337cd68488e88100e2ed4cf3, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -14047,6 +14035,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
     - target: {fileID: 1324563970792568713, guid: c61315d9167dd734b93c63474f7e84cf, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324563970792568713, guid: c61315d9167dd734b93c63474f7e84cf, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
       objectReference: {fileID: 0}
@@ -14160,6 +14152,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
+    - target: {fileID: 1324563970792568713, guid: c80b00c1440da0249a23d6ecf0783a6a, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1324563970792568713, guid: c80b00c1440da0249a23d6ecf0783a6a, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
@@ -14515,6 +14511,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
     - target: {fileID: 1324563970792568713, guid: 1f055089d3277ec49945480eabdd5e96, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324563970792568713, guid: 1f055089d3277ec49945480eabdd5e96, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
       objectReference: {fileID: 0}
@@ -14739,6 +14739,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
     - target: {fileID: 1324563970792568713, guid: 2f32f11ee13eca741bf786f81e89fae9, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324563970792568713, guid: 2f32f11ee13eca741bf786f81e89fae9, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
       objectReference: {fileID: 0}
@@ -14959,6 +14963,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
     - target: {fileID: 1324563970792568713, guid: 3acf9339069feee489862025218dfe8f, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1324563970792568713, guid: 3acf9339069feee489862025218dfe8f, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
       objectReference: {fileID: 0}
@@ -15178,18 +15186,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
-    - target: {fileID: 1324563970792568713, guid: 63a0619c9f564da4a93bec5d0579eb46, type: 3}
-      propertyPath: darkColor.b
-      value: 0.25882354
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324563970792568713, guid: 63a0619c9f564da4a93bec5d0579eb46, type: 3}
-      propertyPath: darkColor.g
-      value: 0.25882354
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324563970792568713, guid: 63a0619c9f564da4a93bec5d0579eb46, type: 3}
-      propertyPath: darkColor.r
-      value: 0.25882354
-      objectReference: {fileID: 0}
     - target: {fileID: 2450787000878761389, guid: 63a0619c9f564da4a93bec5d0579eb46, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -15304,6 +15300,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
+    - target: {fileID: 1324563970792568713, guid: b63a3a617bda31c46bb2cd8edf509008, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1324563970792568713, guid: b63a3a617bda31c46bb2cd8edf509008, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
@@ -15422,6 +15422,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2006515780328564086}
     m_Modifications:
+    - target: {fileID: 1324563970792568713, guid: 7bebda7102849ca40ae708b9d67b3a1d, type: 3}
+      propertyPath: darkColor.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1324563970792568713, guid: 7bebda7102849ca40ae708b9d67b3a1d, type: 3}
       propertyPath: darkColor.b
       value: 0.25882354
