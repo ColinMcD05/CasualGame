@@ -5427,7 +5427,7 @@ PrefabInstance:
   m_SourcePrefab: {fileID: 100100000, guid: 31210cc3fcbf9ff4eb4d0b0cfe544735, type: 3}
 --- !u!4 &191333119 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 9000824259637413054, guid: 31210cc3fcbf9ff4eb4d0b0cfe544735, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3420476921380537425, guid: 31210cc3fcbf9ff4eb4d0b0cfe544735, type: 3}
   m_PrefabInstance: {fileID: 191333118}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &198404714
@@ -51294,8 +51294,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   nextCamera: 0
-  nextCanvasGroup: {fileID: 1402680943}
-  oldCanvasGroup: {fileID: 212209356}
+  nextCanvasGroup: 0
 --- !u!114 &1795918779
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -54359,8 +54358,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Transitions
   nextCamera: 0
-  nextCanvasGroup: {fileID: 212209356}
-  oldCanvasGroup: {fileID: 1402680943}
+  nextCanvasGroup: 0
 --- !u!114 &1880642545
 MonoBehaviour:
   m_ObjectHideFlags: 0

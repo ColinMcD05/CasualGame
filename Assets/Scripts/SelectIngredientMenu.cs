@@ -3,24 +3,24 @@ using UnityEngine.EventSystems;
 
 public class SelectIngredientMenu : MonoBehaviour
 {
-    [SerializeField] CanvasGroup inventorySelectScreen;
+    [SerializeField] CanvasGroup ingredientSelectScreen;
     [SerializeField] EnemyManager enemyManager;
-    bool isOpened = false;
+    bool isOpened = true;
     public void ToggleMenu()
     {
         if (isOpened)
         {
-            inventorySelectScreen.alpha = 0;
-            inventorySelectScreen.interactable = false;
-            inventorySelectScreen.blocksRaycasts = false;
+            ingredientSelectScreen.alpha = 0;
+            ingredientSelectScreen.interactable = false;
+            ingredientSelectScreen.blocksRaycasts = false;
             isOpened = false;
         }
 
         else
         {
-            inventorySelectScreen.alpha = 1;
-            inventorySelectScreen.interactable = true;
-            inventorySelectScreen.blocksRaycasts = true;
+            ingredientSelectScreen.alpha = 1;
+            ingredientSelectScreen.interactable = true;
+            ingredientSelectScreen.blocksRaycasts = true;
             isOpened = true;
         }
     }
