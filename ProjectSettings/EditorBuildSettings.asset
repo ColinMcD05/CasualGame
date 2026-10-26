@@ -6,10 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Cora/Scenes/MainSceneDupe.unity
+    path: Assets/Scenes/MainSceneDupe.unity
     guid: c4e90cd54db7245458fd51a9d72f5a78
   - enabled: 1
-    path: Assets/Design_Assets/Scenes/MainScene.unity
+    path: Assets/Scenes/MainScene.unity
     guid: ecd83d9050634ee43bca5dc06052cc89
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
