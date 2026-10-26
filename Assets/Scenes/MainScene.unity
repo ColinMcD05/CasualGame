@@ -12234,6 +12234,7 @@ GameObject:
   - component: {fileID: 564474519}
   - component: {fileID: 564474518}
   - component: {fileID: 564474520}
+  - component: {fileID: 564474521}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -12315,6 +12316,18 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &564474521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 564474517}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e2eb5b45965fe554993cbedd6902ae99, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::UIManager
 --- !u!1001 &570437220
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -26276,6 +26289,18 @@ PrefabInstance:
       propertyPath: customerManager
       value: 
       objectReference: {fileID: 564474518}
+    - target: {fileID: 3595089602991210837, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595089602991210837, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3595089602991210837, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3632962621446817246, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
       value: 
@@ -26435,6 +26460,10 @@ PrefabInstance:
     - target: {fileID: 8063640009920119874, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: MakeMeal
+      objectReference: {fileID: 0}
+    - target: {fileID: 8354976873381529187, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 9007681026810647694, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

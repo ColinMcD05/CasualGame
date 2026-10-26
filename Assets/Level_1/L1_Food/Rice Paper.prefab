@@ -92,6 +92,7 @@ MonoBehaviour:
   pickUpSound: {fileID: 8300000, guid: d7ca986f385b1064a8386e7ba2b479c5, type: 3}
   dropSound: {fileID: 8300000, guid: d7ca986f385b1064a8386e7ba2b479c5, type: 3}
   dropPotSound: {fileID: 8300000, guid: 705957e8db62f8e44aa3d884fd70e31a, type: 3}
+  darkColor: {r: 0.25882354, g: 0.25882354, b: 0.25882354, a: 1}
 --- !u!114 &7931600601095130950
 MonoBehaviour:
   m_ObjectHideFlags: 0
