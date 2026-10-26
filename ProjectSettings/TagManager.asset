@@ -8,6 +8,9 @@ TagManager:
   - CauldronCamera
   - RestaurantCamera
   - EnemyCamera
+  - RestaurantUI
+  - CauldronUI
+  - EnemyUI
   layers:
   - Default
   - TransparentFX

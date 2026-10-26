@@ -14,6 +14,6 @@ public class EnemyManager : MonoBehaviour
 
     void KillEnemy()
     {
-        inventory.AddToInventorty<Ingredients>(selectedIngredient, 1);
+        inventory.AddIngredient(selectedIngredient, 1);
     }
 }
