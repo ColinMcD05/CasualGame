@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     {
         restaurantUI = GameObject.FindGameObjectWithTag("RestaurantUI").GetComponent<CanvasGroup>();
         potUI = GameObject.FindGameObjectWithTag("CauldronUI").GetComponent<CanvasGroup>();
-        //enemyUI = GameObject.FindGameObjectWithTag("EnemyUI").GetComponent<CanvasGroup>();
+        enemyUI = GameObject.FindGameObjectWithTag("EnemyUI").GetComponent<CanvasGroup>();
 
         //Setup cameras
         currentCanvas = restaurantUI;
