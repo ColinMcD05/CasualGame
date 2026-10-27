@@ -14473,7 +14473,7 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   ingredientGetText: {fileID: 1439751279}
-  poofParticles: {fileID: 859555668}
+  poofVFX: {fileID: 1922225020}
   selectedIngredient: {fileID: 0}
 --- !u!4 &577374608
 Transform:
@@ -18287,11 +18287,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855021536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!198 &859555668 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3357473679679971492, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
-  m_PrefabInstance: {fileID: 1609329129}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &866319512
 GameObject:
   m_ObjectHideFlags: 0
@@ -49673,6 +49668,11 @@ Transform:
   - {fileID: 432615464}
   m_Father: {fileID: 1803880571}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1922225020 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6793216165727516705, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+  m_PrefabInstance: {fileID: 1609329129}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1938943594
 GameObject:
   m_ObjectHideFlags: 0
