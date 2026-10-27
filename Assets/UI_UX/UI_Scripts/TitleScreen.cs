@@ -4,18 +4,20 @@ using System.Collections.Generic;
 
 public class TitleScreen : MonoBehaviour
 {
-    public CanvasGroup titleGroup, showOrdersGroup, orderWindowGroup;
+    public CanvasGroup titleGroup;
 
     public enum Scenes
     {
-        Main
+        One,
+        Two,
+        Three
     }
 
     //called when start is pressed
     public void StartClicked()
     {
         //go to main scene
-        GoToScene(Scenes.Main);
+        GoToScene(Scenes.One);
     }
 
     public void GoToScene(Scenes scene)
@@ -23,8 +25,8 @@ public class TitleScreen : MonoBehaviour
 
         switch(scene)
         { 
-            case Scenes.Main:
-                SceneManager.LoadScene("MainScene");
+            case Scenes.One:
+                SceneManager.LoadScene("RestuarantOne");
                 break;
             default:
                 Debug.Log("How did this happen?");
