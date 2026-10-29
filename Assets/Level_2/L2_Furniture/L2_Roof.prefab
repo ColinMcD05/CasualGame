@@ -8,6 +8,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -9096004779071284208, guid: f4f26d6f8780f2440a21062c6f479cba, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -876546973899608171, guid: a2407126e3372f64cacb75ed466a5621, type: 3}
     - target: {fileID: -8679921383154817045, guid: f4f26d6f8780f2440a21062c6f479cba, type: 3}
       propertyPath: m_LocalScale.x
       value: 29.606766
@@ -62,12 +66,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: f4f26d6f8780f2440a21062c6f479cba, type: 3}
       propertyPath: m_Name
-      value: NewFloorTile
+      value: L2_Roof
       objectReference: {fileID: 0}
     - target: {fileID: 1195604706423551691, guid: f4f26d6f8780f2440a21062c6f479cba, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e745741d1299989498ec6840d6063e36, type: 2}
+      objectReference: {fileID: -876546973899608171, guid: a2407126e3372f64cacb75ed466a5621, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
