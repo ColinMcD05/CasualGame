@@ -31833,7 +31833,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1826876890}
   m_Layer: 0
-  m_Name: FloorCeilings
+  m_Name: Ceiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32065,11 +32065,11 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2116590793}
-  - {fileID: 2143867359}
-  - {fileID: 434185914}
-  - {fileID: 1179297623}
-  - {fileID: 2147472349}
   - {fileID: 1192508257}
+  - {fileID: 2147472349}
+  - {fileID: 1179297623}
+  - {fileID: 434185914}
+  - {fileID: 2143867359}
   m_Father: {fileID: 1405120956}
   m_LocalEulerAnglesHint: {x: 180, y: 0, z: 0}
 --- !u!114 &1849773574 stripped
