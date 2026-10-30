@@ -12337,8 +12337,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1157589291}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.37703264, y: 0, z: 0, w: 0.9262}
-  m_LocalPosition: {x: 5.24, y: 4.51, z: 11.6}
+  m_LocalRotation: {x: 0.28668243, y: -0.6505441, z: 0.29136616, w: 0.640087}
+  m_LocalPosition: {x: 8.272564, y: 5.8390455, z: 19.709932}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -18090,8 +18090,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TitleScreen
   titleGroup: {fileID: 1682550973}
-  showOrdersGroup: {fileID: 0}
-  orderWindowGroup: {fileID: 0}
 --- !u!1 &1695671196
 GameObject:
   m_ObjectHideFlags: 0

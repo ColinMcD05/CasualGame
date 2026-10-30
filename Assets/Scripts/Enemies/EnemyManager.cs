@@ -9,12 +9,18 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
     [SerializeField] private TextMeshProUGUI ingredientGetText;
-    [SerializeField] private ParticleSystem poofParticles;
+    [SerializeField] private GameObject poofVFX;
 
+    ParticleSystem[] poofParticleSources;
+    [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
     private bool enemyActive = false;
     private Coroutine textCoroutine;
-    [HideInInspector] public Ingredients selectedIngredient;
+
+    private void Start()
+    {
+        poofParticleSources = poofVFX.GetComponentsInChildren<ParticleSystem>();
+    }
 
     public void SpawnEnemy()
     {
@@ -54,7 +60,11 @@ public class EnemyManager : MonoBehaviour
                         success = true;
                     }
                     break;
+
+                default:
+                    break;
             }
+
             if (success)
             {
                 if (textCoroutine != null)
@@ -63,10 +73,16 @@ public class EnemyManager : MonoBehaviour
                 }
                 ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
                 textCoroutine = StartCoroutine(displayText());
-                poofParticles.Play();
+
+                foreach(ParticleSystem particleSource in poofParticleSources)
+                {
+                    particleSource.Play();
+                }
 
                 inventory.AddIngredient(selectedIngredient, 1);
                 enemyInstances[currentSlime].SetActive(false);
+
+                currentSlime = -1; //stops phantom slime farming
             }
         }
     }
