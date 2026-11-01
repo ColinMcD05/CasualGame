@@ -93,8 +93,12 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -3995252427605045602, guid: e479d90adf864a043bd136f649b1e144, type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: -3995252427605045602, guid: e479d90adf864a043bd136f649b1e144, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: -3995252427605045602, guid: e479d90adf864a043bd136f649b1e144, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -104,6 +108,10 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
       objectReference: {fileID: 2100000, guid: 83c50263bcace444da1f31824dda72d4, type: 2}
+    - target: {fileID: -3995252427605045602, guid: e479d90adf864a043bd136f649b1e144, type: 3}
+      propertyPath: 'm_Materials.Array.data[2]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 15924ad86dd5e2e4f83fcbedae98dfe6, type: 2}
     - target: {fileID: 919132149155446097, guid: e479d90adf864a043bd136f649b1e144, type: 3}
       propertyPath: m_Name
       value: Table

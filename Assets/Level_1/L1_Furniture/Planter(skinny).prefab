@@ -61,9 +61,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8668258866088874432, guid: fa29ebda6201274408ef03b5d5dccb4d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: -8668258866088874432, guid: fa29ebda6201274408ef03b5d5dccb4d, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 1a8e75716e12139438bf6d4f1ac74116, type: 2}
+    - target: {fileID: -8668258866088874432, guid: fa29ebda6201274408ef03b5d5dccb4d, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 15924ad86dd5e2e4f83fcbedae98dfe6, type: 2}
     - target: {fileID: 919132149155446097, guid: fa29ebda6201274408ef03b5d5dccb4d, type: 3}
       propertyPath: m_Name
       value: Planter(skinny)

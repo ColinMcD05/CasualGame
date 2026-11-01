@@ -61,9 +61,17 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 272094184183498740, guid: 8403a63a6ce6b804d92498c0a7b56f93, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 272094184183498740, guid: 8403a63a6ce6b804d92498c0a7b56f93, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 7d60faa92c5348d41b1b876ba0ff2b0a, type: 2}
+    - target: {fileID: 272094184183498740, guid: 8403a63a6ce6b804d92498c0a7b56f93, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 15924ad86dd5e2e4f83fcbedae98dfe6, type: 2}
     - target: {fileID: 919132149155446097, guid: 8403a63a6ce6b804d92498c0a7b56f93, type: 3}
       propertyPath: m_Name
       value: Wheel_Barrow
