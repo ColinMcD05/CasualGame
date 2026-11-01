@@ -14244,7 +14244,7 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   ingredientGetText: {fileID: 1439751279}
-  poofVFX: {fileID: 0}
+  poofVFX: {fileID: 1813281879}
   selectedIngredient: {fileID: 0}
 --- !u!4 &577374608
 Transform:
@@ -45987,6 +45987,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6058230062008817251, guid: 15ac7848cb4543b4dbb53aba80cb65cd, type: 3}
   m_PrefabInstance: {fileID: 1813131076}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1813281879 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6793216165727516705, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
+  m_PrefabInstance: {fileID: 1609329129}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1823111808
 GameObject:

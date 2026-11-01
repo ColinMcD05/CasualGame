@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public interface ISaving
+public interface ISavable
 {
     public abstract bool Save(string path);
 }
