@@ -2721,7 +2721,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6433620369036792541, guid: 4adf954101237e04e9856992ba88620d, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.21
+      value: -55.08
       objectReference: {fileID: 0}
     - target: {fileID: 6433620369036792541, guid: 4adf954101237e04e9856992ba88620d, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3002,13 +3002,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 209208037}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.13052596, y: -0, z: -0, w: 0.99144495}
-  m_LocalPosition: {x: -60.15326, y: 6.381341, z: 2.5484018}
+  m_LocalRotation: {x: 0.010869355, y: -0, z: -0, w: 0.99994093}
+  m_LocalPosition: {x: -60.15326, y: 1.92, z: 1.97}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 1838589468}
-  m_LocalEulerAnglesHint: {x: 15, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 1.246, y: 0, z: 0}
 --- !u!114 &209208039
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3086,7 +3086,7 @@ Camera:
     height: 1
   near clip plane: 0.3
   far clip plane: 1000
-  field of view: 60
+  field of view: 30
   orthographic: 0
   orthographic size: 5
   m_Depth: -1
@@ -11846,7 +11846,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3702051623646853258, guid: 2f5e6f65f504b124ca10200d0295d0af, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.21
+      value: -55.08
       objectReference: {fileID: 0}
     - target: {fileID: 3702051623646853258, guid: 2f5e6f65f504b124ca10200d0295d0af, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14244,7 +14244,7 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   ingredientGetText: {fileID: 1439751279}
-  poofParticles: {fileID: 859555668}
+  poofVFX: {fileID: 0}
   selectedIngredient: {fileID: 0}
 --- !u!4 &577374608
 Transform:
@@ -18408,11 +18408,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855021536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!198 &859555668 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3357473679679971492, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
-  m_PrefabInstance: {fileID: 1609329129}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &872429587
 GameObject:
   m_ObjectHideFlags: 0
@@ -26838,7 +26833,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7758098266379562349, guid: fe84d3a193b339043ac800807066edc8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.21
+      value: -55.08
       objectReference: {fileID: 0}
     - target: {fileID: 7758098266379562349, guid: fe84d3a193b339043ac800807066edc8, type: 3}
       propertyPath: m_LocalPosition.y
@@ -39140,7 +39135,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -52.21
+      value: -55.08
       objectReference: {fileID: 0}
     - target: {fileID: 174835418111304996, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
       propertyPath: m_LocalPosition.y
