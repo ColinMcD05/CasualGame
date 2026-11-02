@@ -4,6 +4,9 @@ using TMPro;
 
 public class DayManager : MonoBehaviour
 {
+    GameManager gameManager;
+    DayInfo dayInfo;
+
     int currentDay = 1;
     [SerializeField] ShowDay showDay;
     [SerializeField] CustomersManager customersManager;
@@ -15,6 +18,10 @@ public class DayManager : MonoBehaviour
     [SerializeField] Image[] images;
     public void Start()
     {
+        gameManager = GameObject.FindFirstObjectByType<GameManager>();
+        dayInfo = gameManager.GetDayInfo();
+        currentDay = dayInfo.GetDay();
+
         DayStarted();
     }
 
@@ -23,13 +30,18 @@ public class DayManager : MonoBehaviour
         dayText.enabled = true;
         dayText.text = $"Day: {currentDay}";
 
-        Invoke("ResetUI", 1.5f); 
+        Invoke("ResetUI", 1.5f);
+
+        customersManager.StartDay(dayInfo.GetCustomerAmount());
     }
 
     public void StartNewDay()
     {
         showDay.HideDay();
-        customersManager.StartDay();
+        gameManager.NextDay();
+        dayInfo = gameManager.GetDayInfo();
+        currentDay = dayInfo.GetDay();
+
         DayStarted();
     }
 
@@ -59,5 +71,9 @@ public class DayManager : MonoBehaviour
                 images[i].sprite = noStarSprite;
             }
         }
+
+        gameManager.DayCompleted();
+        dayInfo.earnedStars = starAmount;
+        gameManager.SaveLevel(dayInfo);
     }
 }

@@ -1,10 +1,13 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class ShowDay : MonoBehaviour
 {
     [SerializeField] CanvasGroup showDayEndGroup;
 
+
+    [SerializeField] Button nextDayButton;
     [SerializeField] TextMeshProUGUI day;
     [SerializeField] TextMeshProUGUI satisfied;
     [SerializeField] TextMeshProUGUI meh;
@@ -15,6 +18,11 @@ public class ShowDay : MonoBehaviour
         showDayEndGroup.alpha = 1;
         showDayEndGroup.blocksRaycasts = true;
         showDayEndGroup.interactable = true;
+
+        if(currentDay >= 5)
+        {
+            nextDayButton.interactable = false;
+        }
 
         day.text = $"Day: {currentDay}";
         unsatisfied.text = $"Unhappy: {unsatisifedAmount}";

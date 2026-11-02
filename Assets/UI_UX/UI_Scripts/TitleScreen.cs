@@ -27,17 +27,20 @@ public class TitleScreen : MonoBehaviour
         levelScreen.blocksRaycasts = true;
     }
 
-    public void LevelOneClicked()
+    public void LevelOneClicked(int day)
     {
+        GameObject.FindFirstObjectByType<GameManager>().SetCurrentDay(1, day);
         GoToScene(Scenes.One);
     }
-    public void LevelTwoClicked()
+    public void LevelTwoClicked(int day)
     {
+        GameObject.FindFirstObjectByType<GameManager>().SetCurrentDay(2, day);
         GoToScene(Scenes.Two);
     }
 
-    public void LevelThreeClicked()
+    public void LevelThreeClicked(int day)
     {
+        GameObject.FindFirstObjectByType<GameManager>().SetCurrentDay(3, day);
         GoToScene(Scenes.Three);
     }
 
@@ -47,13 +50,13 @@ public class TitleScreen : MonoBehaviour
         switch(scene)
         { 
             case Scenes.One:
-                SceneManager.LoadScene("RestuarantOne");
+                SceneManager.LoadScene("Restuarant1");
                 break;
             case Scenes.Two:
-                SceneManager.LoadScene("Restuarant2");
+                SceneManager.LoadScene("Restaurant2");
                 break;
             case Scenes.Three:
-                SceneManager.LoadScene("Restuarant3");
+                SceneManager.LoadScene("Restaurant3");
                 break;
             default:
                 Debug.Log("How did this happen?");
