@@ -30243,6 +30243,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1838589468}
     m_Modifications:
+    - target: {fileID: 673688386848472374, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 673688386848472374, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
+      propertyPath: m_AnimatePhysics
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4953025158188801087, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
       propertyPath: m_LocalPosition.z
       value: 0.642
