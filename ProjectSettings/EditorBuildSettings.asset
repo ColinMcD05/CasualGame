@@ -11,6 +11,12 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Restuarant1.unity
     guid: ecd83d9050634ee43bca5dc06052cc89
+  - enabled: 1
+    path: Assets/Scenes/Restaurant2.unity
+    guid: 736f9530b2ec84a4facc7eb65863544e
+  - enabled: 1
+    path: Assets/Scenes/Restaurant3.unity
+    guid: 4e7abecf193a4124890fe98c7c35abf3
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
   m_UseUCBPForAssetBundles: 0

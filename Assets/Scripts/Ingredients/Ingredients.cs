@@ -3,7 +3,7 @@ using System.IO;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Ingredients : MonoBehaviour, ISavable
+public class Ingredients : MonoBehaviour
 {
     [Header("Ingrediant Info")]
     //Ingrediant Info

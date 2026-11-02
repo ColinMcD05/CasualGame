@@ -12876,6 +12876,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowDay
   showDayEndGroup: {fileID: 6776969371740340964}
+  nextDayButton: {fileID: 9007681026810647694}
   day: {fileID: 2105987788068897011}
   satisfied: {fileID: 4143288387559214595}
   meh: {fileID: 8933189247975482873}

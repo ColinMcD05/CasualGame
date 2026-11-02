@@ -6,7 +6,7 @@ public class TakeOrder : MonoBehaviour
 {
     public CustomersManager customersManager;
     public Button button;
-    public TextMeshProUGUI text;
+    public TextMeshProUGUI showInfo;
 
     void Start()
     {
@@ -30,9 +30,11 @@ public class TakeOrder : MonoBehaviour
         if (customersManager.CheckCustomersToOrder())
         {
             
-            if(text.enabled)
+            if(showInfo.enabled)
             {
-                text.enabled = false;
+                print("Hello");
+                showInfo.enabled = false;
+                showInfo.text = "";
                 customersManager.TakeOrder(true);
             }
             else
@@ -44,6 +46,6 @@ public class TakeOrder : MonoBehaviour
 
     public void ShowText()
     {
-        text.enabled = true;
+        showInfo.enabled = true;
     }
 }

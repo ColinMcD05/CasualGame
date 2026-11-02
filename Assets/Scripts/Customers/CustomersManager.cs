@@ -37,16 +37,11 @@ public class CustomersManager : MonoBehaviour
     {
         newCustomerSource = gameObject.AddComponent<AudioSource>();
         orderTakenSource = gameObject.AddComponent<AudioSource>();
-
-        StartDay();
     }
 
-    public void StartDay()
+    public void StartDay(int maxCustomersToday)
     {
-        if(dayManager.GetCurrentDay() % 5 == 0)
-        {
-            maxCustomersToday++;
-        }
+        this.maxCustomersToday = maxCustomersToday;
 
         Invoke("AddNewCustomer", 1.2f);
 
@@ -157,7 +152,7 @@ public class CustomersManager : MonoBehaviour
         {
             GameObject newCustomer = null;
 
-            if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count + 1) % maxCustomersToday == 0)
+            if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count + 1) % maxCustomersToday == 0 && dayManager.GetCurrentDay() == 5)
             {
                 int randomIndex = Random.Range(0, customerPrefabs.Length);
                 newCustomer = Instantiate(bossPrefab, orderPositions[needToTake.Count]);
