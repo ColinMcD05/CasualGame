@@ -46,11 +46,10 @@ public class TitleScreen : MonoBehaviour
 
     private void GoToScene(Scenes scene)
     {
-
         switch(scene)
         { 
             case Scenes.One:
-                SceneManager.LoadScene("Restuarant1");
+                SceneManager.LoadScene("Restaurant1");
                 break;
             case Scenes.Two:
                 SceneManager.LoadScene("Restaurant2");
@@ -61,8 +60,6 @@ public class TitleScreen : MonoBehaviour
             default:
                 Debug.Log("How did this happen?");
                 break;
-
         }
     }
-
 }

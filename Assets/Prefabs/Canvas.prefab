@@ -7484,7 +7484,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TakeOrder
   customersManager: {fileID: 0}
   button: {fileID: 8861788911697587864}
-  text: {fileID: 6581789688228303362}
+  showInfo: {fileID: 6581789688228303362}
 --- !u!1 &5213031758474687603
 GameObject:
   m_ObjectHideFlags: 0

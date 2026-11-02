@@ -163,17 +163,19 @@ public class DayInfo
     int day;
     int customerAmount;
     int neededStars;
+    bool canBeUnlocked;
 
     public int earnedStars = 0;
     public bool completed = false;
     public bool unlocked = false;
 
-    public DayInfo(string dayID, int day, int customerAmount, int neededStars)
+    public DayInfo(string dayID, int day, int customerAmount, int neededStars, bool canUnlock = true)
     {
         this.dayID = dayID;
         this.day = day;
         this.customerAmount = customerAmount;
         this.neededStars = neededStars;
+        canBeUnlocked = canUnlock;
     }
 
     public int GetDay()
@@ -193,7 +195,10 @@ public class DayInfo
 
     public void Unlock()
     {
-        unlocked = true;
+        if (canBeUnlocked)
+        {
+            unlocked = true;
+        }
     }
 }
 
@@ -221,11 +226,11 @@ public class Days
             new DayInfo("2-3", 3, 8, 12),
             new DayInfo("2-4", 4, 9, 14),
             new DayInfo("2-5", 5, 10, 16),
-            new DayInfo("3-1", 1, 7, 18),
-            new DayInfo("3-2", 2, 8, 20),
-            new DayInfo("3-3", 3, 9, 22),
-            new DayInfo("3-4", 4, 10, 24),
-            new DayInfo("3-5", 5, 11, 26)//,
+            new DayInfo("3-1", 1, 7, 18, false),
+            new DayInfo("3-2", 2, 8, 20, false),
+            new DayInfo("3-3", 3, 9, 22, false),
+            new DayInfo("3-4", 4, 10, 24, false),
+            new DayInfo("3-5", 5, 11, 26, false)//,
             //new DayInfo("Infinite", -1, -1)
         };
 
