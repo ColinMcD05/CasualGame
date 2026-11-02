@@ -82,6 +82,7 @@ public class DayManager : MonoBehaviour
             }
         }
 
+        if(starAmount > 0)
         gameManager.DayCompleted();
         dayInfo.earnedStars = starAmount;
         gameManager.SaveLevel(dayInfo);

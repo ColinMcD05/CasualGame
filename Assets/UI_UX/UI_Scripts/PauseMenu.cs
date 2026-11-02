@@ -24,4 +24,14 @@ public class PauseMenu : MonoBehaviour
             isPaused = true;
         }
     }
+
+    public void UnlockLevels()
+    {
+        GameObject.FindFirstObjectByType<GameManager>().UnlockAllLevels();
+
+        foreach(LockLevels locks in GameObject.FindObjectsByType<LockLevels>(FindObjectsSortMode.None))
+        {
+            locks.Unlock();
+        }
+    }
 }

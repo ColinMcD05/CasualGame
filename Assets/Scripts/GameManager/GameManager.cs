@@ -40,26 +40,41 @@ public class GameManager : MonoBehaviour
             totalStars += day.earnedStars;
         }
 
-        bool prevUnlock = true;
+        DayInfo prevDay = null;
 
         foreach(DayInfo day in days.days)
         {
             if (day.unlocked)
             {
-                prevUnlock = true;
+                prevDay = day;
                 continue;
             }
 
-            if(totalStars >= day.GetNeededStars() && (prevUnlock || day.GetDay() == 1))
+            if(totalStars >= day.GetNeededStars() && (prevDay.completed || day.GetDay() == 1))
             {
                 day.Unlock();
-                prevUnlock = true;
+                prevDay = day;
             }
             else
             {
-                prevUnlock = false;
+                prevDay = day;
             }
         }
+    }
+
+    public void UnlockAllLevels()
+    {
+        foreach(DayInfo day in days.days)
+        {
+            day.Unlock();
+        }
+
+        RecheckTotalStars();
+    }
+
+    public bool GetIsUnlocked(int index)
+    {
+        return days.days[index].unlocked;
     }
 
     public void DayCompleted()
@@ -145,7 +160,7 @@ public class GameManager : MonoBehaviour
     {
         if(scene.name == "MainMenu")
         {
-            print("Hello");
+            RecheckTotalStars();
         }
     }
 
