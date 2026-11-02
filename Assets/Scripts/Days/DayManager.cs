@@ -20,9 +20,11 @@ public class DayManager : MonoBehaviour
     {
         gameManager = GameObject.FindFirstObjectByType<GameManager>();
         dayInfo = gameManager.GetDayInfo();
-        currentDay = dayInfo.GetDay();
+        if (dayInfo != null)
+            currentDay = dayInfo.GetDay();
+        else currentDay = 1;
 
-        DayStarted();
+            DayStarted();
     }
 
     public void DayStarted()
@@ -32,7 +34,13 @@ public class DayManager : MonoBehaviour
 
         Invoke("ResetUI", 1.5f);
 
-        customersManager.StartDay(dayInfo.GetCustomerAmount());
+        int customerAmount = 5;
+
+        if(dayInfo != null)
+        {
+            customerAmount = dayInfo.GetCustomerAmount();
+        }
+        customersManager.StartDay(customerAmount);
     }
 
     public void StartNewDay()
@@ -40,7 +48,9 @@ public class DayManager : MonoBehaviour
         showDay.HideDay();
         gameManager.NextDay();
         dayInfo = gameManager.GetDayInfo();
-        currentDay = dayInfo.GetDay();
+        if (dayInfo != null)
+            currentDay = dayInfo.GetDay();
+        else currentDay = 1;
 
         DayStarted();
     }
