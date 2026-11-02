@@ -8278,6 +8278,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7583756989225457600, guid: 0bafd3b9485543b4990c4cd0808fa724, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -9172,7 +9176,7 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   ingredientGetText: {fileID: 1439751279}
-  poofParticles: {fileID: 859555668}
+  poofVFX: {fileID: 0}
   selectedIngredient: {fileID: 0}
 --- !u!4 &577374608
 Transform:
@@ -9264,6 +9268,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7583756989225457600, guid: 0bafd3b9485543b4990c4cd0808fa724, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -10119,6 +10127,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2_Bar (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4399487543627345296, guid: 80862c1f33a2be747b8bebc70280f138, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     - target: {fileID: 8162884030983367675, guid: 80862c1f33a2be747b8bebc70280f138, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8612851
@@ -10698,11 +10710,6 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 855021536}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!198 &859555668 stripped
-ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 3357473679679971492, guid: 4b499d5f4c4f213488ceacc89a5f76ca, type: 3}
-  m_PrefabInstance: {fileID: 1609329129}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &873317042
 GameObject:
   m_ObjectHideFlags: 0
@@ -25463,6 +25470,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2_BigTables
       objectReference: {fileID: 0}
+    - target: {fileID: 7528457817008376046, guid: 3ec0f01ba7b18e24cab3627ec7bad89d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -33866,6 +33877,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7583756989225457600, guid: 0bafd3b9485543b4990c4cd0808fa724, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -44322,6 +44337,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level2_Bar
       objectReference: {fileID: 0}
+    - target: {fileID: 4399487543627345296, guid: 80862c1f33a2be747b8bebc70280f138, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: c9b0f32bcdcc2124da0048a7a1883599, type: 2}
     - target: {fileID: 8162884030983367675, guid: 80862c1f33a2be747b8bebc70280f138, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.8612851
