@@ -1804,6 +1804,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 8ccf6dd03ab14454ca31663a94f48e6d, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 09e753445b9a7ef49bf90ecc5dd0ba7b, type: 3}
     - target: {fileID: 8958088558779813876, guid: 8ccf6dd03ab14454ca31663a94f48e6d, type: 3}
       propertyPath: m_Name
       value: Sprinkles
@@ -9296,6 +9300,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 3d3136abc666a1446a11dcbe5af117a0, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc8b0f9ffa5954b42b243b24009ee95e, type: 3}
     - target: {fileID: 8958088558779813876, guid: 3d3136abc666a1446a11dcbe5af117a0, type: 3}
       propertyPath: m_Name
       value: Cream
@@ -9645,6 +9653,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 70dc9b9cf06a72d4397072cb81418e12, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 86ead4b93562b234d97a45ff30f07b54, type: 3}
     - target: {fileID: 8958088558779813876, guid: 70dc9b9cf06a72d4397072cb81418e12, type: 3}
       propertyPath: m_Name
       value: Banana
@@ -9961,6 +9973,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: c568456fe3c90274f878370fd988dc4b, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 4feb57195fe77944482861e9c062f3a4, type: 3}
     - target: {fileID: 8958088558779813876, guid: c568456fe3c90274f878370fd988dc4b, type: 3}
       propertyPath: m_Name
       value: Ice Cream Cones
@@ -10371,6 +10387,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: bb568c741227e234a8ac6f2d9bc64383, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8472da7e73bc7044c818edb382763026, type: 3}
     - target: {fileID: 8958088558779813876, guid: bb568c741227e234a8ac6f2d9bc64383, type: 3}
       propertyPath: m_Name
       value: Butter
@@ -11572,6 +11592,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: eedaf19d1fbdd8a46b266188f1f42c96, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 9f4e19a6a103afa4e8419ed536ff5f2f, type: 3}
     - target: {fileID: 8958088558779813876, guid: eedaf19d1fbdd8a46b266188f1f42c96, type: 3}
       propertyPath: m_Name
       value: Sugar
@@ -12515,6 +12539,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 47a4058895e2429439217ba0f4c9f479, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 71b1699faf75edd49a6b0131c2285fcf, type: 3}
     - target: {fileID: 8958088558779813876, guid: 47a4058895e2429439217ba0f4c9f479, type: 3}
       propertyPath: m_Name
       value: Flour
@@ -19342,6 +19370,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: a3358384f7fd4814dac6e186341bf4a0, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 18c6dcc4f996f8945b542466c6524a10, type: 3}
     - target: {fileID: 8958088558779813876, guid: a3358384f7fd4814dac6e186341bf4a0, type: 3}
       propertyPath: m_Name
       value: Ice Cream Base
@@ -25633,6 +25665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: cb38b82ad97fc694dbb52df55cfa6b11, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 42c469f0deeb42b418d8f61e23f3299e, type: 3}
     - target: {fileID: 8958088558779813876, guid: cb38b82ad97fc694dbb52df55cfa6b11, type: 3}
       propertyPath: m_Name
       value: Ube
@@ -32146,6 +32182,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 17be9b1511d57d446a5af53d87ef85f2, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 8eabbddeebb1ac6429dcd5869b2bdd0d, type: 3}
     - target: {fileID: 8958088558779813876, guid: 17be9b1511d57d446a5af53d87ef85f2, type: 3}
       propertyPath: m_Name
       value: Milk
@@ -32397,6 +32437,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: e2c5674835b573142af62ad5e03fc88d, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 957d2147d359c814e9217faca7a0f2c1, type: 3}
     - target: {fileID: 8958088558779813876, guid: e2c5674835b573142af62ad5e03fc88d, type: 3}
       propertyPath: m_Name
       value: Cinnamon
@@ -33493,6 +33537,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 01e76f6321989ca4c81cac32dbbbd786, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: bbd5fdb202f1aa140ab30a26cf1ba825, type: 3}
     - target: {fileID: 8958088558779813876, guid: 01e76f6321989ca4c81cac32dbbbd786, type: 3}
       propertyPath: m_Name
       value: Chocolate Syrup
@@ -33777,6 +33825,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: 6947b5312bc9bf04b86afb4d3cea4897, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f33ecf2a18c3e564d933c38dd7d29a9b, type: 3}
     - target: {fileID: 8958088558779813876, guid: 6947b5312bc9bf04b86afb4d3cea4897, type: 3}
       propertyPath: m_Name
       value: Caramel Syrup
@@ -33879,6 +33931,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7931600601095130950, guid: ea1bf59123ff2764ca91af87dc0efe17, type: 3}
+      propertyPath: sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 5b5591a3789a34d4a92851289ec48063, type: 3}
     - target: {fileID: 8958088558779813876, guid: ea1bf59123ff2764ca91af87dc0efe17, type: 3}
       propertyPath: m_Name
       value: Cream Cheese
