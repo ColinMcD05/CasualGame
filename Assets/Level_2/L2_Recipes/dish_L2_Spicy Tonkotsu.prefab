@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2430792126017433590}
   - component: {fileID: 3890580777529729676}
   m_Layer: 0
-  m_Name: dish_L2_Spicy Tonkatsu
+  m_Name: dish_L2_Spicy Tonkotsu
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
