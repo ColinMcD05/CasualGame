@@ -6,17 +6,20 @@ using UnityEngine.InputSystem.iOS;
 
 public class EnemyManager : MonoBehaviour
 {
+    //logic stuff
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private TextMeshProUGUI ingredientGetText;
-    [SerializeField] private GameObject poofVFX;
-
     [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
     private bool enemyActive = false;
+
+    //visual stuff
+    [SerializeField] private TextMeshProUGUI ingredientGetText;
+    [SerializeField] private GameObject poofVFX;
     private Coroutine textCoroutine;
     private ParticleSystem[] poofParticleSources;
 
+    //audio stuff
     private AudioSource audioSource;
     [SerializeField] private AudioClip sound;
 
