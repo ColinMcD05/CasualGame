@@ -11,11 +11,19 @@ public class EnemyManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI ingredientGetText;
     [SerializeField] private GameObject poofVFX;
 
-    ParticleSystem[] poofParticleSources;
     [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
     private bool enemyActive = false;
     private Coroutine textCoroutine;
+    private ParticleSystem[] poofParticleSources;
+
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip sound;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
