@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5336151779008511377}
-  - {fileID: 786332495429124961}
+  - {fileID: 745426170846231575}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2430792126017433590
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2242530862710018387}
   m_maskType: 0
---- !u!1001 &8281701565013560956
+--- !u!1001 &8241402238293635338
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -260,6 +260,18 @@ PrefabInstance:
     - target: {fileID: 8308242051535214503, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
       propertyPath: m_Name
       value: dish_L2_tteokbokki
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
       propertyPath: m_LocalRotation.y
@@ -306,8 +318,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
---- !u!4 &786332495429124961 stripped
+--- !u!4 &745426170846231575 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8648915199908662557, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
-  m_PrefabInstance: {fileID: 8281701565013560956}
+  m_PrefabInstance: {fileID: 8241402238293635338}
   m_PrefabAsset: {fileID: 0}

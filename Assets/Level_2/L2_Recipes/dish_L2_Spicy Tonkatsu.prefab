@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5336151779008511377}
-  - {fileID: 4508053593566145694}
+  - {fileID: 1292227125807376295}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2430792126017433590
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2242530862710018387}
   m_maskType: 0
---- !u!1001 &2460043098783283103
+--- !u!1001 &955589166577581222
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -259,7 +259,19 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1722581078780035515, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
       propertyPath: m_Name
-      value: dish_L2_boss_tonkotsu_ramen
+      value: dish_L2_boss_tonkatsu_ramen
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
       propertyPath: m_LocalRotation.y
@@ -306,8 +318,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
---- !u!4 &4508053593566145694 stripped
+--- !u!4 &1292227125807376295 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 2066033964632382209, guid: 509ed3f2231ced54f96213d3259c686e, type: 3}
-  m_PrefabInstance: {fileID: 2460043098783283103}
+  m_PrefabInstance: {fileID: 955589166577581222}
   m_PrefabAsset: {fileID: 0}

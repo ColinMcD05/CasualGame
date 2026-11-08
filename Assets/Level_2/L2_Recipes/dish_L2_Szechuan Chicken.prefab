@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 5336151779008511377}
-  - {fileID: 7709981847883551697}
+  - {fileID: 5699102604192268887}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2430792126017433590
@@ -249,7 +249,7 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_renderer: {fileID: 2242530862710018387}
   m_maskType: 0
---- !u!1001 &8178811935678041285
+--- !u!1001 &6082364342957628739
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -260,6 +260,18 @@ PrefabInstance:
     - target: {fileID: 1167682550881043886, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
       propertyPath: m_Name
       value: dish_L2_szechuan_chicken
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 0.08
+      objectReference: {fileID: 0}
+    - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 0.08
       objectReference: {fileID: 0}
     - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -279,7 +291,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
       propertyPath: m_LocalRotation.y
@@ -306,8 +318,8 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
---- !u!4 &7709981847883551697 stripped
+--- !u!4 &5699102604192268887 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1981480187696488212, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
-  m_PrefabInstance: {fileID: 8178811935678041285}
+  m_PrefabInstance: {fileID: 6082364342957628739}
   m_PrefabAsset: {fileID: 0}
