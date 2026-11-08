@@ -6,16 +6,34 @@ using UnityEngine.InputSystem.iOS;
 
 public class EnemyManager : MonoBehaviour
 {
+    //logic stuff
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private TextMeshProUGUI ingredientGetText;
-    [SerializeField] private GameObject poofVFX;
-
-    ParticleSystem[] poofParticleSources;
     [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
     private bool enemyActive = false;
+
+    //visual stuff
+    [SerializeField] private TextMeshProUGUI ingredientGetText;
+    [SerializeField] private GameObject poofVFX;
     private Coroutine textCoroutine;
+    private ParticleSystem[] poofParticleSources;
+
+    //audio stuff
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip Spell_Fire;
+    [SerializeField] private AudioClip Spell_Lightning;
+    [SerializeField] private AudioClip Spell_Ice;
+    [SerializeField] private AudioClip SlimeDeath;
+    [SerializeField] private AudioClip MainMenu;
+    [SerializeField] private AudioClip Level1;
+    [SerializeField] private AudioClip Level2;
+    [SerializeField] private AudioClip Level3;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
