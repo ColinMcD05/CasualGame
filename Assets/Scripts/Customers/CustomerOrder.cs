@@ -19,7 +19,7 @@ public class CustomerOrder : MonoBehaviour
 
 	private float waitTimer = 0;
 
-	[SerializeField] TextMeshProUGUI orderText;
+	[SerializeField] TextMeshPro orderText;
 
     void Awake()
 	{
@@ -77,12 +77,11 @@ public class CustomerOrder : MonoBehaviour
 	public void ShowOrder()
 	{
 		orderText.text = order.recipeName;
-
     }
 
 	public Recipe GetOrder()
 	{
-        ShowOrder();
+        Invoke("ShowOrder", 2);
         return order;
 	}
 
