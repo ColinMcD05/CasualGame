@@ -21,7 +21,14 @@ public class EnemyManager : MonoBehaviour
 
     //audio stuff
     private AudioSource audioSource;
-    [SerializeField] private AudioClip sound;
+    [SerializeField] private AudioClip Spell_Fire;
+    [SerializeField] private AudioClip Spell_Lightning;
+    [SerializeField] private AudioClip Spell_Ice;
+    [SerializeField] private AudioClip SlimeDeath;
+    [SerializeField] private AudioClip MainMenu;
+    [SerializeField] private AudioClip Level1;
+    [SerializeField] private AudioClip Level2;
+    [SerializeField] private AudioClip Level3;
 
     private void Awake()
     {

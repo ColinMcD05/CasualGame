@@ -14301,6 +14301,7 @@ Transform:
   m_Children:
   - {fileID: 873317043}
   - {fileID: 360434920}
+  - {fileID: 577374608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &564474520
@@ -14614,9 +14615,17 @@ MonoBehaviour:
   - {fileID: 525106679}
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
+  selectedIngredient: {fileID: 0}
   ingredientGetText: {fileID: 1439751279}
   poofVFX: {fileID: 1609329131}
-  selectedIngredient: {fileID: 0}
+  Spell_Fire: {fileID: 8300000, guid: c44524082dc77c449a4c469c633189ea, type: 3}
+  Spell_Lightning: {fileID: 8300000, guid: e6322c8634a83c34bb20243d14fbc5e3, type: 3}
+  Spell_Ice: {fileID: 8300000, guid: d1d96baea1dd80b479af5f5319b6b0a8, type: 3}
+  SlimeDeath: {fileID: 8300000, guid: 4600fd63a5c95ef46b194ec93b700c18, type: 3}
+  MainMenu: {fileID: 8300000, guid: e091e017275d4804eafafe927f708d0a, type: 3}
+  Level1: {fileID: 8300000, guid: ea9ebd7b3a86aa441a43efab41abc452, type: 3}
+  Level2: {fileID: 8300000, guid: 9b4dc250526c8674086b2b6408a2017d, type: 3}
+  Level3: {fileID: 8300000, guid: 8e2ff349e5052cb4c93a5d1552a21bf3, type: 3}
 --- !u!4 &577374608
 Transform:
   m_ObjectHideFlags: 0
@@ -14625,12 +14634,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577374606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 434.76312, y: 0.00001, z: 1591.3004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 438.0454, y: 0.00001, z: 1585.7184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 564474519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &578545460 stripped
 MonoBehaviour:
@@ -62509,13 +62518,11 @@ SceneRoots:
   - {fileID: 1556223879}
   - {fileID: 1803880571}
   - {fileID: 1838589468}
-  - {fileID: 564474519}
   - {fileID: 1211303545}
   - {fileID: 1113411656}
   - {fileID: 990610924}
   - {fileID: 1210305912}
   - {fileID: 1495671046}
-  - {fileID: 577374608}
   - {fileID: 415660672}
   - {fileID: 2852532404909999640}
   - {fileID: 7947987920176238025}
@@ -62523,3 +62530,4 @@ SceneRoots:
   - {fileID: 1382942989}
   - {fileID: 1337425623}
   - {fileID: 1294400439}
+  - {fileID: 564474519}
