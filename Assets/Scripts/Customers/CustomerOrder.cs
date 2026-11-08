@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -18,6 +19,7 @@ public class CustomerOrder : MonoBehaviour
 
 	private float waitTimer = 0;
 
+	[SerializeField] TextMeshProUGUI orderText;
 
     void Awake()
 	{
@@ -72,9 +74,16 @@ public class CustomerOrder : MonoBehaviour
 		}
 	}
 
+	public void ShowOrder()
+	{
+		orderText.text = order.recipeName;
+
+    }
+
 	public Recipe GetOrder()
 	{
-		return order;
+        ShowOrder();
+        return order;
 	}
 
 	public void GoodOrder()
