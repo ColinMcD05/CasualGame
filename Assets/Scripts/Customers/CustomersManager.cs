@@ -148,8 +148,14 @@ public class CustomersManager : MonoBehaviour
 
     public void AddNewCustomer()
     {
-        if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday && alreadyTaken.Count + needToTake.Count < customerLimit)
+        if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday)
         {
+            if (alreadyTaken.Count + needToTake.Count >= customerLimit)
+            {
+                Invoke("AddNewCustomer", 5);
+                return;
+            }
+
             GameObject newCustomer = null;
 
             if ((satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count + 1) % maxCustomersToday == 0 && dayManager.GetCurrentDay() == 5)
