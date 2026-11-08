@@ -14295,6 +14295,7 @@ Transform:
   m_Children:
   - {fileID: 873317043}
   - {fileID: 360434920}
+  - {fileID: 577374608}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &564474520
@@ -14619,12 +14620,12 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 577374606}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 434.76312, y: 0.00001, z: 1591.3004}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 438.0454, y: 0.00001, z: 1585.7184}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 0}
+  m_Father: {fileID: 564474519}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &578545460 stripped
 MonoBehaviour:
@@ -30837,7 +30838,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6627989370010781066, guid: ffa583d226719f8469433fbc084b9871, type: 3}
       propertyPath: m_Name
-      value: Customer_L1 1
+      value: Sanchez
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -31398,7 +31399,7 @@ PrefabInstance:
   serializedVersion: 2
   m_Modification:
     serializedVersion: 3
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1838589468}
     m_Modifications:
     - target: {fileID: -9109408118380772660, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
@@ -31434,15 +31435,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -50.46853
+      value: -60.121788
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.000000002532829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 2.73
+      value: 18.17498
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalRotation.w
@@ -31450,7 +31451,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalRotation.y
@@ -31458,7 +31459,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -31745,6 +31746,11 @@ PrefabInstance:
       addedObject: {fileID: 289836662}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
+--- !u!4 &1337425624 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: f8461ea353583a54cb3f00a32c18ade3, type: 3}
+  m_PrefabInstance: {fileID: 1337425623}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1338595238
 GameObject:
   m_ObjectHideFlags: 0
@@ -47364,6 +47370,7 @@ Transform:
   - {fileID: 525106680}
   - {fileID: 426657849}
   - {fileID: 1609329130}
+  - {fileID: 1337425624}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1846360590
@@ -62609,11 +62616,9 @@ SceneRoots:
   - {fileID: 990610924}
   - {fileID: 1210305912}
   - {fileID: 1495671046}
-  - {fileID: 577374608}
   - {fileID: 415660672}
   - {fileID: 2852532404909999640}
   - {fileID: 7947987920176238025}
   - {fileID: 580173424195889681}
   - {fileID: 1382942989}
-  - {fileID: 1337425623}
   - {fileID: 1294400439}
