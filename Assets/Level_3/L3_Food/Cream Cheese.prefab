@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2450787000878761389}
   - component: {fileID: 3393270344345570079}
-  - component: {fileID: 7506636115850831363}
+  - component: {fileID: 5817197319570794664}
   - component: {fileID: 1324563970792568713}
   - component: {fileID: 7931600601095130950}
   m_Layer: 5
@@ -47,7 +47,7 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8958088558779813876}
   m_CullTransparentMesh: 1
---- !u!114 &7506636115850831363
+--- !u!114 &5817197319570794664
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -67,7 +67,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 00587264dc316d141a9e9505392650ac, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 5b5591a3789a34d4a92851289ec48063, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -106,5 +106,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Ingredients
   ingredientName: Cream Cheese
-  sprite: {fileID: 21300000, guid: 00587264dc316d141a9e9505392650ac, type: 3}
-  image: {fileID: 7506636115850831363}
+  sprite: {fileID: 21300000, guid: 5b5591a3789a34d4a92851289ec48063, type: 3}
+  image: {fileID: 5817197319570794664}
