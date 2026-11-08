@@ -14,6 +14,7 @@ public class EnemyManager : MonoBehaviour
     private bool enemyActive = false;
 
     //visual stuff
+    [SerializeField] private Animator playerAnimator;
     [SerializeField] private TextMeshProUGUI ingredientGetText;
     [SerializeField] private GameObject poofVFX;
     private Coroutine textCoroutine;
@@ -21,14 +22,10 @@ public class EnemyManager : MonoBehaviour
 
     //audio stuff
     private AudioSource audioSource;
-    [SerializeField] private AudioClip Spell_Fire;
-    [SerializeField] private AudioClip Spell_Lightning;
-    [SerializeField] private AudioClip Spell_Ice;
-    [SerializeField] private AudioClip SlimeDeath;
-    [SerializeField] private AudioClip MainMenu;
-    [SerializeField] private AudioClip Level1;
-    [SerializeField] private AudioClip Level2;
-    [SerializeField] private AudioClip Level3;
+    [SerializeField] private AudioClip spellFire;
+    [SerializeField] private AudioClip spellLightning;
+    [SerializeField] private AudioClip spellIce;
+    [SerializeField] private AudioClip slimeDeath;
 
     private void Awake()
     {
@@ -38,6 +35,11 @@ public class EnemyManager : MonoBehaviour
     private void Start()
     {
         poofParticleSources = poofVFX.GetComponentsInChildren<ParticleSystem>();
+    }
+
+    public void PlayEntrance()
+    {
+        playerAnimator.Play("Player_Entrance");
     }
 
     public void SpawnEnemy()
@@ -55,6 +57,8 @@ public class EnemyManager : MonoBehaviour
         {
             int element = button.GetElement();
             bool success = false;
+
+            playerAnimator.Play("Player_Attack");
 
             switch (element)
             {
@@ -96,7 +100,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     particleSource.Play();
                 }
-
+                
                 inventory.AddIngredient(selectedIngredient, 1);
                 enemyInstances[currentSlime].SetActive(false);
 
