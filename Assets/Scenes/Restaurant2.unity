@@ -9044,9 +9044,17 @@ MonoBehaviour:
   - {fileID: 525106679}
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
+  selectedIngredient: {fileID: 0}
   ingredientGetText: {fileID: 1439751279}
   poofVFX: {fileID: 519292178}
-  selectedIngredient: {fileID: 0}
+  Spell_Fire: {fileID: 0}
+  Spell_Lightning: {fileID: 0}
+  Spell_Ice: {fileID: 0}
+  SlimeDeath: {fileID: 0}
+  MainMenu: {fileID: 0}
+  Level1: {fileID: 0}
+  Level2: {fileID: 0}
+  Level3: {fileID: 0}
 --- !u!4 &577374608
 Transform:
   m_ObjectHideFlags: 0
@@ -9806,6 +9814,34 @@ PrefabInstance:
       propertyPath: m_Sprite
       value: 
       objectReference: {fileID: 21300000, guid: 2eae91d812684d44b8c875c5b57a25be, type: 3}
+    - target: {fileID: 6730585300880360210, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.1149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730585300880360210, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.1149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730585300880360210, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.1149
+      objectReference: {fileID: 0}
+    - target: {fileID: 6730585300880360210, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 6879854561109760456, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.41
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081146805650247080, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.77
+      objectReference: {fileID: 0}
+    - target: {fileID: 7081146805650247080, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 8511338974324294258, guid: 740836efdc2ecff40a3e737dce6aeca8, type: 3}
       propertyPath: m_Sprite
       value: 
@@ -19405,7 +19441,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6897615567433590604, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 2.2
+      value: 2.7
       objectReference: {fileID: 0}
     - target: {fileID: 6897615567433590604, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
       propertyPath: m_LocalPosition.z
@@ -34822,9 +34858,9 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 9b4dc250526c8674086b2b6408a2017d, type: 3}
+  m_Resource: {fileID: 8300000, guid: 8a814a48be0a60a40b7ee999cdbc5da0, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.3
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
