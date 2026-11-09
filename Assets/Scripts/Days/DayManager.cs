@@ -67,7 +67,7 @@ public class DayManager : MonoBehaviour
 
     public void FinishDay(int satisfiedAmount, int unsatisifedAmount, int mehAmount, int starAmount)
     {
-        showDay.DisplayDayEnd(satisfiedAmount, unsatisifedAmount, mehAmount, currentDay);
+        showDay.DisplayDayEnd(satisfiedAmount, unsatisifedAmount, mehAmount, currentDay, starAmount);
         currentDay++;
 
         for(int i = 0; i < images.Length; i++)

@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using System.IO;
+using System.Runtime.InteropServices.ComTypes;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -13,6 +14,8 @@ public class GameManager : MonoBehaviour
     int currentIndex;
     Days days;
     DayInfo currentDay;
+
+    [HideInInspector] public bool musicPlaying = true, sfxPlaying = true;
 
     private void Awake()
     {
@@ -121,6 +124,19 @@ public class GameManager : MonoBehaviour
         {
             stream.WriteLine(dayString);
         }
+
+        Settings settings = new Settings
+        {
+            isMusicPlaying = musicPlaying,
+            isSfxPlaying = sfxPlaying
+        };
+
+        filePath = Application.persistentDataPath + "/Settings.json";
+        using(StreamWriter stream = File.CreateText(filePath))
+        {
+            string settingString = JsonUtility.ToJson(settings);
+            stream.WriteLine(settingString);
+        }
     }
 
     public void LoadGame()
@@ -154,6 +170,22 @@ public class GameManager : MonoBehaviour
                 days.days[i].unlocked = dayData.days[i].unlocked;
             }
         }
+
+        filePath = Application.persistentDataPath + "/Settings.json";
+
+        if(!File.Exists(filePath))
+        {
+            return;
+        }
+
+        using (StreamReader stream = new StreamReader(filePath))
+        {
+            var settingsString = stream.ReadToEnd();
+            var settingsData = JsonUtility.FromJson<Settings>(settingsString);
+
+            musicPlaying = settingsData.isMusicPlaying;
+            sfxPlaying = settingsData.isSfxPlaying;
+        }
     }
 
     public void CheckAtMainMenu(Scene scene, LoadSceneMode scene1)
@@ -178,19 +210,17 @@ public class DayInfo
     int day;
     int customerAmount;
     int neededStars;
-    bool canBeUnlocked;
 
     public int earnedStars = 0;
     public bool completed = false;
     public bool unlocked = false;
 
-    public DayInfo(string dayID, int day, int customerAmount, int neededStars, bool canUnlock = true)
+    public DayInfo(string dayID, int day, int customerAmount, int neededStars)
     {
         this.dayID = dayID;
         this.day = day;
         this.customerAmount = customerAmount;
         this.neededStars = neededStars;
-        canBeUnlocked = canUnlock;
     }
 
     public int GetDay()
@@ -210,10 +240,7 @@ public class DayInfo
 
     public void Unlock()
     {
-        if (canBeUnlocked)
-        {
-            unlocked = true;
-        }
+        unlocked = true;
     }
 }
 
@@ -241,14 +268,21 @@ public class Days
             new DayInfo("2-3", 3, 8, 12),
             new DayInfo("2-4", 4, 9, 14),
             new DayInfo("2-5", 5, 10, 16),
-            new DayInfo("3-1", 1, 7, 18, false),
-            new DayInfo("3-2", 2, 8, 20, false),
-            new DayInfo("3-3", 3, 9, 22, false),
-            new DayInfo("3-4", 4, 10, 24, false),
-            new DayInfo("3-5", 5, 11, 26, false)//,
+            new DayInfo("3-1", 1, 7, 18),
+            new DayInfo("3-2", 2, 8, 20),
+            new DayInfo("3-3", 3, 9, 22),
+            new DayInfo("3-4", 4, 10, 24),
+            new DayInfo("3-5", 5, 11, 26)//,
             //new DayInfo("Infinite", -1, -1)
         };
 
         days[0].Unlock();
     }
+}
+
+[System.Serializable]
+public class Settings
+{
+    public bool isMusicPlaying;
+    public bool isSfxPlaying;
 }
