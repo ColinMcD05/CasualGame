@@ -64,32 +64,45 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
     {
         if (connectedMeal)
         {
-            GameObject objectUnder = eventData.pointerCurrentRaycast.gameObject;
-            if (!objectUnder)
+            Vector2 screenPostion = eventData.position;
+            Ray position = thisCamera.ScreenPointToRay(screenPostion);
+
+            if (Physics.Raycast(position, out RaycastHit hit))
             {
-                shelves.UpdatePositions();
-                return;
-            }
-            if (objectUnder.TryGetComponent(out CustomerDropOff dropOff))
-            {
-                if (dropOff.DropOff(shelves.GetRecipeAtIndex(num)))
+                if (hit.collider.TryGetComponent(out CustomerDropOff dropOff))
+                {
+                    if (dropOff.DropOff(shelves.GetRecipeAtIndex(num)))
+                    {
+                        print("Droppedoff");
+                        shelves.RemoveFinishedMeal(num);
+                        connectedMeal = null;
+                        shelves.UpdatePositions();
+                        return;
+                    }
+                    else
+                    {
+                        print("NotDroppedoff");
+                        shelves.UpdatePositions();
+                        return;
+                    }
+                }
+                if (hit.collider.TryGetComponent(out TrashCan trashCan))
                 {
                     shelves.RemoveFinishedMeal(num);
                     connectedMeal = null;
+                    shelves.UpdatePositions();
+                    return;
                 }
                 else
                 {
                     shelves.UpdatePositions();
+                    return;
                 }
-            }
-            if(objectUnder.TryGetComponent(out TrashCan trashCan))
-            {
-                shelves.RemoveFinishedMeal(num);
-                connectedMeal = null;
             }
             else
             {
                 shelves.UpdatePositions();
+                return;
             }
         }
     }

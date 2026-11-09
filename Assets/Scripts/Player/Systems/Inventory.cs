@@ -64,4 +64,12 @@ public class Inventory : MonoBehaviour
     {
         return ingredients;
     }
+
+    public int GetIngredientAmount(Ingredients ingredient)
+    {
+        if (!ingredients.ContainsKey(ingredient))
+            return 0;
+
+        return ingredients[ingredient];
+    }
 }

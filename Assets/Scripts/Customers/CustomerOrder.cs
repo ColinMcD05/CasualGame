@@ -1,4 +1,5 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,7 +8,6 @@ public class CustomerOrder : MonoBehaviour
 	public bool boss;
 	private Menu menu;
 	private Recipe order;
-	private Shelves shelf;
 	private Image indicator;
 	[SerializeField] Sprite goodSprite, badSprite, mehSprite;
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
@@ -18,6 +18,7 @@ public class CustomerOrder : MonoBehaviour
 
 	private float waitTimer = 0;
 
+	[SerializeField] TextMeshPro orderText;
 
     void Awake()
 	{
@@ -72,9 +73,18 @@ public class CustomerOrder : MonoBehaviour
 		}
 	}
 
+	public void ShowOrder()
+	{
+		if (order != null)
+		{
+			orderText.text = order.recipeName;
+		}
+    }
+
 	public Recipe GetOrder()
 	{
-		return order;
+        Invoke("ShowOrder", 2);
+        return order;
 	}
 
 	public void GoodOrder()

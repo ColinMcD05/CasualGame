@@ -1,13 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-public class IngredientContainers : MonoBehaviour
+public class IngredientContainers : MonoBehaviour, IDraggable3D
 {
     [SerializeField] Vector2 maxZValues;
 
-    MobileActions mobileAction;
-    InputAction tracking;
-    InputAction touch;
     Camera cauldronCamera;
     GameObject hitObject;
     [SerializeField] Transform movingObject;
@@ -17,35 +14,12 @@ public class IngredientContainers : MonoBehaviour
 
     void Awake()
     {
-        mobileAction = new MobileActions();
-
-        tracking = mobileAction.MobileAction.Tracking;
-        touch = mobileAction.MobileAction.Touch;
-
         cauldronCamera = GameObject.FindGameObjectWithTag("CauldronCamera").GetComponent<Camera>();
     }
 
-    void OnEnable()
+    public void StartDrag(Vector2 newScreenPosition)
     {
-        touch.Enable();
-        touch.performed += CheckIfOverObject;
-
-        tracking.Enable();
-        tracking.performed += DragIngredientContainer;
-    }
-
-    private void OnDisable()
-    {
-        touch.performed -= CheckIfOverObject;
-        touch.Disable();
-
-        tracking.performed -= DragIngredientContainer;
-        tracking.Disable();
-    }
-
-    public void CheckIfOverObject(InputAction.CallbackContext context)
-    {
-        Vector2 screenPostion = context.ReadValue<Vector2>();
+        Vector2 screenPostion = newScreenPosition;
         Ray position = cauldronCamera.ScreenPointToRay(screenPostion);
 
         if (Physics.Raycast(position, out RaycastHit hit))
@@ -67,11 +41,11 @@ public class IngredientContainers : MonoBehaviour
         }
     }
 
-    public void DragIngredientContainer(InputAction.CallbackContext context)
+    public void Drag(Vector2 screenPosition)
     {
         if (hitObject)
         {
-            Vector2 newPosition = context.ReadValue<Vector2>();
+            Vector2 newPosition = screenPosition;
             Vector3 toWorld = cauldronCamera.ScreenToWorldPoint(new Vector3(newPosition.x, newPosition.y, dragDepth));
 
             float distance = previousPosition.z - toWorld.z;

@@ -6,20 +6,40 @@ using UnityEngine.InputSystem.iOS;
 
 public class EnemyManager : MonoBehaviour
 {
+    //logic stuff
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
-    [SerializeField] private TextMeshProUGUI ingredientGetText;
-    [SerializeField] private GameObject poofVFX;
-
-    ParticleSystem[] poofParticleSources;
     [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
     private bool enemyActive = false;
+
+    //visual stuff
+    [SerializeField] private Animator playerAnimator;
+    [SerializeField] private TextMeshProUGUI ingredientGetText;
+    [SerializeField] private GameObject poofVFX;
     private Coroutine textCoroutine;
+    private ParticleSystem[] poofParticleSources;
+
+    //audio stuff
+    private AudioSource audioSource;
+    [SerializeField] private AudioClip spellFire;
+    [SerializeField] private AudioClip spellLightning;
+    [SerializeField] private AudioClip spellIce;
+    [SerializeField] private AudioClip slimeDeath;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
 
     private void Start()
     {
         poofParticleSources = poofVFX.GetComponentsInChildren<ParticleSystem>();
+    }
+
+    public void PlayEntrance()
+    {
+        playerAnimator.Play("Player_Entrance");
     }
 
     public void SpawnEnemy()
@@ -37,6 +57,8 @@ public class EnemyManager : MonoBehaviour
         {
             int element = button.GetElement();
             bool success = false;
+
+            playerAnimator.Play("Player_Attack");
 
             switch (element)
             {
@@ -78,7 +100,7 @@ public class EnemyManager : MonoBehaviour
                 {
                     particleSource.Play();
                 }
-
+                
                 inventory.AddIngredient(selectedIngredient, 1);
                 enemyInstances[currentSlime].SetActive(false);
 
