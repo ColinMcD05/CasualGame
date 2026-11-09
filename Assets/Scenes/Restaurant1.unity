@@ -2289,8 +2289,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1246475000}
-  - {fileID: 1436805538}
   - {fileID: 947848945}
+  - {fileID: 1436805538}
   m_Father: {fileID: 1515890275}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &115299534
@@ -20439,7 +20439,7 @@ Transform:
   m_GameObject: {fileID: 947848944}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.3, y: 0.4, z: -0.05}
+  m_LocalPosition: {x: 0, y: 0.5, z: 0}
   m_LocalScale: {x: 0.4, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -27602,6 +27602,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.056
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 2335835229142090552, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 3078393482709539319, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.944
@@ -27610,6 +27617,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.594
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 4412594855486683826, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 4582685946080045995, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.915
@@ -27698,6 +27712,13 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.265
       objectReference: {fileID: 0}
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: 7766390709692486810, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.2
+      objectReference: {fileID: 0}
+>>>>>>> Stashed changes
     - target: {fileID: 8749824597919067865, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Name
       value: Lights
@@ -30614,7 +30635,7 @@ Transform:
   m_GameObject: {fileID: 1246474999}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.3, y: 0.4, z: -0.05}
+  m_LocalPosition: {x: -0.3, y: 0.5, z: 0}
   m_LocalScale: {x: 0.4, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -33253,7 +33274,7 @@ Transform:
   m_GameObject: {fileID: 1436805537}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.4, z: -0.05}
+  m_LocalPosition: {x: 0.3, y: 0.5, z: 0}
   m_LocalScale: {x: 0.4, y: 8, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -38970,8 +38991,13 @@ Transform:
   m_GameObject: {fileID: 1515890274}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< Updated upstream
   m_LocalPosition: {x: 3.36, y: 2.65, z: -0.07}
   m_LocalScale: {x: 0.91, y: 1, z: 1}
+=======
+  m_LocalPosition: {x: 2.8, y: 2.65, z: -0.08}
+  m_LocalScale: {x: 0.9, y: 1, z: 1}
+>>>>>>> Stashed changes
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 115299533}
