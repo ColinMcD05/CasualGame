@@ -454,6 +454,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomerDropOff
   customerManager: {fileID: 0}
+  order: {fileID: 2660994075430276341}
 --- !u!1001 &7572736599200913414
 PrefabInstance:
   m_ObjectHideFlags: 0

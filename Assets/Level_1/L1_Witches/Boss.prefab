@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 5959891417907169116}
   - component: {fileID: 194079956409856316}
   - component: {fileID: 2888960895650412394}
+  - component: {fileID: 890700970726783506}
   m_Layer: 0
   m_Name: Boss
   m_TagString: Untagged
@@ -129,6 +130,7 @@ MonoBehaviour:
   visuals: {fileID: 2888960895650412394}
   ehTime: 60
   madTime: 90
+  orderText: {fileID: 0}
 --- !u!114 &2888960895650412394
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -145,6 +147,20 @@ MonoBehaviour:
   happyVFX: {fileID: 6901163469695356891, guid: 3f9924c4dd84f664cadba37a63ebecf2, type: 3}
   mehVFX: {fileID: 926000766313542392, guid: 618b57a28ca808b4891a95b5c404adc9, type: 3}
   madVFX: {fileID: 8132163291705024431, guid: cd2c10663fa43bc499542e8297b2d69b, type: 3}
+--- !u!114 &890700970726783506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3149795306523558028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 20d58b2b8fa66454598622efa7183b43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomerDropOff
+  customerManager: {fileID: 0}
+  order: {fileID: 194079956409856316}
 --- !u!1 &6320654496754360954
 GameObject:
   m_ObjectHideFlags: 0

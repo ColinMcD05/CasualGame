@@ -33,6 +33,15 @@ public class CustomersManager : MonoBehaviour
 
     [SerializeField] DayManager dayManager;
 
+    private ShowOrders showOrders;
+
+    List<int> indexArray = new List<int>();
+
+    public void Awake()
+    {
+        showOrders = GameObject.FindFirstObjectByType<ShowOrders>();
+    }
+
     public void Start()
     {
         newCustomerSource = gameObject.AddComponent<AudioSource>();
@@ -84,12 +93,12 @@ public class CustomersManager : MonoBehaviour
         }
 
         canTakeOrder = true;
+
+        showOrders.UpdateOrders();
     }
 
-    public void OrderGiven(Recipe recipe)
+    public void OrderGiven(Recipe recipe, CustomerSatisfaction wasGood)
     {
-        CustomerSatisfaction wasGood = alreadyTaken[0].TakeMeal(recipe);
-
         switch (wasGood)
         {
             case CustomerSatisfaction.Satisfied:
@@ -114,6 +123,8 @@ public class CustomersManager : MonoBehaviour
             dropoffText.enabled = false;
         }
 
+        indexArray.Add(alreadyTaken.FindIndex(order => order.GetOrder() == recipe));
+
         CheckDayEnd();
         Invoke("RemoveCustomer", 2);
     }
@@ -121,8 +132,9 @@ public class CustomersManager : MonoBehaviour
     //Remove customer
     void RemoveCustomer()
     {
-        GameObject remove = alreadyTaken[0].gameObject;
-        alreadyTaken.RemoveAt(0);
+        GameObject remove = alreadyTaken[indexArray[0]].gameObject;
+        alreadyTaken.RemoveAt(indexArray[0]);
+        indexArray.RemoveAt(0);
         Destroy(remove);
 
         if(alreadyTaken.Count == 0 && needToTake.Count == 0)
@@ -134,6 +146,8 @@ public class CustomersManager : MonoBehaviour
         {
             alreadyTaken[i].transform.position = waitingPositions[i].position;
         }
+
+        showOrders.UpdateOrders();
     }
 
     public bool CheckCustomersToOrder()

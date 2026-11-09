@@ -3,6 +3,7 @@ using UnityEngine;
 public class CustomerDropOff : MonoBehaviour
 {
     [SerializeField] CustomersManager customerManager;
+    [SerializeField] CustomerOrder order;
 
     public void Start()
     {
@@ -10,11 +11,12 @@ public class CustomerDropOff : MonoBehaviour
     }
     public bool DropOff(Recipe recipe)
     {
-        if (customerManager.CheckCustomersToGive())
+        if(order.GetOrder() == null)
         {
-            customerManager.OrderGiven(recipe);
-            return true;
+            return false;
         }
-        return false;
+
+        customerManager.OrderGiven(order.GetOrder(), order.TakeMeal(recipe));
+        return true;
     }
 }

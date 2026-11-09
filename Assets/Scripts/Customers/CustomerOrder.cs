@@ -8,7 +8,6 @@ public class CustomerOrder : MonoBehaviour
 	public bool boss;
 	private Menu menu;
 	private Recipe order;
-	private Shelves shelf;
 	private Image indicator;
 	[SerializeField] Sprite goodSprite, badSprite, mehSprite;
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
@@ -76,7 +75,10 @@ public class CustomerOrder : MonoBehaviour
 
 	public void ShowOrder()
 	{
-		orderText.text = order.recipeName;
+		if (order != null)
+		{
+			orderText.text = order.recipeName;
+		}
     }
 
 	public Recipe GetOrder()

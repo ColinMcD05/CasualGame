@@ -73,18 +73,25 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
                 {
                     if (dropOff.DropOff(shelves.GetRecipeAtIndex(num)))
                     {
+                        print("Droppedoff");
                         shelves.RemoveFinishedMeal(num);
                         connectedMeal = null;
+                        shelves.UpdatePositions();
+                        return;
                     }
                     else
                     {
+                        print("NotDroppedoff");
                         shelves.UpdatePositions();
+                        return;
                     }
                 }
                 if (hit.collider.TryGetComponent(out TrashCan trashCan))
                 {
                     shelves.RemoveFinishedMeal(num);
                     connectedMeal = null;
+                    shelves.UpdatePositions();
+                    return;
                 }
                 else
                 {

@@ -13,15 +13,20 @@ public class ShowOrders : MonoBehaviour
         group.blocksRaycasts = true;
         group.interactable = true;
 
+        UpdateOrders();
+    }
+
+    public void UpdateOrders()
+    {
         for (int i = 0; i < groups.Length; i++)
         {
-            if(i < customersManager.GetTakenCount())
+            if (i < customersManager.GetTakenCount())
             {
                 groups[i].alpha = 1;
                 Recipe recipe = customersManager.GetRecipeByIndex(i);
                 TextMeshProUGUI[] text = groups[i].GetComponentsInChildren<TextMeshProUGUI>();
                 text[0].text = recipe.recipeName;
-                for(int j = 1; j < text.Length; j++)
+                for (int j = 1; j < text.Length; j++)
                 {
                     if (j - 1 < recipe.ingredients.Length)
                     {
@@ -31,11 +36,11 @@ public class ShowOrders : MonoBehaviour
                     {
                         text[j].text = "";
                     }
-                    if(j == text.Length - 2)
+                    if (j == text.Length - 2)
                     {
                         text[j].text = $"{recipe.stirAmount}";
                     }
-                    if(j == text.Length - 1)
+                    if (j == text.Length - 1)
                     {
                         text[j].text = $"Mix";
                     }
@@ -47,7 +52,6 @@ public class ShowOrders : MonoBehaviour
             }
         }
     }
-
     public void Deactivate()
     {
         group.alpha = 0;
