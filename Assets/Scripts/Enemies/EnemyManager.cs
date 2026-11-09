@@ -6,26 +6,35 @@ using UnityEngine.InputSystem.iOS;
 
 public class EnemyManager : MonoBehaviour
 {
-    //logic stuff
+    [Header("Logic Stuff")]
     [SerializeField] GameObject[] enemyInstances;
     [SerializeField] private Inventory inventory;
     [HideInInspector] public Ingredients selectedIngredient;
     private int currentSlime;
+    private int buttonElement;
     private bool enemyActive = false;
 
-    //visual stuff
+    [Header("Visual Stuff")]
     [SerializeField] private Animator playerAnimator;
     [SerializeField] private TextMeshProUGUI ingredientGetText;
     [SerializeField] private GameObject poofVFX;
-    private Coroutine textCoroutine;
+    [SerializeField] private GameObject[] spellCastPrefabs;
+    [SerializeField] private GameObject[] spellProjectilePrefabs;
+    [SerializeField] private GameObject[] spellCollisionPrefabs;
+    private Coroutine fightCoroutine;
     private ParticleSystem[] poofParticleSources;
 
-    //audio stuff
-    private AudioSource audioSource;
-    [SerializeField] private AudioClip spellFire;
-    [SerializeField] private AudioClip spellLightning;
-    [SerializeField] private AudioClip spellIce;
+    [Header("Audio Stuff")]
+    [SerializeField] private AudioClip[] spellSounds;
     [SerializeField] private AudioClip slimeDeath;
+    private AudioSource audioSource;
+
+    [Header("Timing Tuning")]
+    [SerializeField] private float textDuration = 2f;
+    [SerializeField] private float castDelay = .1f;
+    [SerializeField] private float projectileSpeed = 1f;
+    [SerializeField] private float collisionDelay = 1f;
+    [SerializeField] private float deathDelay = .5f;
 
     private void Awake()
     {
@@ -37,7 +46,7 @@ public class EnemyManager : MonoBehaviour
         poofParticleSources = poofVFX.GetComponentsInChildren<ParticleSystem>();
     }
 
-    public void PlayEntrance()
+    public void PlayEntrance() //if entrance is still playing when you go into the scene it won't start from the beginning
     {
         playerAnimator.Play("Player_Entrance");
     }
@@ -51,16 +60,15 @@ public class EnemyManager : MonoBehaviour
         }
     }
 
-    public void KillEnemy()
+    public void KillEnemy() // may change to fight enemy later
     {
-        if (EventSystem.current.currentSelectedGameObject.TryGetComponent<AttackButton>(out AttackButton button))
+        if (EventSystem.current.currentSelectedGameObject.TryGetComponent<AttackButton>(out AttackButton button) && currentSlime >=0)
         {
-            int element = button.GetElement();
+            buttonElement = button.GetElement();
             bool success = false;
 
-            playerAnimator.Play("Player_Attack");
-
-            switch (element)
+            //check for the right element being used
+            switch (buttonElement)
             {
                 case 0:
                     if(currentSlime == 2)
@@ -87,33 +95,80 @@ public class EnemyManager : MonoBehaviour
                     break;
             }
 
+            //plays animations, vfx, and sounds
+            playerAnimator.Play("Player_Attack");
             if (success)
             {
-                if (textCoroutine != null)
+                if (fightCoroutine != null)
                 {
-                    StopCoroutine(textCoroutine);
+                    StopCoroutine(fightCoroutine);
                 }
-                ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
-                textCoroutine = StartCoroutine(displayText());
-
-                foreach(ParticleSystem particleSource in poofParticleSources)
+                fightCoroutine = StartCoroutine(fightSuccess());
+            }
+            else
+            {
+                if (fightCoroutine != null)
                 {
-                    particleSource.Play();
+                    StopCoroutine(fightCoroutine);
                 }
-                
-                inventory.AddIngredient(selectedIngredient, 1);
-                enemyInstances[currentSlime].SetActive(false);
-
-                currentSlime = -1; //stops phantom slime farming
+                fightCoroutine = StartCoroutine(fightFail());
             }
         }
     }
 
-    private IEnumerator displayText()
+    private IEnumerator fightSuccess()
     {
+        //plays cast particles and spawn projectile
+        yield return new WaitForSeconds(castDelay);
+        audioSource.PlayOneShot(spellSounds[buttonElement]);
+        Instantiate(spellCastPrefabs[buttonElement], new Vector3(-51.4300003f, 4.58300018f, -6.18900013f), Quaternion.Euler(0, 90, 0));
+
+        GameObject projectile = Instantiate(spellProjectilePrefabs[buttonElement], new Vector3(-51.4300003f, 4.58300018f, -6.18900013f), Quaternion.Euler(0, 90, 0));
+        ProjectileMove projectileScript = projectile.GetComponent<ProjectileMove>();
+        projectileScript.SetSpeed(projectileSpeed);
+        Destroy(projectile, collisionDelay);
+
+        //plays collision particles
+        yield return new WaitForSeconds(collisionDelay);
+        Instantiate(spellCollisionPrefabs[buttonElement], new Vector3(-47.4766693f, 2.68000007f, -4f), Quaternion.identity);
+
+        //kills slime and plays death particles
+        yield return new WaitForSeconds(deathDelay);
+        audioSource.PlayOneShot(slimeDeath);
+        enemyInstances[currentSlime].SetActive(false);
+        foreach (ParticleSystem particleSource in poofParticleSources)
+        {
+            particleSource.Play();
+        }
+
+        inventory.AddIngredient(selectedIngredient, 1);
+        currentSlime = -1; //stops phantom slime farming
+
+        //display text
+        ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
         ingredientGetText.gameObject.SetActive(true);
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(textDuration);
         ingredientGetText.gameObject.SetActive(false);
-        textCoroutine = null;
+
+        fightCoroutine = null;
+    }
+
+    private IEnumerator fightFail()
+    {
+        //plays cast particles and spawn projectile
+        yield return new WaitForSeconds(castDelay);
+        audioSource.PlayOneShot(spellSounds[buttonElement]);
+        Instantiate(spellCastPrefabs[buttonElement], new Vector3(-51.4300003f, 4.58300018f, -6.18900013f), Quaternion.Euler(0, 90, 0));
+
+        GameObject projectile = Instantiate(spellProjectilePrefabs[buttonElement], new Vector3(-51.4300003f, 4.58300018f, -6.18900013f), Quaternion.Euler(0, 90, 0));
+        ProjectileMove projectileScript = projectile.GetComponent<ProjectileMove>();
+        projectileScript.SetSpeed(projectileSpeed);
+        Destroy(projectile, collisionDelay);
+
+        //plays collision particles
+        yield return new WaitForSeconds(collisionDelay);
+        Instantiate(spellCollisionPrefabs[buttonElement], new Vector3(-47.4766693f, 2.68000007f, -4f), Quaternion.identity);
+
+        fightCoroutine = null;
     }
 }
