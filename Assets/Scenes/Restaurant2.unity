@@ -8618,13 +8618,13 @@ MonoBehaviour:
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
   selectedIngredient: {fileID: 0}
-  playerAnimator: {fileID: 0}
+  playerAnimator: {fileID: 1259670112}
   ingredientGetText: {fileID: 1439751279}
   poofVFX: {fileID: 519292178}
-  spellFire: {fileID: 0}
-  spellLightning: {fileID: 0}
-  spellIce: {fileID: 0}
-  slimeDeath: {fileID: 0}
+  spellFire: {fileID: 8300000, guid: c44524082dc77c449a4c469c633189ea, type: 3}
+  spellLightning: {fileID: 8300000, guid: e6322c8634a83c34bb20243d14fbc5e3, type: 3}
+  spellIce: {fileID: 8300000, guid: d1d96baea1dd80b479af5f5319b6b0a8, type: 3}
+  slimeDeath: {fileID: 8300000, guid: 4600fd63a5c95ef46b194ec93b700c18, type: 3}
 --- !u!4 &577374608
 Transform:
   m_ObjectHideFlags: 0
@@ -19137,6 +19137,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
+--- !u!95 &1259670112 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 673688386848472374, guid: 854fc3a32c2b86340ae5f2910c483d4a, type: 3}
+  m_PrefabInstance: {fileID: 1259670111}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1263390784
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34574,7 +34579,7 @@ AudioSource:
   m_GameObject: {fileID: 2027644243}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 88de841466de1854882ee08e1a4061ca, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: 8a814a48be0a60a40b7ee999cdbc5da0, type: 3}
   m_PlayOnAwake: 1

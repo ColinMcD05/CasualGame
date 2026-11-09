@@ -5540,6 +5540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce6bdf7db0f04488eff7b7839919a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  musicPlaying: 1
+  sfxPlaying: 1
 --- !u!4 &408834676
 Transform:
   m_ObjectHideFlags: 0
@@ -20142,7 +20144,7 @@ AudioSource:
   m_GameObject: {fileID: 1635203166}
   m_Enabled: 1
   serializedVersion: 4
-  OutputAudioMixerGroup: {fileID: 0}
+  OutputAudioMixerGroup: {fileID: 24300002, guid: 88de841466de1854882ee08e1a4061ca, type: 2}
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 8300000, guid: e091e017275d4804eafafe927f708d0a, type: 3}
   m_PlayOnAwake: 1
