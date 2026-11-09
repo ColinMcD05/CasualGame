@@ -14243,9 +14243,14 @@ MonoBehaviour:
   - {fileID: 525106679}
   - {fileID: 426657850}
   inventory: {fileID: 2040153975}
+  selectedIngredient: {fileID: 0}
+  playerAnimator: {fileID: 0}
   ingredientGetText: {fileID: 1439751279}
   poofVFX: {fileID: 0}
-  selectedIngredient: {fileID: 0}
+  spellFire: {fileID: 0}
+  spellLightning: {fileID: 0}
+  spellIce: {fileID: 0}
+  slimeDeath: {fileID: 0}
 --- !u!4 &577374608
 Transform:
   m_ObjectHideFlags: 0
