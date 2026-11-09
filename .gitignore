@@ -104,3 +104,8 @@ InitTestScene*.unity*
 
 # Auto-generated cache in Assets folder
 /[Aa]ssets/[Ss]ceneDependencyCache*
+Assets/Scenes/MainMenu.unity
+Assets/Scenes/Restaurant1.unity
+Assets/Scenes/Restaurant3.unity
+Assets/UI_UX/PauseMenu.prefab
+Assets/UI_UX/UI_Fonts/Baloo-Regular SDF.asset
