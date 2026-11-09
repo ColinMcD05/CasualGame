@@ -5540,6 +5540,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 26ce6bdf7db0f04488eff7b7839919a0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameManager
+  musicPlaying: 1
+  sfxPlaying: 1
 --- !u!4 &408834676
 Transform:
   m_ObjectHideFlags: 0
@@ -25486,6 +25488,10 @@ PrefabInstance:
     - target: {fileID: 5756302824700783095, guid: 37b6f1987c11191438aad663766f538d, type: 3}
       propertyPath: m_Name
       value: PauseMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 7845740221126457043, guid: 37b6f1987c11191438aad663766f538d, type: 3}
+      propertyPath: m_Alpha
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -13,13 +13,13 @@ public class ShowDay : MonoBehaviour
     [SerializeField] TextMeshProUGUI meh;
     [SerializeField] TextMeshProUGUI unsatisfied;
 
-    public void DisplayDayEnd(int satisfiedAmount, int unsatisifedAmount, int mehAmount, int currentDay)
+    public void DisplayDayEnd(int satisfiedAmount, int unsatisifedAmount, int mehAmount, int currentDay, int starAmount)
     {
         showDayEndGroup.alpha = 1;
         showDayEndGroup.blocksRaycasts = true;
         showDayEndGroup.interactable = true;
 
-        if(currentDay >= 5)
+        if(currentDay >= 5 || starAmount <= 0)
         {
             nextDayButton.interactable = false;
         }

@@ -32,10 +32,7 @@ public class LockLevels : MonoBehaviour
 
     public void Unlock()
     {
-        if (canUnlock)
-        {
-            button.interactable = true;
-            lockSprite.enabled = false;
-        }
+        button.interactable = true;
+        lockSprite.enabled = false;
     }
 }
