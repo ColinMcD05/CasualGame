@@ -5170,7 +5170,7 @@ ParticleSystemRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
@@ -5212,6 +5212,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8443658031989022658}
+  - component: {fileID: 2697667024490498276}
   m_Layer: 0
   m_Name: RedProj
   m_TagString: Untagged
@@ -5239,6 +5240,18 @@ Transform:
   - {fileID: 34723493931018225}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2697667024490498276
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5638986335607235870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ceea87cd22435eb4bb286795bf8549b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ProjectileMove
 --- !u!1 &6197098215754845879
 GameObject:
   m_ObjectHideFlags: 0
@@ -5318,7 +5331,7 @@ TrailRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Time: 0.25
   m_PreviewTimeScale: 1
@@ -5469,7 +5482,7 @@ TrailRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_MaskInteraction: 0
   m_Time: 0.25
   m_PreviewTimeScale: 1
