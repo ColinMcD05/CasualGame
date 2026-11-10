@@ -52,11 +52,11 @@ public class CustomersManager : MonoBehaviour
     {
         this.maxCustomersToday = maxCustomersToday;
 
-        Invoke("AddNewCustomer", 1.2f);
-
         satisfiedCustomers = 0;
         unsatisfiedCustomers = 0;
         mehCustomers = 0;
+
+        Invoke("AddNewCustomer", 1.2f);
 
         maxPoints = maxCustomersToday * 3;
     }

@@ -17,6 +17,7 @@ public class CustomerOrder : MonoBehaviour
 	[SerializeField] float ehTime = 30, madTime = 60;
 
 	private float waitTimer = 0;
+	bool taken = false;
 
 	[SerializeField] TextMeshPro orderText;
 
@@ -28,8 +29,15 @@ public class CustomerOrder : MonoBehaviour
 		giveOrderSource = gameObject.AddComponent<AudioSource>();
     }
 
+	public bool GetTaken()
+	{
+		return taken;
+	}
+
     public CustomerSatisfaction TakeMeal(Recipe meal)
 	{
+		taken = true;
+
 		if(meal == null || meal.recipeName != order.recipeName)
 		{
 			BadOrder();

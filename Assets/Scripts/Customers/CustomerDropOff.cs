@@ -11,7 +11,7 @@ public class CustomerDropOff : MonoBehaviour
     }
     public bool DropOff(Recipe recipe)
     {
-        if(order.GetOrder() == null)
+        if(order.GetOrder() == null || order.GetTaken())
         {
             return false;
         }

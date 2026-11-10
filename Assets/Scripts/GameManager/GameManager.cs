@@ -97,6 +97,11 @@ public class GameManager : MonoBehaviour
         currentDay = days.days[currentIndex];
     }
 
+    public bool NextDayUnlocked()
+    {
+        return days.days[currentIndex + 1].unlocked;
+    }
+
     public DayInfo GetDayInfo()
     {
         return currentDay;
