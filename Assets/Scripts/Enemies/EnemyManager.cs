@@ -101,7 +101,7 @@ public class EnemyManager : MonoBehaviour
             {
                 if (fightCoroutine != null)
                 {
-                    StopCoroutine(fightCoroutine);
+                    return;
                 }
                 fightCoroutine = StartCoroutine(fightSuccess());
             }
@@ -109,7 +109,7 @@ public class EnemyManager : MonoBehaviour
             {
                 if (fightCoroutine != null)
                 {
-                    StopCoroutine(fightCoroutine);
+                    return;
                 }
                 fightCoroutine = StartCoroutine(fightFail());
             }
@@ -148,10 +148,9 @@ public class EnemyManager : MonoBehaviour
         //display text
         ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
         ingredientGetText.gameObject.SetActive(true);
+        fightCoroutine = null;
         yield return new WaitForSeconds(textDuration);
         ingredientGetText.gameObject.SetActive(false);
-
-        fightCoroutine = null;
     }
 
     private IEnumerator fightFail()
