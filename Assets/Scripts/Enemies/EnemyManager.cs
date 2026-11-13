@@ -47,7 +47,7 @@ public class EnemyManager : MonoBehaviour
 
     public void PlayEntrance() //if entrance is still playing when you go into the scene it won't start from the beginning
     {
-        playerAnimator.Play("Player_Entrance");
+        playerAnimator.Play("Player_Entrance", -1, 0);
     }
 
     public void SpawnEnemy()
@@ -56,10 +56,11 @@ public class EnemyManager : MonoBehaviour
         {
             currentSlime = Random.Range(0, 3);
             enemyInstances[currentSlime].SetActive(true);
+            enemyActive = true;
         }
     }
 
-    public void KillEnemy() // may change to fight enemy later
+    public void KillEnemy()
     {
         if (EventSystem.current.currentSelectedGameObject.TryGetComponent<AttackButton>(out AttackButton button) && currentSlime >=0)
         {
@@ -135,6 +136,7 @@ public class EnemyManager : MonoBehaviour
         yield return new WaitForSeconds(deathDelay);
         audioSource.PlayOneShot(slimeDeath);
         enemyInstances[currentSlime].SetActive(false);
+        enemyActive = false;
         foreach (ParticleSystem particleSource in poofParticleSources)
         {
             particleSource.Play();

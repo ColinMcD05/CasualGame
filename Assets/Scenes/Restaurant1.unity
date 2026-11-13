@@ -18977,7 +18977,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4551762567131390684, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5227145299875477102, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
