@@ -493,7 +493,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -7270,6 +7271,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6626428
@@ -7318,6 +7323,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (9)
@@ -7920,6 +7937,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6526787
@@ -7968,6 +7989,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (4)
@@ -9618,6 +9651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: FP_Countertop_02
       objectReference: {fileID: 0}
+    - target: {fileID: 6126868350937270525, guid: 87cf760d8117e1f47addaabd3e96b58e, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects:
@@ -10406,6 +10443,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6534247
@@ -10454,6 +10495,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (3)
@@ -12206,6 +12259,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6534247
@@ -12254,6 +12311,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket
@@ -20212,7 +20281,7 @@ PrefabInstance:
     - target: {fileID: 6429243876239656901, guid: 5eddf670fa4c62d48b146b464f3ec029, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
-      objectReference: {fileID: 2100000, guid: e0e00ecba75be51479da4f4c36b62f21, type: 2}
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 6429243876239656901, guid: 5eddf670fa4c62d48b146b464f3ec029, type: 3}
       propertyPath: 'm_Materials.Array.data[1]'
       value: 
@@ -25769,6 +25838,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.65774065
@@ -25817,6 +25890,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (5)
@@ -25842,6 +25927,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6534247
@@ -25890,6 +25979,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (13)
@@ -26329,6 +26430,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6529451
@@ -26377,6 +26482,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (7)
@@ -26585,7 +26702,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32089,6 +32207,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1803880571}
     m_Modifications:
+    - target: {fileID: 7431142625919131284, guid: b5ba67e8a6fbcde45b6cc361f45e726c, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
+    - target: {fileID: 7431142625919131284, guid: b5ba67e8a6fbcde45b6cc361f45e726c, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 8605134257942406651, guid: b5ba67e8a6fbcde45b6cc361f45e726c, type: 3}
       propertyPath: m_LocalScale.x
       value: 1.2750001
@@ -32163,6 +32289,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6534247
@@ -32211,6 +32341,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (1)
@@ -32270,6 +32412,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.65816694
@@ -32318,6 +32464,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (11)
@@ -32601,7 +32759,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32662,6 +32821,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.65315825
@@ -32710,6 +32873,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (10)
@@ -32745,6 +32920,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6579538
@@ -32793,6 +32972,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (8)
@@ -34071,6 +34262,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6628559
@@ -34119,6 +34314,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (12)
@@ -34669,6 +34876,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.6534247
@@ -34717,6 +34928,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (2)
@@ -34742,6 +34965,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 471177635}
     m_Modifications:
+    - target: {fileID: 1333228163374950960, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 85f4f79084b8b794f9697aecd57b2ce4, type: 2}
     - target: {fileID: 3517990740244888755, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.66242963
@@ -34790,6 +35017,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.40037662
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (6)
