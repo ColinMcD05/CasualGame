@@ -19184,6 +19184,22 @@ PrefabInstance:
       propertyPath: customerManager
       value: 
       objectReference: {fileID: 564474518}
+    - target: {fileID: 3459830822159172088, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459830822159172088, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459830822159172088, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3459830822159172088, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3595089602991210837, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Color.b
       value: 1
