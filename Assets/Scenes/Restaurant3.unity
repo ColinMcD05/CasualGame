@@ -21984,6 +21984,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_ColorTemperature
       value: 20000
       objectReference: {fileID: 0}
@@ -21997,6 +22005,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
@@ -22025,6 +22041,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Color.r
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Intensity
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
