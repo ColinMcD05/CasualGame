@@ -12751,7 +12751,8 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 7424982840350075429, guid: 2de31254d4e1674478c58dfa0331fd55, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2de31254d4e1674478c58dfa0331fd55, type: 3}
@@ -22258,6 +22259,18 @@ PrefabInstance:
     - target: {fileID: 4412594855486683826, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.23903024
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107562493984607731, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.b
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107562493984607731, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.g
+      value: 0.59419173
+      objectReference: {fileID: 0}
+    - target: {fileID: 5107562493984607731, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.r
+      value: 0.1415093
       objectReference: {fileID: 0}
     - target: {fileID: 5107562493984607731, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Intensity
