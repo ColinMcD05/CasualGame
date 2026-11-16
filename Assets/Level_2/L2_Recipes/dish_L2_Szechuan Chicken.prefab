@@ -259,6 +259,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846269141474592216}
     m_Modifications:
+    - target: {fileID: 807425710233773179, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 102987177324519282, guid: 0b3102dbddc6b4b429c0bab47d54d2a8, type: 3}
+    - target: {fileID: 807425710233773179, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
+      propertyPath: 'm_Materials.Array.data[1]'
+      value: 
+      objectReference: {fileID: 506705819354183807, guid: 0b3102dbddc6b4b429c0bab47d54d2a8, type: 3}
     - target: {fileID: 1167682550881043886, guid: 9ef4ad92527eae24794da350d5118d1f, type: 3}
       propertyPath: m_Name
       value: dish_L2_szechuan_chicken
