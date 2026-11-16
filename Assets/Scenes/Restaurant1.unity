@@ -25880,8 +25880,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shelves
   positions:
   - {fileID: 1246475000}
-  - {fileID: 947848945}
   - {fileID: 1436805538}
+  - {fileID: 947848945}
   - {fileID: 1417327551}
   - {fileID: 223335558}
   - {fileID: 490970644}

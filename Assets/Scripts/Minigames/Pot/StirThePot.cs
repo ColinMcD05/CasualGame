@@ -46,7 +46,11 @@ public class StirThePot : MonoBehaviour, IDraggable3D
         float addedAngle = Vector2.SignedAngle(newVector, previousVector);
 
         addedAngle = Mathf.Abs(addedAngle);
-        angle += addedAngle;
+
+        print(addedAngle);
+
+        if(addedAngle < 15)
+            angle += addedAngle;
 
         if (angle >= 360)
         {

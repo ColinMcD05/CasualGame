@@ -20,6 +20,10 @@ public class CustomerOrder : MonoBehaviour
 	bool taken = false;
 
 	[SerializeField] TextMeshPro orderText;
+	[SerializeField] Image timerImage;
+	[SerializeField] Sprite[] coloredTimers;
+
+	private CustomerSatisfaction currentHappiness = CustomerSatisfaction.Satisfied;
 
     void Awake()
 	{
@@ -142,7 +146,19 @@ public class CustomerOrder : MonoBehaviour
 		while(waitTimer <= madTime)
 		{
 			waitTimer += Time.deltaTime;
-			yield return null;
+			if((waitTimer>ehTime && waitTimer < madTime) && currentHappiness != CustomerSatisfaction.Meh)
+			{
+				currentHappiness = CustomerSatisfaction.Meh;
+				timerImage.sprite = coloredTimers[1];
+            }
+
+			if(waitTimer >=madTime && currentHappiness != CustomerSatisfaction.Mad)
+			{
+				currentHappiness = CustomerSatisfaction.Mad;
+                timerImage.sprite = coloredTimers[2];
+            }
+
+            yield return null;
 		}
 	}
 }
