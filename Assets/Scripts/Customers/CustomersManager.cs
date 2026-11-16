@@ -10,6 +10,8 @@ public class CustomersManager : MonoBehaviour
     [SerializeField] private Transform[] waitingPositions;
     [SerializeField] private TextMeshProUGUI orderText;
     [SerializeField] private TextMeshProUGUI dropoffText;
+    [SerializeField] private GameObject[] poof;
+    [SerializeField] private Transform[] poofPlacements;
 
     List<CustomerOrder> needToTake = new();
     List<CustomerOrder> alreadyTaken = new();
