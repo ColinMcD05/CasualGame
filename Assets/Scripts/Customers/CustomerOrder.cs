@@ -18,9 +18,10 @@ public class CustomerOrder : MonoBehaviour
 
 	private float waitTimer = 0;
 	bool taken = false;
+	bool canTake = false;
 
 	[SerializeField] TextMeshPro orderText;
-	[SerializeField] Image timerImage;
+	[SerializeField] SpriteRenderer timerImage;
 	[SerializeField] Sprite[] coloredTimers;
 
 	private CustomerSatisfaction currentHappiness = CustomerSatisfaction.Satisfied;
@@ -36,6 +37,11 @@ public class CustomerOrder : MonoBehaviour
 	public bool GetTaken()
 	{
 		return taken;
+	}
+
+	public bool GetCanTake()
+	{
+		return canTake;
 	}
 
     public CustomerSatisfaction TakeMeal(Recipe meal)
@@ -90,6 +96,7 @@ public class CustomerOrder : MonoBehaviour
 		if (order != null)
 		{
 			orderText.text = order.recipeName;
+			canTake = true;
 		}
     }
 

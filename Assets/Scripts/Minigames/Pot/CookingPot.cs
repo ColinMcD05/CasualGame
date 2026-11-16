@@ -33,7 +33,6 @@ public class CookingPot : MonoBehaviour, IDroppedOn
     public void DroppedOn(Ingredients ingredient)
     {
         ingredientsInPot.Add(ingredient);
-        Debug.Log(ingredient.GetIngredientName());
         SetRotation(0);
     }
 
@@ -47,14 +46,12 @@ public class CookingPot : MonoBehaviour, IDroppedOn
             {
                 shelf.AddFinishedMeal(null, badMeal);
                 ShowText("Bad Meal");
-                Debug.Log("Bad Meal");
                 creationSource.PlayOneShot(badClip);
             }
             else
             {
                 shelf.AddFinishedMeal(recipe);
                 ShowText(recipe.recipeName);
-                Debug.Log(recipe.recipeName);
                 creationSource.PlayOneShot(goodClip);
             }
             Invoke("TextDisappear", 2);

@@ -47,8 +47,6 @@ public class StirThePot : MonoBehaviour, IDraggable3D
 
         addedAngle = Mathf.Abs(addedAngle);
 
-        print(addedAngle);
-
         if(addedAngle < 15)
             angle += addedAngle;
 
