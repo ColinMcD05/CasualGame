@@ -257,6 +257,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 846269141474592216}
     m_Modifications:
+    - target: {fileID: 7515437198613132914, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: -4612162990109294230, guid: 005e0b061c1befe4fbf7151387dae8bf, type: 3}
     - target: {fileID: 8308242051535214503, guid: cc1523f39b9d0fc478d0fa6b2db303c2, type: 3}
       propertyPath: m_Name
       value: dish_L2_tteokbokki
