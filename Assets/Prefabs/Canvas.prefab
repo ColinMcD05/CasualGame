@@ -13910,6 +13910,7 @@ MonoBehaviour:
   satisfied: {fileID: 4143288387559214595}
   meh: {fileID: 8933189247975482873}
   unsatisfied: {fileID: 958166282142242922}
+  gameManager: {fileID: 0}
 --- !u!225 &6776969371740340964
 CanvasGroup:
   m_ObjectHideFlags: 0
@@ -16445,6 +16446,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 6054198657278301603, guid: 37b6f1987c11191438aad663766f538d, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -6.5999985
+      objectReference: {fileID: 0}
+    - target: {fileID: 6054198657278301603, guid: 37b6f1987c11191438aad663766f538d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -1.7141037
+      objectReference: {fileID: 0}
     - target: {fileID: 7845740221126457043, guid: 37b6f1987c11191438aad663766f538d, type: 3}
       propertyPath: m_Alpha
       value: 0
@@ -16452,6 +16461,10 @@ PrefabInstance:
     - target: {fileID: 8616385584876500742, guid: 37b6f1987c11191438aad663766f538d, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0.0000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8710700771964472633, guid: 37b6f1987c11191438aad663766f538d, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -3.7914
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
