@@ -4,12 +4,14 @@ public class UIManager : MonoBehaviour
 {
     [SerializeField] static CanvasGroup restaurantUI, potUI, enemyUI;
     static CanvasGroup currentCanvas;
+    static ShowOrders orders;
 
     private void Awake()
     {
         restaurantUI = GameObject.FindGameObjectWithTag("RestaurantUI").GetComponent<CanvasGroup>();
         potUI = GameObject.FindGameObjectWithTag("CauldronUI").GetComponent<CanvasGroup>();
         enemyUI = GameObject.FindGameObjectWithTag("EnemyUI").GetComponent<CanvasGroup>();
+        orders = GameObject.FindFirstObjectByType<ShowOrders>();
 
         //Setup cameras
         currentCanvas = restaurantUI;
@@ -52,6 +54,8 @@ public class UIManager : MonoBehaviour
                 currentCanvas.alpha = 1;
                 currentCanvas.interactable = true;
                 currentCanvas.blocksRaycasts = true;
+
+                orders.UpdateOrders();
                 break;
             case UIType.Enemy:
                 currentCanvas = enemyUI;

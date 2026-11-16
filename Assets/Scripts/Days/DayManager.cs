@@ -29,6 +29,8 @@ public class DayManager : MonoBehaviour
 
     public void DayStarted()
     {
+        Time.timeScale = 1;
+
         dayText.enabled = true;
         dayText.text = $"Day: {currentDay}";
 

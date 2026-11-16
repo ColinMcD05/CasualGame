@@ -10,7 +10,7 @@ public class CustomersManager : MonoBehaviour
     [SerializeField] private Transform[] waitingPositions;
     [SerializeField] private TextMeshProUGUI orderText;
     [SerializeField] private TextMeshProUGUI dropoffText;
-    [SerializeField] private GameObject[] poof;
+    [SerializeField] private GameObject poof;
     [SerializeField] private Transform[] poofPlacements;
 
     List<CustomerOrder> needToTake = new();
@@ -150,6 +150,8 @@ public class CustomersManager : MonoBehaviour
         }
 
         showOrders.UpdateOrders();
+
+        Destroy(Instantiate(poof, poofPlacements[1]), 2);
     }
 
     public bool CheckCustomersToOrder()
@@ -166,6 +168,8 @@ public class CustomersManager : MonoBehaviour
     {
         if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday)
         {
+            Destroy(Instantiate(poof, poofPlacements[0]), 2);
+
             if (alreadyTaken.Count + needToTake.Count >= customerLimit)
             {
                 Invoke("AddNewCustomer", 5);

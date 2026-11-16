@@ -150,6 +150,8 @@ public class CustomerOrder : MonoBehaviour
 
 	public IEnumerator IncreaseWaitTimer()
 	{
+		timerImage.sprite = coloredTimers[0];
+
 		while(waitTimer <= madTime)
 		{
 			waitTimer += Time.deltaTime;
