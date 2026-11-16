@@ -18,8 +18,13 @@ public class CustomerOrder : MonoBehaviour
 
 	private float waitTimer = 0;
 	bool taken = false;
+	bool canTake = false;
 
 	[SerializeField] TextMeshPro orderText;
+	[SerializeField] SpriteRenderer timerImage;
+	[SerializeField] Sprite[] coloredTimers;
+
+	private CustomerSatisfaction currentHappiness = CustomerSatisfaction.Satisfied;
 
     void Awake()
 	{
@@ -32,6 +37,11 @@ public class CustomerOrder : MonoBehaviour
 	public bool GetTaken()
 	{
 		return taken;
+	}
+
+	public bool GetCanTake()
+	{
+		return canTake;
 	}
 
     public CustomerSatisfaction TakeMeal(Recipe meal)
@@ -86,6 +96,7 @@ public class CustomerOrder : MonoBehaviour
 		if (order != null)
 		{
 			orderText.text = order.recipeName;
+			canTake = true;
 		}
     }
 
@@ -142,7 +153,19 @@ public class CustomerOrder : MonoBehaviour
 		while(waitTimer <= madTime)
 		{
 			waitTimer += Time.deltaTime;
-			yield return null;
+			if((waitTimer>ehTime && waitTimer < madTime) && currentHappiness != CustomerSatisfaction.Meh)
+			{
+				currentHappiness = CustomerSatisfaction.Meh;
+				timerImage.sprite = coloredTimers[1];
+            }
+
+			if(waitTimer >=madTime && currentHappiness != CustomerSatisfaction.Mad)
+			{
+				currentHappiness = CustomerSatisfaction.Mad;
+                timerImage.sprite = coloredTimers[2];
+            }
+
+            yield return null;
 		}
 	}
 }

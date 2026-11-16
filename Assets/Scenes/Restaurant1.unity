@@ -773,6 +773,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (4)
@@ -1111,6 +1123,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1350,15 +1363,15 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: -8679921383154817045, guid: 5accb9104903e3b47a49310a9c83ca7f, type: 3}
       propertyPath: m_LocalScale.x
-      value: 45
+      value: 45.796497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5accb9104903e3b47a49310a9c83ca7f, type: 3}
       propertyPath: m_LocalScale.y
-      value: 45
+      value: 45.796497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5accb9104903e3b47a49310a9c83ca7f, type: 3}
       propertyPath: m_LocalScale.z
-      value: 45
+      value: 45.796497
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 5accb9104903e3b47a49310a9c83ca7f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2006,6 +2019,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b79ec551b5a3eaf4c91c6ecbf37f8928, type: 2}
     - target: {fileID: 6602477458643304255, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
       propertyPath: m_Name
       value: NewFloorTile (7)
@@ -7844,6 +7865,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (10)
@@ -8387,6 +8420,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (15)
@@ -8464,6 +8509,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b79ec551b5a3eaf4c91c6ecbf37f8928, type: 2}
     - target: {fileID: 6602477458643304255, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
       propertyPath: m_Name
       value: NewFloorTile (13)
@@ -9405,6 +9458,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (9)
@@ -10172,6 +10237,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (5)
@@ -10256,6 +10333,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (7)
@@ -10334,6 +10423,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (3)
@@ -10411,6 +10512,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b79ec551b5a3eaf4c91c6ecbf37f8928, type: 2}
     - target: {fileID: 6602477458643304255, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
       propertyPath: m_Name
       value: NewFloorTile (5)
@@ -11584,6 +11693,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (14)
@@ -11836,6 +11957,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (12)
@@ -12356,6 +12489,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket
@@ -12429,6 +12574,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (2)
@@ -18044,6 +18201,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 14.623993
       objectReference: {fileID: 0}
+    - target: {fileID: 1273186723089210715, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273186723089210715, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Lightmapping
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1273186723089210715, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 2235964832887940998, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2.67
@@ -18068,10 +18237,6 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: -0.056
       objectReference: {fileID: 0}
-    - target: {fileID: 2335835229142090552, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.965
-      objectReference: {fileID: 0}
     - target: {fileID: 3078393482709539319, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0.944
@@ -18080,9 +18245,29 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 0.594
       objectReference: {fileID: 0}
-    - target: {fileID: 4412594855486683826, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.96500015
+    - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.r
+      value: 0.4331658
+      objectReference: {fileID: 0}
+    - target: {fileID: 3509510788697658536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 3666988072775605015, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4582685946080045995, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.x
@@ -18095,6 +18280,18 @@ PrefabInstance:
     - target: {fileID: 5107562493984607731, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Intensity
       value: 80.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Color.r
+      value: 0.43529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 5186327136015376536, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5262451048700627963, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Type
@@ -18171,10 +18368,6 @@ PrefabInstance:
     - target: {fileID: 7311168389831840890, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_LocalPosition.z
       value: 1.265
-      objectReference: {fileID: 0}
-    - target: {fileID: 7766390709692486810, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.96500015
       objectReference: {fileID: 0}
     - target: {fileID: 8749824597919067865, guid: cecfc9348c86303468ba8faac973b8cf, type: 3}
       propertyPath: m_Name
@@ -18694,6 +18887,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6243572711525408382, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: b79ec551b5a3eaf4c91c6ecbf37f8928, type: 2}
     - target: {fileID: 6602477458643304255, guid: 7cf44063910ac2b49a7967907536774d, type: 3}
       propertyPath: m_Name
       value: NewFloorTile (15)
@@ -18827,6 +19028,10 @@ PrefabInstance:
       propertyPath: m_Colors.m_ColorMultiplier
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2029098347854036472, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2077453254025984829, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
       value: 
@@ -18843,6 +19048,34 @@ PrefabInstance:
       propertyPath: thisCamera
       value: 
       objectReference: {fileID: 1157589295}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 202
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 10.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2902021831875313534, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 125.29993
+      objectReference: {fileID: 0}
     - target: {fileID: 3173812954797305020, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: customerManager
       value: 
@@ -18977,7 +19210,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4551762567131390684, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Alpha
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5227145299875477102, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
@@ -25667,8 +25900,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Shelves
   positions:
   - {fileID: 1246475000}
-  - {fileID: 947848945}
   - {fileID: 1436805538}
+  - {fileID: 947848945}
   - {fileID: 1417327551}
   - {fileID: 223335558}
   - {fileID: 490970644}
@@ -25781,6 +26014,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32006,6 +32240,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (8)
@@ -32214,6 +32460,7 @@ MeshRenderer:
   m_RendererPriority: 0
   m_Materials:
   - {fileID: 2100000, guid: 997e16aac52b04c46a13a62829199efb, type: 2}
+  - {fileID: 2100000, guid: 017aabedae703f84e82922e5caa3b53a, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -32876,6 +33123,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (1)
@@ -33026,6 +33285,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (11)
@@ -33615,6 +33886,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (6)
@@ -34105,6 +34388,18 @@ PrefabInstance:
       propertyPath: cauldronCamera
       value: 
       objectReference: {fileID: 878403165}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.b
+      value: 0.5529412
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.g
+      value: 0.827451
+      objectReference: {fileID: 0}
+    - target: {fileID: 6379801416616173411, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
+      propertyPath: m_Color.r
+      value: 0.72325593
+      objectReference: {fileID: 0}
     - target: {fileID: 6404364559749677813, guid: a58e3f5d376606a4f988b5ea8f2b5d12, type: 3}
       propertyPath: m_Name
       value: Food_Basket (13)

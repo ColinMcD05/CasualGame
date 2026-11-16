@@ -21,6 +21,12 @@ MonoBehaviour:
   m_OverrideGlobalSceneList: 1
   m_Scenes:
   - m_enabled: 1
+    m_path: Assets/Scenes/MainMenu.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Restaurant1.unity
+  - m_enabled: 1
+    m_path: Assets/Scenes/Restaurant2.unity
+  - m_enabled: 1
     m_path: Assets/Scenes/Restaurant3.unity
   m_HasScriptingDefines: 0
   m_ScriptingDefines: []
@@ -29,6 +35,8 @@ MonoBehaviour:
   references:
     version: 2
     RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
     - rid: 3331457801766830080
       type: {class: AndroidPlatformBuildSettings, ns: UnityEditor.Android, asm: UnityEditor.Android.Extensions}
       data:

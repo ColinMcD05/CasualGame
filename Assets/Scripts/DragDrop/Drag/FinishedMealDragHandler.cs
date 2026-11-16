@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -67,13 +68,25 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
             Vector2 screenPostion = eventData.position;
             Ray position = thisCamera.ScreenPointToRay(screenPostion);
 
+            GameObject can = eventData.pointerCurrentRaycast.gameObject;
+
+            if (can != null)
+            {
+                if (can.GetComponent<TrashCan>() != null)
+                {
+                    shelves.RemoveFinishedMeal(num);
+                    connectedMeal = null;
+                    shelves.UpdatePositions();
+                    return;
+                }
+            }
+
             if (Physics.Raycast(position, out RaycastHit hit))
             {
                 if (hit.collider.TryGetComponent(out CustomerDropOff dropOff))
                 {
                     if (dropOff.DropOff(shelves.GetRecipeAtIndex(num)))
                     {
-                        print("Droppedoff");
                         shelves.RemoveFinishedMeal(num);
                         connectedMeal = null;
                         shelves.UpdatePositions();
@@ -81,17 +94,9 @@ public class FinishedMealDragHandler : MonoBehaviour, IBeginDragHandler, IDragHa
                     }
                     else
                     {
-                        print("NotDroppedoff");
                         shelves.UpdatePositions();
                         return;
                     }
-                }
-                if (hit.collider.TryGetComponent(out TrashCan trashCan))
-                {
-                    shelves.RemoveFinishedMeal(num);
-                    connectedMeal = null;
-                    shelves.UpdatePositions();
-                    return;
                 }
                 else
                 {
