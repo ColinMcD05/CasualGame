@@ -3,17 +3,12 @@ using UnityEngine;
 
 public class ShowOrders : MonoBehaviour
 {
-    [SerializeField] CanvasGroup group;
     [SerializeField] CanvasGroup[] groups;
     [SerializeField] CustomersManager customersManager;
 
-    public void Activate()
+    public void Start()
     {
-        group.alpha = 1;
-        group.blocksRaycasts = true;
-        group.interactable = true;
-
-        UpdateOrders();
+        customersManager = GameObject.FindAnyObjectByType<CustomersManager>();
     }
 
     public void UpdateOrders()
@@ -51,11 +46,5 @@ public class ShowOrders : MonoBehaviour
                 groups[i].alpha = 0;
             }
         }
-    }
-    public void Deactivate()
-    {
-        group.alpha = 0;
-        group.blocksRaycasts = false;
-        group.interactable = false;
     }
 }
