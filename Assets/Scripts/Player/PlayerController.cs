@@ -68,8 +68,6 @@ public class PlayerController : MonoBehaviour
 
             draggedObject = touchedDraggable;
             draggedObject.StartDrag(screenPostion);
-
-            Debug.Log(hit.collider.gameObject);
         }
     }
 
