@@ -21152,6 +21152,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3951911918385488597, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00008126977
+      objectReference: {fileID: 0}
     - target: {fileID: 4086901395538294413, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
       value: 
@@ -21227,6 +21231,14 @@ PrefabInstance:
     - target: {fileID: 8354976873381529187, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Alpha
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764999018446210380, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -48.47632
+      objectReference: {fileID: 0}
+    - target: {fileID: 8764999018446210380, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -47.911865
       objectReference: {fileID: 0}
     - target: {fileID: 8861788911697587864, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
