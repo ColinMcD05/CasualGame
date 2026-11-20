@@ -8862,10 +8862,10 @@ MonoBehaviour:
   - {fileID: 8300000, guid: d1d96baea1dd80b479af5f5319b6b0a8, type: 3}
   slimeDeath: {fileID: 8300000, guid: 4600fd63a5c95ef46b194ec93b700c18, type: 3}
   textDuration: 2
-  castDelay: 0.1
-  projectileSpeed: 1
+  castDelay: 1
+  projectileSpeed: 2.5
   collisionDelay: 1
-  deathDelay: 0.5
+  deathDelay: 0.2
 --- !u!4 &577374608
 Transform:
   m_ObjectHideFlags: 0
