@@ -4,6 +4,7 @@ using UnityEngine.EventSystems;
 public class SelectIngredientMenu : MonoBehaviour
 {
     [SerializeField] CanvasGroup ingredientSelectScreen;
+    [SerializeField] CanvasGroup spellUI;
     [SerializeField] EnemyManager enemyManager;
     bool isOpened = true;
     public void ToggleMenu()
@@ -13,6 +14,8 @@ public class SelectIngredientMenu : MonoBehaviour
             ingredientSelectScreen.alpha = 0;
             ingredientSelectScreen.interactable = false;
             ingredientSelectScreen.blocksRaycasts = false;
+            spellUI.interactable = false;
+            spellUI.blocksRaycasts = false;
             isOpened = false;
         }
 
@@ -21,6 +24,8 @@ public class SelectIngredientMenu : MonoBehaviour
             ingredientSelectScreen.alpha = 1;
             ingredientSelectScreen.interactable = true;
             ingredientSelectScreen.blocksRaycasts = true;
+            spellUI.interactable = true;
+            spellUI.blocksRaycasts = true;
             isOpened = true;
         }
     }
