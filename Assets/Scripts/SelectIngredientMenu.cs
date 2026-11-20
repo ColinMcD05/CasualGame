@@ -14,8 +14,9 @@ public class SelectIngredientMenu : MonoBehaviour
             ingredientSelectScreen.alpha = 0;
             ingredientSelectScreen.interactable = false;
             ingredientSelectScreen.blocksRaycasts = false;
-            spellUI.interactable = false;
-            spellUI.blocksRaycasts = false;
+            spellUI.alpha = 1;
+            spellUI.interactable = true;
+            spellUI.blocksRaycasts = true;
             isOpened = false;
         }
 
@@ -24,8 +25,9 @@ public class SelectIngredientMenu : MonoBehaviour
             ingredientSelectScreen.alpha = 1;
             ingredientSelectScreen.interactable = true;
             ingredientSelectScreen.blocksRaycasts = true;
-            spellUI.interactable = true;
-            spellUI.blocksRaycasts = true;
+            spellUI.alpha = 0;
+            spellUI.interactable = false;
+            spellUI.blocksRaycasts = false;
             isOpened = true;
         }
     }
