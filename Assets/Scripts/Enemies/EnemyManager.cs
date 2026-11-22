@@ -96,28 +96,32 @@ public class EnemyManager : MonoBehaviour
             }
 
             //plays animations, vfx, and sounds
-            playerAnimator.Play("Player_Attack");
-            if (success)
-            {
-                if (fightCoroutine != null)
+            if(currentSlime != -1){
+                playerAnimator.Play("Player_Attack");
+                if (success)
                 {
-                    return;
+                    if (fightCoroutine != null)
+                    {
+                        return;
+                    }
+                    fightCoroutine = StartCoroutine(fightSuccess());
                 }
-                fightCoroutine = StartCoroutine(fightSuccess());
-            }
-            else
-            {
-                if (fightCoroutine != null)
+                else
                 {
-                    return;
+                    if (fightCoroutine != null)
+                    {
+                        return;
+                    }
+                    fightCoroutine = StartCoroutine(fightFail());
                 }
-                fightCoroutine = StartCoroutine(fightFail());
             }
         }
     }
 
     private IEnumerator fightSuccess()
     {
+        currentSlime = -1; //stops phantom slime farming
+
         //plays cast particles and spawn projectile
         yield return new WaitForSeconds(castDelay);
         audioSource.PlayOneShot(spellSounds[buttonElement]);
@@ -143,7 +147,6 @@ public class EnemyManager : MonoBehaviour
         }
 
         inventory.AddIngredient(selectedIngredient, 1);
-        currentSlime = -1; //stops phantom slime farming
 
         //display text
         ingredientGetText.text = ($"You got 1 {selectedIngredient.GetIngredientName()}!");
