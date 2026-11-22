@@ -120,6 +120,7 @@ public class EnemyManager : MonoBehaviour
 
     private IEnumerator fightSuccess()
     {
+        int slime = currentSlime;
         currentSlime = -1; //stops phantom slime farming
 
         //plays cast particles and spawn projectile
@@ -139,7 +140,7 @@ public class EnemyManager : MonoBehaviour
         //kills slime and plays death particles
         yield return new WaitForSeconds(deathDelay);
         audioSource.PlayOneShot(slimeDeath);
-        enemyInstances[currentSlime].SetActive(false);
+        enemyInstances[slime].SetActive(false);
         enemyActive = false;
         foreach (ParticleSystem particleSource in poofParticleSources)
         {
