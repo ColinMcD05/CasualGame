@@ -21081,6 +21081,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: -1.7141037
       objectReference: {fileID: 0}
+    - target: {fileID: 1029451460184568826, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 10.499992
+      objectReference: {fileID: 0}
     - target: {fileID: 1062150536360161209, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -21329,6 +21333,10 @@ PrefabInstance:
       propertyPath: customersManager
       value: 
       objectReference: {fileID: 564474518}
+    - target: {fileID: 7878926262838883121, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 7946697872397686991, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: shelves
       value: 
@@ -21360,6 +21368,14 @@ PrefabInstance:
     - target: {fileID: 8764999018446210380, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -47.911865
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824755644631173870, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -0.0000038146973
+      objectReference: {fileID: 0}
+    - target: {fileID: 8824755644631173870, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.0000076293945
       objectReference: {fileID: 0}
     - target: {fileID: 8861788911697587864, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: m_Colors.m_NormalColor.a
