@@ -35,13 +35,13 @@ public class CustomersManager : MonoBehaviour
 
     [SerializeField] DayManager dayManager;
 
-    private ShowOrders showOrders;
+    private ShowOrders[] showOrders;
 
     List<int> indexArray = new List<int>();
 
     public void Awake()
     {
-        showOrders = GameObject.FindFirstObjectByType<ShowOrders>();
+        showOrders = GameObject.FindObjectsByType<ShowOrders>(FindObjectsSortMode.None);
     }
 
     public void Start()
@@ -84,7 +84,9 @@ public class CustomersManager : MonoBehaviour
 
     public void OrderTaken()
     {
+        Destroy(Instantiate(poof, poofPlacements[0]), 2);
         needToTake[0].transform.position = waitingPositions[alreadyTaken.Count - 1].position;
+        Destroy(needToTake[0].GetComponent<CustomerVisuals>().PlayPoof(), 2);
         orderText.text = "";
 
         needToTake.RemoveAt(0);
@@ -96,7 +98,10 @@ public class CustomersManager : MonoBehaviour
 
         canTakeOrder = true;
 
-        showOrders.UpdateOrders();
+        foreach (ShowOrders orders in showOrders)
+        {
+            orders.UpdateOrders();
+        }
     }
 
     public void OrderGiven(Recipe recipe, CustomerSatisfaction wasGood)
@@ -135,6 +140,7 @@ public class CustomersManager : MonoBehaviour
     void RemoveCustomer()
     {
         GameObject remove = alreadyTaken[indexArray[0]].gameObject;
+        Destroy(remove.GetComponent<CustomerVisuals>().PlayPoof(), 2);
         alreadyTaken.RemoveAt(indexArray[0]);
         indexArray.RemoveAt(0);
         Destroy(remove);
@@ -149,9 +155,10 @@ public class CustomersManager : MonoBehaviour
             alreadyTaken[i].transform.position = waitingPositions[i].position;
         }
 
-        showOrders.UpdateOrders();
-
-        Destroy(Instantiate(poof, poofPlacements[1]), 2);
+        foreach (ShowOrders orders in showOrders)
+        {
+            orders.UpdateOrders();
+        }
     }
 
     public bool CheckCustomersToOrder()
@@ -168,7 +175,6 @@ public class CustomersManager : MonoBehaviour
     {
         if (satisfiedCustomers + unsatisfiedCustomers + mehCustomers + alreadyTaken.Count + needToTake.Count < maxCustomersToday)
         {
-            Destroy(Instantiate(poof, poofPlacements[0]), 2);
 
             if (alreadyTaken.Count + needToTake.Count >= customerLimit)
             {
@@ -198,6 +204,7 @@ public class CustomersManager : MonoBehaviour
             newCustomerSource.PlayOneShot(newCustomerClip);
 
             needToTake.Add(newCustomer.GetComponent<CustomerOrder>());
+            Destroy(newCustomer.GetComponent<CustomerVisuals>().PlayPoof(), 2);
 
             Invoke("AddNewCustomer", Random.Range(10, 15));
         }

@@ -8,7 +8,7 @@ public class CustomerOrder : MonoBehaviour
 	public bool boss;
 	private Menu menu;
 	private Recipe order;
-	private Image indicator;
+	[SerializeField] private SpriteRenderer indicator;
 	[SerializeField] Sprite goodSprite, badSprite, mehSprite;
 	[SerializeField] AudioClip correctOrderGiven, incorrectOrderGiven;
     private AudioSource giveOrderSource;
@@ -30,7 +30,6 @@ public class CustomerOrder : MonoBehaviour
 	{
 		menu = GameObject.FindFirstObjectByType<Menu>();
 
-		indicator = GameObject.Find("Indicator").GetComponent<Image>();
 		giveOrderSource = gameObject.AddComponent<AudioSource>();
     }
 

@@ -1238,13 +1238,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 599429f5d80a35842b934abb2fdc0d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ShowOrders
-  group: {fileID: 0}
   groups:
   - {fileID: 5613029283737744575}
   - {fileID: 1208424946481978139}
   - {fileID: 5372940555577209100}
-  - {fileID: 9166546069931823906}
-  - {fileID: 8470376318177951856}
   customersManager: {fileID: 0}
 --- !u!1 &543235525880581742
 GameObject:

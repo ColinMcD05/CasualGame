@@ -3,12 +3,8 @@ using UnityEngine;
 public class CustomerVisuals : MonoBehaviour
 {
     [SerializeField] Animator animator;
-    [SerializeField] GameObject happyVFX, mehVFX, madVFX;
-
-    public void Start()
-    {
-
-    }
+    [SerializeField] GameObject happyVFX, mehVFX, madVFX, poofVFX;
+    [SerializeField] Transform poof;
 
     public void PlayVisual(CustomerSatisfaction satisfaction)
     {
@@ -56,5 +52,10 @@ public class CustomerVisuals : MonoBehaviour
                 animator.SetTrigger("CorrectOrder");
                 break;
         }
+    }
+
+    public GameObject PlayPoof(float time = 0)
+    {
+        return Instantiate(poofVFX, poof);
     }
 }
