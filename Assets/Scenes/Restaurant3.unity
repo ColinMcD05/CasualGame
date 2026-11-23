@@ -10736,6 +10736,51 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8744119303986643144, guid: 373bba194f809a94aa83a6cff005ae24, type: 3}
   m_PrefabInstance: {fileID: 542363814}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &552614843
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 552614845}
+  - component: {fileID: 552614844}
+  m_Layer: 0
+  m_Name: AudioManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &552614844
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552614843}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b1c90d87d8f7faf4797285ac1e3c9bbb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  mixer: {fileID: 24300002, guid: e770defcc8c60b545b01510840283a11, type: 2}
+--- !u!4 &552614845
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 552614843}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -535.8042, y: 846.07733, z: -1932.3027}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &554888651
 GameObject:
   m_ObjectHideFlags: 0
@@ -24199,6 +24244,10 @@ PrefabInstance:
       propertyPath: thisCamera
       value: 
       objectReference: {fileID: 1157589295}
+    - target: {fileID: 2981575660451314961, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3173812954797305020, guid: 9e07dea63b432354aa30face39c49db5, type: 3}
       propertyPath: customerManager
       value: 
@@ -33598,6 +33647,10 @@ PrefabInstance:
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7958333907288545163, guid: 92d66e55f06c1b94c82de69d69b3453d, type: 3}
+      propertyPath: initialIngredients.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 7958333907288545163, guid: 92d66e55f06c1b94c82de69d69b3453d, type: 3}
       propertyPath: 'initialIngredients.Array.data[0]'
       value: 
       objectReference: {fileID: 636889105}
@@ -33616,7 +33669,7 @@ PrefabInstance:
     - target: {fileID: 7958333907288545163, guid: 92d66e55f06c1b94c82de69d69b3453d, type: 3}
       propertyPath: 'initialIngredients.Array.data[4]'
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 1783393362}
     - target: {fileID: 7958333907288545163, guid: 92d66e55f06c1b94c82de69d69b3453d, type: 3}
       propertyPath: 'initialIngredients.Array.data[5]'
       value: 
@@ -57210,3 +57263,4 @@ SceneRoots:
   - {fileID: 1838589468}
   - {fileID: 1495671046}
   - {fileID: 1298347184}
+  - {fileID: 552614845}

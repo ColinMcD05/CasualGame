@@ -47,6 +47,7 @@ public class CustomersManager : MonoBehaviour
     public void Start()
     {
         newCustomerSource = gameObject.AddComponent<AudioSource>();
+
         orderTakenSource = gameObject.AddComponent<AudioSource>();
     }
 

@@ -9,7 +9,7 @@ public class PauseFunctions : MonoBehaviour
 
     [SerializeField] AudioMixer musicMixer, sfxMixer;
 
-    bool musicToggled;
+    bool musicToggled, sfxToggled;
 
     GameManager gameManager;
 
@@ -32,17 +32,17 @@ public class PauseFunctions : MonoBehaviour
             musicMixer.SetFloat("Volume", 0);
         }
 
-        /*
-        sfxToggle.isOn = gameManager.sfxPlaying;
+        sfxToggled = gameManager.sfxPlaying;
+
+        sfxToggle.SetIsOnWithoutNotify(sfxToggled);
         if (!sfxToggle.isOn)
         {
-            sfxMixer.SetFloat("Master", -80);
+            sfxMixer.SetFloat("Volume", -80);
         }
         else
         {
-            sfxMixer.SetFloat("Master", 0);
+            sfxMixer.SetFloat("Volume", 0);
         }
-        */
     }
 
     public void MuteMusic()
@@ -64,6 +64,18 @@ public class PauseFunctions : MonoBehaviour
 
     public void MuteSFX()
     {
-        sfxToggle.isOn = !sfxToggle.isOn;
+        sfxToggled = !sfxToggled;
+        gameManager.sfxPlaying = sfxToggled;
+
+        sfxToggle.SetIsOnWithoutNotify(sfxToggled);
+
+        if (!sfxToggle.isOn)
+        {
+            sfxMixer.SetFloat("Volume", -80);
+        }
+        else
+        {
+            sfxMixer.SetFloat("Volume", 0);
+        }
     }
 }
