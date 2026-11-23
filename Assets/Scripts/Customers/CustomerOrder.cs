@@ -33,6 +33,11 @@ public class CustomerOrder : MonoBehaviour
 		giveOrderSource = gameObject.AddComponent<AudioSource>();
     }
 
+	public float GetSeconds()
+	{
+		return waitTimer;
+	}
+
 	public bool GetTaken()
 	{
 		return taken;
@@ -96,6 +101,7 @@ public class CustomerOrder : MonoBehaviour
 		{
 			orderText.text = order.recipeName;
 			canTake = true;
+			StartCoroutine("IncreaseWaitTimer");
 		}
     }
 
