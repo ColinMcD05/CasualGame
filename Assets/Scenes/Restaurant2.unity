@@ -10262,7 +10262,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9e7a891d4a5ecf54ebe8909feea367a8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CustomersManager
-  customerLimit: 5
+  customerLimit: 3
   maxCustomersToday: 5
   orderPositions:
   - {fileID: 1191936190}
