@@ -69,7 +69,6 @@ public class CustomersManager : MonoBehaviour
         orderTakenSource.PlayOneShot(takeOrder);
         if (canTakeOrder)
         {
-            needToTake[0].StartCoroutine("IncreaseWaitTimer");
             alreadyTaken.Add(needToTake[0]);
             orderText.text = needToTake[0].GetOrder().recipeName;
             canTakeOrder = false;
